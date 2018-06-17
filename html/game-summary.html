@@ -15,12 +15,47 @@
     <script src="../bootstrap/js/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <style>
+        img{
+            position: fixed;
+            /*z-index: 100;*/
+        }
+        video{
+            display: inline-block;
+            /*z-index: 50;*/
+        }
+
+
+    </style>
 </head>
+
 <body>
 
+<div class="box">
+    <img src="../images/game/game-nav.jpg" alt="">
+
+</div>
+<div>
+    <video src="../images/game/video.mp4" controls="false"  ></video>
+</div>
 </body>
 </html>
+
 
 <script src="../bootstrap/js/jquery-1.11.3.js"></script>
 
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $('video').click(function() {
+        $('img').style.zIndex(0);
+        $('video').animate(   {
+            width:700,
+            height:400,
+            position: relative,
+
+            top:200,
+        } ,1000
+    )  })
+
+</script>
