@@ -16,46 +16,53 @@
     <![endif]-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/animate.css">
-    <style>
-        img{
-            position: fixed;
-            /*z-index: 100;*/
-        }
-        video{
-            display: inline-block;
-            /*z-index: 50;*/
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="../css/game-summay.css">
 </head>
 
 <body>
+<section class="overview-section">
+  <div class="overview-cont">
+    <div class="grid grid-info">
+        <div class="column col-lg-6 lg-push-6">
+                <h1 class="h2 u-invert">欢迎加入《守望先锋》</h1>
+                <p class="intro-text game-description u-invert u-limit-width">在《守望先锋》这款团队射击游戏中，你将控制许多风格迥异的英雄中的其中一个，与战友组成一支六人队伍，和对手抢夺目标、决一死战并夺取最终的胜利！</p>
 
-<div class="box">
-    <img src="../images/game/game-nav.jpg" alt="">
-
+        </div>
+        <div class="column col-lg-6 lg-pull-6">
+            <a href="" class="overwatch-trailer">
+                <div class="column-video wrap">
+                    <img src="../images/game/game-nav.jpg" alt="">
+                </div>
+                <div class="column-video-s">
+                 <video src="../images/game/video.mp4"  controls poster="../images/game/game-nav.jpg" >
+                 </video>
 </div>
-<div>
-    <video src="../images/game/video.mp4" controls="false"  ></video>
-</div>
+            </a>
+        </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
-
-
 <script src="../bootstrap/js/jquery-1.11.3.js"></script>
-
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
-    $('video').click(function() {
-        $('img').style.zIndex(0);
-        $('video').animate(   {
-            width:700,
-            height:400,
-            position: relative,
 
-            top:200,
-        } ,1000
-    )  })
+    // function fn(){
+    //     top:-245px;
+    //     left:55px;
+    // }
+    $('.overwatch-trailer').click(function(e) {
+           e.preventDefault();
+            console.log(this);
+        $('.column-video-s').offset({
+            top:0,
+            left:55,
+        });
+        console.log( $('.column-video-s').offset().top);
+    })
 
+    // videos.onplay=function(){
+    //     fn();
+    // }
 </script>
