@@ -36,12 +36,12 @@
 <section class="overview-section">
   <div class="overview-cont">
     <div class="grid grid-info">
-        <div class="column col-lg-6 lg-push-6">
+        <div class="column lg-6 lg-push-6">
                 <h1 class="h2 u-invert">欢迎加入《守望先锋》</h1>
                 <p class="intro-text game-description u-invert u-limit-width">在《守望先锋》这款团队射击游戏中，你将控制许多风格迥异的英雄中的其中一个，与战友组成一支六人队伍，和对手抢夺目标、决一死战并夺取最终的胜利！</p>
 
         </div>
-        <div class="column col-lg-6 lg-pull-6">
+        <div class="column lg-6 lg-pull-6">
             <a href="" class="overwatch-trailer">
                 <div class="column-video wrap">
                     <img src="../images/game/game-nav.jpg" alt="">
@@ -107,16 +107,32 @@
            </div>
         </div>
         <div class="grid role-descriptions">
-            <div class="column col-lg-3">
+            <div class="column lg-3">
+                <div class="role-header hide-for-lg">
+                    <div class="role-icon offense-icon"></div>
+                    <div class="role-title h5">突击</div>
+                </div>
                 <p class="role-text u-invert">突击英雄是负责制造大量伤害的英雄，目标很简单：探敌、发现以及摧毁。</p>
             </div>
-            <div class="column col-lg-3">
+            <div class="column lg-3">
+                <div class="role-header hide-for-lg">
+                    <div class="role-icon defense-icon"></div>
+                    <div class="role-title h5">防御</div>
+                </div>
                 <p class="role-text u-invert">防御英雄一般都具有控场能力，阻碍敌人的进攻或者强化防御工事。作为防御英雄，你的任务就是阻碍敌人前进的脚步。</p>
             </div>
-            <div class="column col-lg-3">
+            <div class="column lg-3">
+                <div class="role-header hide-for-lg">
+                    <div class="role-icon tank-icon"></div>
+                    <div class="role-title h5">重装</div>
+                </div>
                 <p class="role-text u-invert">重装英雄负责吸收伤害以及冲散对方的防御，在冲击抱团的敌人或是突击咽喉要道时有着重要的作用。如果你是一名重装英雄，你就得扛起率领团队攻击的责任。</p>
             </div>
-            <div class="column col-lg-3">
+            <div class="column lg-3">
+                <div class="role-header hide-for-lg">
+                    <div class="role-icon support-icon"></div>
+                    <div class="role-title h5">支援</div>
+                </div>
                 <p class="role-text u-invert">支援英雄能够保护并强化盟友。他们能够给盟友治疗或添加护盾，提升盟友造成的伤害或移动速度，甚至还能复活盟友继续战斗。作为一名支援英雄，你就是团队存活的关键。</p>
             </div>
         </div>
@@ -1575,4 +1591,28 @@ $('.conter-top a').click(function(e){
 })
 
 
+</script>
+<script>
+    window.onscroll=function(){
+        var wScrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        console.log(wScrollTop);
+        if(wScrollTop>=230){
+            $('[id="btn"]').show();
+        }else{
+            $('[id="btn"]').hide();
+        }
+
+    }
+    $('.blog-sidebar-box-lis li').click(function(e){
+
+        e.preventDefault();
+        var index=$(this).index();
+        var top=$('[data="blog-body"]').eq(index).offset().top;
+        $('body,html').animate({scrollTop:top},'fast');
+    })
+
+    $('[id="btn"]').click(function(e){
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},'fast');
+    })
 </script>
