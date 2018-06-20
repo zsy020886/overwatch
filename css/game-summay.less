@@ -15,6 +15,7 @@ body{
   font-size: 1.5rem;
   line-height: 1.4;
 }
+
 .rect(@w:200px,@h:200px,@bg:#ccc){
   width:@w;
   height:@h;
@@ -27,8 +28,10 @@ body{
   -ms-box-shadow:@arguments; /*IE */
   -o-box-shadow:@arguments; /*opera*/
 }
-.overview-section{
+.overview-section ,heroes-section,.role-section{
   border-bottom: 5px solid hsla(0,0%,100%,.5);
+  text-shadow: 1px 2px 3px rgba(51,51,51,.5);
+
 }
 .overview-section{
   position: relative;
@@ -37,7 +40,7 @@ body{
   background:url("../images/game/game-nav1.jpg");
   text-align: center;
   background-size: cover;
-  text-shadow: 1px 2px 3px rgba(51,51,51,.5);
+
 }
 .overview-cont{
   width: 100%;
@@ -70,6 +73,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: .08rem;
   font-style: italic;
 }
+h3 {
+  font: "microsoft yahei", impact, sans-serif;
+  font-size: 2.4rem;
+  line-height: normal;
+  letter-spacing: .1px;
+  font-style: italic;
+}
 .intro-text {
   line-height: 1.47;
   margin-bottom: 3.6rem;
@@ -81,9 +91,9 @@ h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
   margin-top: .5em;
 }
 .column-video{
-  .rect(100%,100%);
   position:relative;
   overflow:hidden;
+
 }
 .column .overwatch-trailer {
   max-width: 540px;
@@ -117,6 +127,12 @@ h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
   background-repeat: no-repeat;
   background-size: 13% auto;
 }
+a:hover{
+   color: #f9ab4f;
+}
+.column a:hover{
+  border:4px solid white;
+}
 .column-video img{
   position: absolute;
   width: 100%;
@@ -128,12 +144,647 @@ h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-.column-video-s{
-  .rect(1080,100%);
+.overview-video-s{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background: #040d15;
   position:absolute;
   top:0px;
-  left:0px;
+  left:135px;
   transition: all .5s;
+  z-index: 1000;
+  text-align:center;
+   //opacity: 0;
+.video-conter{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid rgba(0,195,255,.1);
+  background: rgba(3,12,21,.98);
+  .conter-top{
+    height: 15%;
+    padding: .5em 0 0;
+    border-bottom: 1px solid rgba(0,195,255,.1);
+    font-size: 12px;
+
+    div{
+      display:inline-block;
+      text-align: center;
+     font-size: 2.8em;
+     padding-bottom: .2em;
+     }
+   a {
+      display:inline-block;
+      .rect(36px,36px);
+      float: right;
+      margin:-3px 5px 0 0;
+      background: url("../images/game/x.png");
+      float: right;
+    }
+  }
+  .conter-conter{
+    height: 85%;
+    padding: 1em 0;
+    box-sizing: border-box;
+    position: relative;
+       video{
+         width: 100%;
+         height: 100%;
+       }
+  }
+}
+}
+// 第二部
+.heroes-section{
+  position: relative;
+  z-index: 2;
+  padding-bottom: 40px;
+
+ .heroes-conter{
+   text-align: center;
+   width: 100%;
+   max-width: 1250px;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+   box-sizing: border-box;
+   .grid{
+     padding: 0 2.2rem 0 2.2rem;
+     .heroes-img{
+       //#myimg{
+       //  display: none;
+       //}
+       .heroes-img-1 , .heroes-img-2{
+         width: 320px;
+         position: relative;
+         top: -40px;
+         margin-bottom: -40px;
+         max-width: 90%;
+       }
+       .u-center-block {
+         display: table;
+         margin-left: auto;
+         margin-right: auto;
+       }
+     }
+     .heroes-subtitle{
+       text-align: center;
+       color: #f0edf2;
+       max-width: 40em;
+       p{
+         font-size: inherit;
+         line-height: 1.6;
+         margin-bottom: 0;
+         text-rendering: optimizeLegibility;
+       }
+       p+p {
+         margin-top: 1em;
+       }
+     }
+     .button {
+       margin-top: 40px;
+       text-decoration: none;
+     }
+     .button:hover{
+       border-color: #ffb033;
+       background-color: #ffb033;
+       -webkit-transition: none;
+       transition: none;
+     }
+     .m-wide{
+       font-size: 2rem;
+       color: #fefefe;
+       padding: 7.5px 65px;
+     }
+   }
+ }
+}
+.u-pseudo-background:before,.heroes-section:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.heroes-section:before{
+  background-image: url(../images/game/2Fgame_teams_bg.jpg);
+}
+
+//第三部
+.role-section{
+  background-image: url(../images/game/game_roles_bg.jpg);
+  background-size: cover;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  .overview-cont{
+     .role-section-title{
+       margin-bottom: 5rem;
+       color: #f0edf2;
+       text-align: center;
+     }
+    .panels{
+      margin: 0 auto 30px;
+      text-align: center;
+      height: 595px;
+      max-width: 1700px;
+      box-shadow: 0 0 25px rgba(0,0,0,.5);
+      -webkit-transform: skew(-.25rad);
+      -ms-transform: skew(-.25rad);
+      transform: skew(-.25rad);
+      -webkit-transform: skew(-.25rad) perspective(1px) translate3d(0,0,0);
+      transform: skew(-.25rad) perspective(1px) translate3d(0,0,0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      .panel {
+        width: 25%;
+        height: 100%;
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0 -3px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        .panel-image{
+          width: 160%;
+          margin-left: -30%;
+          height: 100%;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: skew(.25rad);
+        }
+        .role-details{
+          position: absolute;
+          bottom: 0;
+          width: 102%;
+          margin-top: 15em;
+          display: block;
+          height: 270px;
+          background: rgba(255,255,255,.1);
+          text-align: center;
+          overflow: hidden;
+          .role-icon {
+            height: 115px;
+            width: 150px;
+            display: block;
+            margin: 50px auto 0;
+            background-size: auto 100%;
+            background-position: center center;
+            -webkit-transform: skew(.25rad);
+            -ms-transform: skew(.25rad);
+            transform: skew(.25rad);
+            vertical-align: middle;
+          }
+          .role-name {
+            display: block;
+            padding-left: 1em;
+            text-shadow: -0.5px -0.5px 1px rgba(234,89,247,.5), 0.5px 0.5px 1px rgba(0,228,230,.5);
+            color: rgba(255,255,255,.9);
+            -webkit-transform: skew(.25rad);
+            -ms-transform: skew(.25rad);
+            transform: skew(.25rad);
+          }
+        }
+      }
+      .panel-left .panel-image{
+        background:url('../images/game/game_roles_offense.jpg');
+      }
+      .panel-left .role-icon{
+        background:url('../images/game/2Frole-offense1.png');
+      }
+      .panel-conter-defense .panel-image{
+        background-image: url(../images/game/game_roles_defense.jpg);
+        background-position: 80% top;
+      }
+      .panel-conter-defense .role-icon{
+        background:url('../images/game/2Frole-defense2.png');
+      }
+      .panel-tank .panel-image{
+        background-image: url(../images/game/game_roles_tank.jpg);
+      }
+      .panel-tank .role-icon{
+        background:url('../images/game/2Frole-tank3.png');
+      }
+    .panel-support .panel-image{
+      background-image: url(../images/game/game_roles_support.jpg);
+     }
+      .panel-support .role-icon{
+        background:url('../images/game/2Frole-support4.png');
+      }
+    }
+  }
+}
+.btn, .button, button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  border-radius: 2px;
+  padding: 6px 45px;
+  text-transform: none;
+  border: none;
+  outline: 0;
+  border: 3px solid #ff9c00;
+  background-color: #ff9c00;
+  color: #333;
+  line-height: 1;
+  letter-spacing: .025em;
+  font-weight: 700;
+  font-size: 1.6rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  text-shadow: none;
+  text-decoration: none;
+}
+
+//第四部
+
+.maps-section{
+  background-image: url(../images/game/maps-section-new.jpg);
+  background-size: contain;
+  background-position: top;
+  background-color: #1f2224;
+  left: 0;
+  position: relative;
+  transition: left .25s ease-in-out;
+  border-bottom: 5px solid hsla(0,0%,100%,.5);
+  padding-top: 44px;
+  padding-bottom: 44px;
+  .maps-top{
+      width: 100%;
+      max-width: 1250px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    .maps-subtitle {
+      padding-bottom: 60px;
+      margin-top: 30px;
+    }
+  }
+  .maps-conter{
+    background-color: #314550;
+    color: #f0edf2;
+    .maps-conter-conter{
+      width: 100%;
+      max-width: 1250px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+         .maps-conter-row{
+
+           .map-type-icon {
+             width: 75px;
+             position: relative;
+             fill: #f0edf2;
+             stroke: #f0edf2;
+             stroke-width: 0;
+           }
+         }
+        .maps-conter-row:hover{
+          background-color: #476577;
+          cursor: pointer;
+      }
+    }
+  }
+}
+.maps-bottom{
+  width: 100%;
+  max-width: 1250px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.map-type-wrapper {
+  min-width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 346px;
+  flex: 1 1 346px;
+  border-bottom: 1px solid #476577;
+  padding: 20px 10px;
+  pointer-events: auto;
+  transition: background-color .1s linear;
+}
+.media-graphic {
+  float: left;
+  margin-right: 16px;
+}
+.map-type-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.media-graphic {
+  float: left;
+  margin-right: 16px;
+}
+.u-align-center {
+  text-align: center;
+}
+.u-limit-width {
+  max-width: 40em;
+}
+.u-center-block {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rows:after {
+  clear: both;
+}
+.h6{
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: normal;
+  letter-spacing: .5px;
+}
+.map-wrapper {
+  padding-bottom: 32px;
+  pointer-events: none;
+}
+.rows-r{
+  float: left;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.map.m-16-9 {
+  padding-top: 56.25%;
+}
+ .map {
+  background-size: cover;
+  display: block;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,.28);
+}
+.map-gradient {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 40%,rgba(0,0,0,.5));
+}
+.u-font-shadow {
+  text-shadow: 1px 2px 3px rgba(51,51,51,.5);
+}
+.map-name-wrapper {
+  position: absolute;
+  vertical-align: middle;
+  text-align: right;
+  bottom: 0;
+  width: 100%;
+  padding-right: 4%;
+  padding-bottom: 2%;
+}
+.map-category-container {
+  min-height: 60px;
+}
+.map-category {
+  padding-top: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #f0edf2;
+
+}
+.icon {
+  height: 24px;
+  fill: #f0edf2;
+  stroke: #f0edf2;
+  stroke-width: 0;
+}
+.u-invert {
+  color: #f0edf2;
+}
+
+.map-category-name {
+  padding-left: 6px;
+  padding-right: 14px;
+  font-size: 13px;
+}
+.map-category-icon svg {
+  width: 28.92px;
+}
+.map-flag {
+  height: 3.14vw;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+}
+.map-name {
+  font-style: italic;
+  font-size: 5vw;
+  font-family: Big Noodle Too,impact,sans-serif;
+  display: inline-block;
+  position: relative;
+  color: #f0edf2;
+}
+
+
+
+
+
+
+/*  end  */
+.ow-footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: 26px;
+  width: auto;
+  height: 358px;
+  z-index: 3;
+  font-size: 12px!important;
+  background: #202020;
+}
+.ow-footer a {
+  text-decoration: none;
+  padding-top: 5px;
+  color: #fff;
+  font-weight: 400;
+}
+/*    footer-top  */
+.footer-top{
+  width:1000px;
+  position: relative;
+  left:50%;
+  margin-left: -500px;
+  color: #fff;
+  z-index: 100;
+  font-size: 14px;
+  padding-top: 39px;
+}
+.footer-top-f{
+  float:left;
+  height: 25px;
+}
+.footer-top-f a{
+  padding-top:5px;
+  margin-right: 37px;
+  color: white;
+}
+.footer-top-f a:first-child i{
+  background-position: -96px 0;
+}
+.footer-top-f i{
+  display:inline-block;
+  width:24px;
+  height:24px;
+  margin-right: 10px;
+  position: relative;
+  background: url(../images/game/Fsprite-24-blue.png);
+  vertical-align: middle;
+  top: -2px;
+}
+
+.footer-top-f a:nth-child(2) i{
+  background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i{
+  background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+  clear: both;
+  padding-top: 51px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: 0 auto 8px;
+  text-align: left;
+  width: 1000px;
+}
+
+.logo_bz{
+  display: inline-block;
+  width: 140px;
+  height: 80px;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 0;
+  position: relative;
+  top: 4px;
+  box-sizing: border-box;
+  background: url("../images/game/foot-1.png")no-repeat 0 0;;
+}
+
+.logo_bz+a{
+  display: inline-block;
+  background: url("../images/game/foot-2.png") no-repeat 0 0;
+  width: 125px;
+  height: 38px;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: relative;
+  top: 39px;
+  left: -3px;
+  margin: 0;
+}
+
+.info {
+  display: inline-block;
+  color: rgba(255,255,255,.5);
+  width: 706px;
+  float: right;
+  text-align: left;
+  padding: 0 0 0 73px;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+}
+.info a{
+  color: rgba(255,255,255,.5);
+}
+.info ul{
+  margin: 0 0 3px -10px;
+  padding: 0 0 5px;
+  overflow: hidden;
+}
+.info ul li{
+  float:left;
+}
+.info ul li a{
+  color: #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.info p{
+  line-height: 20px;
+  vertical-align: top;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+}
+.info p:last-child{
+  padding: 8px 0;
+  position: relative;
+
+}
+.info p:last-child a{
+  margin-right:5px;
+}
+.integrity a:first-child{
+  position: relative;
+  top:-1px;
+}
+.integrity a:nth-child(2){
+  position: relative;
+  top:-1px;
+}
+.integrity a:nth-child(3){
+  position: relative;
+  top:-1px;
+}
+#btn {
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  padding: 0;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,.25);
+  color: #000;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 501;
+  display: none;
+  cursor: pointer;
+}
+/*   foot - bottom */
+
+.footer-bottom{
+  color: rgba(255,255,255,.3);
+  text-align: center;
+  clear: both;
+  position: relative;
+  font-size: 12px;
+
+}
+.footer-bottom p{
+  line-height: 20px;
 }
 
 /* 栅格系统*/
@@ -144,6 +795,11 @@ h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
   box-sizing: border-box;
 }
 .grid:before,.grid:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.rows:before,.rows:after{
   content: "";
   display: table;
   clear: both;
@@ -183,6 +839,9 @@ h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
 }
 .col-xs-1 {
   width: 8.33333333%;
+}
+.xs-12 {
+  width: 100%;
 }
 @media (min-width: 768px) {
 
@@ -311,27 +970,153 @@ body {
   .h2, h2 {
     font-size: 5.6rem;
   }
+  .h4, h4 {
+    font-size: 3.2rem;
+  }
+  .data-table>thead th, .h5, .intro-text, h5 {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 400px){
+  .m-sm{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .heroes-conter .grid .heroes-img #myimgt{
+    display: none;
+  }
 }
 @media only screen and (min-width: 768px){
   .overview-section{
     background:url("../images/game/game-nav1.jpg");
     padding-bottom: 200px;
-
+    background-size: cover;
   }
   .overview-cont{
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .heroes-left{
+    background-image: url(../images/game/game_teams_left.png);
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: calc(100% + 60px);
+    width: 60%;
+    background-position: left bottom;
+    background-size: auto 100%;
+    z-index: -1;
+  }
+  .heroes-right{
+    background-image: url(../images/game/game_teams_right.png);
+    position: absolute;
+    right: 0;
+    top: -60px;
+    height: calc(100% + 60px);
+    width: 50%;
+    background-position: left bottom;
+    background-size: auto 100%;
+    z-index: -1;
+  }
+  .heroes-section .heroes-conter{
+     padding-left: 30px;
+     padding-right: 30px;
+    box-sizing: border-box;
+   }
+  .heroes-conter .grid .heroes-img   #myimg{
+    display: none;
+  }
+  .heroes-subtitle{
+    font-size: 2.2rem;
+  }
+  .maps-top, .maps-bottom, maps-conter-conter{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .u-font-large {
+    font-size: 2.2rem;
+  }
+  .maps-conter{
+    margin-bottom: 24px;
+    background-color: rgba(49,69,80,.65);
+  }
+  .maps-conter-conter-s{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .map-type-wrapper{
+    padding: 20px 20px 20px 10px;
+    border-bottom: none;
+    min-width: 325px;
+    width: 50%;
+    cursor: pointer;
+}
+  .map-flag {
+    height: 1.82vw;
+  }
+  .map-name {
+    font-size: 2.5vw;
   }
 }
 @media only screen and (min-width: 992px){
   .overview-section{
     text-align: left;
   }
-.overwatch-trailer {
+  .overwatch-trailer {
   margin-right: 30px;
   margin-bottom: 0;
 }
-
+  .role-section{
+   padding-top: 80px;
+   padding-bottom: 80px;
+ }
+  .maps-section {
+   background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+ }
+  .map-flag {
+    height: 17px;
+  }
+   .map-name {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 960px){
+  .info{
+    display: block;
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .info .clearFix{
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 1280px){
+  .map-type-wrapper{
+    max-width: 33.33%;
+  }
+  .map-name {
+    font-size: 24px;
+  }
 }
 @media only screen and (min-width: 1300px){
   .overview-section{
@@ -339,6 +1124,20 @@ body {
   }
   .h2, h2 {
     font-size: 7.2rem;
+  }
+  .h4, h4 {
+    font-size: 4.8rem;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .role-section:not(li) .role-descriptions {
+    margin-left: -3%;
+    margin-right: 5%;
+  }
+}
+@media screen and (min-width: 48em) {
+  .md-6 {
+    width: 50%;
   }
 }
 @media screen and (min-width: 62em) {
@@ -354,4 +1153,8 @@ body {
     padding-left: 2.2rem;
     padding-right: 2.2rem;
   }
+  .lg-4 {
+    width: 33.33333%;
+  }
 }
+
