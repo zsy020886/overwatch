@@ -19,7 +19,12 @@ body {
 }
 .overview-section,
 heroes-section,
-.role-section {
+.role-section,
+.abilities-section,
+.match-section,
+.progress-section,
+.game-modes-section,
+.friends-section {
   border-bottom: 5px solid rgba(255, 255, 255, 0.5);
   text-shadow: 1px 2px 3px rgba(51, 51, 51, 0.5);
 }
@@ -92,6 +97,13 @@ h4 + p,
 h5 + p,
 h6 + p {
   margin-top: .5em;
+}
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: 2em;
 }
 .column-video {
   position: relative;
@@ -585,6 +597,270 @@ button {
   position: relative;
   color: #f0edf2;
 }
+.abilities-section {
+  background-size: cover;
+  background-position: center;
+  color: #f0edf2;
+  position: relative;
+}
+h5 {
+  margin: 0;
+}
+h5 + p {
+  margin-bottom: 0;
+}
+p + p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+p + h5 {
+  margin-top: 2em;
+}
+p {
+  font-size: inherit;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+}
+.video-background {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+.abilities-section:not(li) .video-background-wrapper {
+  height: 1080px;
+  min-height: 100%;
+}
+.video-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.video-background-wrapper > .video-background-vid {
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.video-background-wrapper > .m-right-align {
+  right: 0;
+  left: auto;
+}
+.abilities-section:not(li) .video-background-vid > video {
+  min-height: 100%;
+  min-width: 100%;
+}
+.abilities-content {
+  margin-top: 60px;
+}
+.video-background-vid.m-blend:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  top: -160px;
+  background-image: -webkit-linear-gradient(top, rgba(240, 237, 242, 0) 0, #f0edf2 100%);
+  background-image: linear-gradient(to bottom, rgba(240, 237, 242, 0) 0, #f0edf2 100%);
+}
+.match-section {
+  background: url("../images/game/FbacFbg-howtoplay.jpg");
+  background-size: cover;
+  background-position: center;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  color: #f0edf2;
+}
+.match-section p {
+  margin-bottom: 0;
+}
+.match-section h6 {
+  margin-bottom: 0;
+}
+.match-section:not(li) .side-tips-section {
+  margin-top: 2em;
+  background-color: rgba(40, 53, 79, 0.9);
+  text-shadow: none;
+}
+.match-section:not(li) .side-tips-section-content {
+  padding: 1.4em;
+}
+.progress-section {
+  overflow: hidden;
+  background-color: #17121d;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+.progress-section h2 {
+  margin-bottom: 0;
+}
+.progress-section p {
+  margin-bottom: 0;
+}
+.progress-section .progress-bg {
+  position: relative;
+  float: none;
+  right: 50%;
+}
+.progress-section .progress-bg img {
+  position: relative;
+  right: -50%;
+  margin-top: -14%;
+  margin-bottom: -17%;
+}
+.progress-section .progress-content {
+  margin-top: 20px;
+}
+.progress-section .progress-description {
+  max-width: 70em;
+}
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+.progress-section:not(li) .achievement-image {
+  margin-top: -4em;
+}
+.progress-section:not(li) .achievement-description {
+  text-align: left;
+  margin-top: 4em;
+  padding-left: 5em;
+}
+.progress-section:not(li) .loot-image > img {
+  height: 200px;
+  position: relative;
+  bottom: 10px;
+  right: 60px;
+}
+.progress-section:not(li) .achievement-image > img {
+  height: 400px;
+  left: -100px;
+  position: relative;
+  max-width: none;
+}
+.game-modes-section {
+  background-image: url(../images/game/2Fbg-gameModes7.jpg);
+  background-size: cover;
+  background-position: 50%;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+.game-modes-section h2 {
+  margin-bottom: 0;
+}
+.game-modes-section .game-modes-subtitle {
+  margin-bottom: 3em;
+}
+.game-modes-section .game-mode-items {
+  max-width: 860px;
+}
+.game-modes-section .game-modes-item.practice {
+  background-image: url(../images/game/game-modes1.jpg);
+}
+.game-modes-section .game-modes-item.ai {
+  background-image: url(../images/game/game-modes2.jpg);
+}
+.game-modes-section .game-modes-item.quick {
+  background-image: url(../images/game/game-modes3.jpg);
+}
+.game-modes-section .game-modes-item.custom {
+  background-image: url(../images/game/game-modes4.jpg);
+}
+.game-modes-section .game-modes-item.arcade {
+  background-image: url(../images/game/game-modes5.jpg);
+}
+.game-modes-section .game-modes-item.competitive {
+  background-image: url(../images/game/game-modes6.jpg);
+}
+.game-modes-section .game-modes-item {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  width: 248px;
+  height: 400px;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  background-size: contain;
+}
+.game-modes-section .game-modes-item .container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 186px;
+  padding: 10px;
+  text-align: center;
+  color: #2e3c51;
+  text-shadow: none;
+  background-color: #fff;
+}
+.game-modes-section .game-modes-item .container .btn {
+  width: 100%;
+  margin-top: 18px;
+}
+.game-modes-section .game-modes-item .container .btn.m-sm {
+  font-size: 1.28rem;
+  border-width: 1px;
+}
+.game-modes-section .game-modes-item .container .btn:hover {
+  border-color: #ffb033;
+  background-color: #ffb033;
+  -webkit-transition: none;
+  transition: none;
+}
+.game-modes-section .game-modes-item .game-modes-item-icon {
+  height: 36px;
+}
+.game-modes-section .game-modes-item .game-modes-item-title {
+  font-size: 3.2rem;
+}
+.game-modes-section .game-modes-item h4 {
+  margin-bottom: 0;
+  line-height: normal;
+  font-style: italic;
+}
+.game-modes-section .game-modes-item h4 + p {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #9f9f9f;
+}
+.friends-section {
+  background-color: #2d374f;
+  position: relative;
+}
+.friends-section .fg-hanzo-genji {
+  display: none;
+  position: absolute;
+  left: calc(50% - 560px);
+  height: calc(100% + 60px);
+  bottom: 0;
+}
+.friends-section .friends-section-content {
+  float: right;
+  width: 58.33333%;
+  padding: 2.4em;
+}
+.friends-section .friends-section-content h4 {
+  margin-bottom: 0;
+  line-height: normal;
+  font-style: italic;
+  color: #f0edf2;
+}
+.friends-section .friends-section-content .gray-blue {
+  color: #9daac8;
+}
+.friends-section .friends-section-content .gray-blue P:first-child {
+  margin: 0;
+}
 /*  end  */
 .ow-footer {
   margin: 0;
@@ -778,6 +1054,12 @@ button {
   display: table;
   clear: both;
 }
+.overview-cont:before,
+.overview-cont:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .col-xs-12 {
   width: 100%;
 }
@@ -950,6 +1232,15 @@ button {
   h5 {
     font-size: 2.4rem;
   }
+  .match-section-title {
+    margin-bottom: 60px;
+  }
+  h6 {
+    font-size: 1.8rem;
+  }
+  .progress-section:not(li) .loot-description {
+    padding-right: 5em;
+  }
 }
 @media only screen and (max-width: 400px) {
   .m-sm {
@@ -1049,6 +1340,18 @@ button {
   .map-name {
     font-size: 2.5vw;
   }
+  .progress-section:not(li) .progress-bg > img {
+    right: -25%;
+    max-width: 150%;
+    margin-top: -13%;
+    margin-bottom: -6%;
+  }
+  .game-modes-section:not(li) {
+    padding-bottom: 100px;
+  }
+  .friends-section .fg-hanzo-genji {
+    display: block;
+  }
 }
 @media only screen and (min-width: 992px) {
   .overview-section {
@@ -1058,7 +1361,11 @@ button {
     margin-right: 30px;
     margin-bottom: 0;
   }
-  .role-section {
+  .role-section,
+  .video-background,
+  .match-section,
+  .progress-section,
+  .game-modes-section {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -1072,6 +1379,9 @@ button {
   }
   .map-name {
     font-size: 2vw;
+  }
+  .friends-section .fg-hanzo-genji {
+    left: calc(50% - 495px);
   }
 }
 @media only screen and (max-width: 960px) {
@@ -1117,6 +1427,15 @@ button {
   .md-6 {
     width: 50%;
   }
+  .hide-for-md {
+    display: none!important;
+  }
+  .md-8 {
+    width: 66.66667%;
+  }
+  .md-4 {
+    width: 33.33333%;
+  }
 }
 @media screen and (min-width: 62em) {
   .lg-push-6 {
@@ -1134,5 +1453,8 @@ button {
   }
   .lg-4 {
     width: 33.33333%;
+  }
+  .lg-6 {
+    width: 50%;
   }
 }
