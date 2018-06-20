@@ -604,16 +604,26 @@ position: relative;
         width: 100%;
     }
 }
+
+
+
 @media only screen and (max-width: 960px){
-    .info{
+   .ow-footer .footer-center #infos{
         display: block;
         float: none;
         width: 90%;
         margin: 0 auto;
         padding: 0;
     }
-    .info .clearFix{
+    .footer-center  .info .clearFix{
         padding: 0px;
+    }
+    .footer-center .footer-info{
+        display: block;
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
     }
 }
 
