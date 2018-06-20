@@ -511,7 +511,6 @@ position: relative;
     }
 }
 @media (min-width: 992px) {
-
     .col-md-12 {
         width: 100%;
     }
@@ -604,9 +603,6 @@ position: relative;
         width: 100%;
     }
 }
-
-
-
 @media only screen and (max-width: 960px){
    .ow-footer .footer-center #infos{
         display: block;
@@ -617,13 +613,6 @@ position: relative;
     }
     .footer-center  .info .clearFix{
         padding: 0px;
-    }
-    .footer-center .footer-info{
-        display: block;
-        float: none;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0;
     }
 }
 
