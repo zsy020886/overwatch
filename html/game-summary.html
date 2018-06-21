@@ -1290,18 +1290,18 @@
 <script src="../bootstrap/js/jquery-1.11.3.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
-
+    var videos=document.getElementsByTagName('video')[0];
     $('.overwatch-trailer').click(function(e) {
            e.preventDefault();
-        $('.overview-video-s').show();
+        // $('.overview-video-s').show();
           $('.overview-video-s').css(
               {
                   'height':'100%',
                   'width':'80%',
           });
-          var videos=document.getElementsByTagName('video')[0];
+
           console.log(videos);
-            videos.load();
+            // videos.load();
             videos.play();
     })
 
@@ -1314,7 +1314,8 @@ $('.conter-top a').click(function(e){
         });
     });
 
-    $('.overview-video-s').show(10);
+    $('.overview-video-s').show(1);
+    videos.load();
 
 })
 
