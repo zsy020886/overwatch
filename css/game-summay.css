@@ -287,6 +287,7 @@ a:hover {
   background-size: cover;
   padding-top: 44px;
   padding-bottom: 44px;
+  overflow: hidden;
 }
 .role-section .overview-cont .role-section-title {
   margin-bottom: 5rem;
@@ -383,6 +384,39 @@ a:hover {
 .role-section .overview-cont .panels .panel-support .role-icon {
   background: url('../images/game/2Frole-support4.png');
 }
+.role-section:not(li) .role-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.offense-icon {
+  background-image: url(../images/game/2Frole-offense1.png);
+  background-size: contain;
+  padding: 24px;
+  display: inline-block;
+}
+.support-icon {
+  background-image: url(../images/game/2Frole-support4.png);
+  background-size: contain;
+  padding: 24px;
+  display: inline-block;
+}
+.tank-icon {
+  background-image: url(../images/game/2Frole-tank3.png);
+  background-size: contain;
+  padding: 24px;
+  display: inline-block;
+}
+.support-icon {
+  background-image: url(../images/game/2Frole-support4.png);
+  background-size: contain;
+  padding: 24px;
+  display: inline-block;
+}
+.role-section:not(li) .role-title {
+  color: #f0edf2;
+  display: inline-block;
+  vertical-align: middle;
+}
 .btn,
 .button,
 button {
@@ -429,33 +463,56 @@ button {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 .maps-section .maps-top .maps-subtitle {
   padding-bottom: 60px;
   margin-top: 30px;
 }
-.maps-section .maps-conter {
+.maps-conter {
   background-color: #314550;
   color: #f0edf2;
 }
-.maps-section .maps-conter .maps-conter-conter {
+.maps-conter .maps-conter-conter {
   width: 100%;
   max-width: 1250px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
-.maps-section .maps-conter .maps-conter-conter .maps-conter-row .map-type-icon {
+.maps-conter .maps-conter-conter .maps-conter-row .map-type-icon {
   width: 75px;
   position: relative;
   fill: #f0edf2;
   stroke: #f0edf2;
   stroke-width: 0;
 }
-.maps-section .maps-conter .maps-conter-conter .maps-conter-row:hover {
+.maps-conter .maps-conter-conter .maps-conter-row:hover {
   background-color: #476577;
   cursor: pointer;
+}
+.map-type-nav-arrow {
+  background-image: url(../images/game/mage-map-nav-arrows-new.png);
+  background-position-y: -410px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 24px;
+  height: 38px;
+}
+.flex-item {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+  align-self: auto;
 }
 .maps-bottom {
   width: 100%;
@@ -743,6 +800,9 @@ p {
   position: relative;
   max-width: none;
 }
+img {
+  max-width: 100%;
+}
 .game-modes-section {
   background-image: url(../images/game/2Fbg-gameModes7.jpg);
   background-size: cover;
@@ -861,6 +921,71 @@ p {
 .friends-section .friends-section-content .gray-blue P:first-child {
   margin: 0;
 }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+}
+li {
+  font-size: inherit;
+}
+.nav-right {
+  position: relative;
+  z-index: 100;
+}
+.nav-right .nav-ul {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.nav-right .nav-ul .sub-nav-item {
+  left: 100%;
+  margin-left: -3.6rem;
+}
+.nav-right .sub-nav-btn {
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+.nav-right .sub-nav-icon {
+  display: inline-block;
+  padding: .5rem;
+  height: 100%;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  font-size: 3.6rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-position: 0 -1em;
+  border-radius: .3rem 0 0 .3rem;
+  background-size: 1em 2em;
+  fill: #f0edf2;
+  opacity: .8;
+  box-sizing: border-box;
+}
+.nav-right .sub-nav-text {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .3em 1.2em;
+  font-family: "Open Sans", "microsoft yahei", sans-serif;
+  font-size: 1.09rem;
+  text-transform: none;
+  font-weight: 700;
+  color: #f0edf2;
+}
+.nav-right .sub-nav-item.active,
+.nav-right .sub-nav-item:hover {
+  background-color: #00c3ff;
+}
+.nav-right .sub-nav-item {
+  display: block;
+  position: relative;
+  margin-bottom: .1em;
+  background-color: #3c4860;
+  border-radius: .3rem;
+}
 /*  end  */
 .ow-footer {
   margin: 0;
@@ -872,6 +997,7 @@ p {
   z-index: 3;
   font-size: 12px!important;
   background: #202020;
+  overflow: hidden;
 }
 .ow-footer a {
   text-decoration: none;
@@ -928,6 +1054,7 @@ p {
   margin: 0 auto 8px;
   text-align: left;
   width: 1000px;
+  box-sizing: border-box;
 }
 .logo_bz {
   display: inline-block;
@@ -1251,6 +1378,31 @@ p {
   .heroes-conter .grid .heroes-img #myimgt {
     display: none;
   }
+  .friends-section .friends-section-content {
+    width: 100%;
+  }
+  .progress-section:not(li) .loot-image {
+    display: none;
+  }
+  .progress-section:not(li) .achievement-image {
+    display: none;
+  }
+  .progress-section:not(li) .achievement-description {
+    padding-left: 12px;
+    margin-top: 3em;
+  }
+  .maps-bottom {
+    padding-top: 70px;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: #1f2224;
+    overflow: scroll;
+    left: 100vw;
+    z-index: 95;
+  }
 }
 @media only screen and (min-width: 768px) {
   .overview-section {
@@ -1383,6 +1535,11 @@ p {
   .friends-section .fg-hanzo-genji {
     left: calc(50% - 495px);
   }
+  .nav-right .nav-ul .sub-nav-item:hover {
+    margin-left: -100%;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
 }
 @media only screen and (max-width: 960px) {
   .info {
@@ -1423,6 +1580,34 @@ p {
     margin-right: 5%;
   }
 }
+@media only screen and (max-width: 1300px) {
+  .role-section:not(li) .role-descriptions {
+    margin-left: -5%;
+    margin-right: 10%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .role-section:not(li) .role-descriptions {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .role-section:not(li) .role-descriptions {
+    margin: 0;
+    margin-left: 2em;
+  }
+  .match-section:not(li) {
+    background: url("../images/game/FbacFbg-howtoplay.jpg") no-repeat;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-size: contain;
+    background-position: top;
+    padding-top: 50%;
+  }
+  .overview-cont-l {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
 @media screen and (min-width: 48em) {
   .md-6 {
     width: 50%;
@@ -1446,6 +1631,9 @@ p {
     position: relative;
     left: -50%;
   }
+  .lg-6 {
+    width: 50%;
+  }
   .column,
   .columns {
     padding-left: 2.2rem;
@@ -1456,5 +1644,48 @@ p {
   }
   .lg-6 {
     width: 50%;
+  }
+  .lg-3 {
+    width: 25%;
+  }
+  .hide-for-lg {
+    display: none!important;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .role-section .overview-cont .panels {
+    -webkit-transform: skew(0);
+    -ms-transform: skew(0);
+    transform: skew(0);
+    height: 398px;
+  }
+  .role-section .overview-cont .panels .panel .role-details .role-icon {
+    width: 90px;
+    height: 80px;
+    margin: 30px auto 10px;
+    -webkit-transform: skew(0);
+    -ms-transform: skew(0);
+    transform: skew(0);
+  }
+  .role-section .overview-cont .panels .panel .role-details {
+    height: 200px;
+  }
+  .role-section .overview-cont .panels .panel {
+    display: inline-block;
+    height: 400px;
+    margin: -1px;
+    width: 24%;
+  }
+}
+@media only screen and (max-width: 47.5em) {
+  .role-section .overview-cont .panels .panel {
+    width: 40%;
+    height: 200px;
+  }
+  .show-for-md {
+    display: none!important;
+  }
+  .nav-right {
+    display: none!important;
   }
 }
