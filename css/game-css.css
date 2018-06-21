@@ -614,6 +614,9 @@ position: relative;
     .footer-center  .info .clearFix{
         padding: 0px;
     }
+    .footer-center {
+        width: 100%;
+    }
 }
 
 
