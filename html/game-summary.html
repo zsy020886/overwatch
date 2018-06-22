@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="../css/game-summay.css">
 </head>
-
 <body>
 <div class="overview-video-s" >
     <div class="video-conter">
@@ -1324,29 +1323,6 @@ $('.conter-top a').click(function(e){
 
 </script>
 <script>
-    window.onscroll=function(){
-        var wScrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-        // console.log(wScrollTop);
-        if(wScrollTop>=230){
-            $('[id="btn"]').show();
-        }else{
-            $('[id="btn"]').hide();
-        }
-
-    }
-    $('.blog-sidebar-box-lis li').click(function(e){
-        e.preventDefault();
-        var index=$(this).index();
-        var top=$('[data="blog-body"]').eq(index).offset().top;
-        $('body,html').animate({scrollTop:top},'fast');
-    });
-
-    $('[id="btn"]').click(function(e){
-        e.preventDefault();
-        $('body,html').animate({scrollTop:0},'fast');
-    })
-</script>
-<script>
     var falst=0;
 
     $('.nav-ul li').on('click',function(){
@@ -1366,6 +1342,11 @@ $('.conter-top a').click(function(e){
     window.onscroll=function(){
         if(falst==0) {
             var windeoTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if(windeoTop>=230){
+                $('[id="btn"]').show();
+            }else{
+                $('[id="btn"]').hide();
+            }
             $('section').each(function (index) {
                 if (windeoTop >= $(this).offset().top-10) {
                     $('.nav-ul li').removeClass('active').eq(index).addClass('active');
@@ -1373,4 +1354,8 @@ $('.conter-top a').click(function(e){
             })
         }
     }
+    $('[id="btn"]').click(function(e){
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},'fast');
+    })
 </script>
