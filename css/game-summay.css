@@ -40,6 +40,14 @@ heroes-section,
   text-align: center;
   background-size: cover;
 }
+.overview-section h1 {
+  margin: 0;
+}
+.overview-section .grid {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
 .overview-cont {
   width: 100%;
   max-width: 1250px;
@@ -48,6 +56,10 @@ heroes-section,
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+}
+.overview-cont h1 + p {
+  margin-bottom: 42.3px;
+  margin-top: 13px;
 }
 .column-video-s {
   width: 100%;
@@ -990,6 +1002,9 @@ li {
   font-weight: 700;
   color: #f0edf2;
 }
+.nav-right .sub-nav-icon * {
+  fill: #f0edf2;
+}
 .nav-right .sub-nav-item.active,
 .nav-right .sub-nav-item:hover {
   background-color: #00c3ff;
@@ -1192,12 +1207,6 @@ li {
 }
 .rows:before,
 .rows:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.overview-cont:before,
-.overview-cont:after {
   content: "";
   display: table;
   clear: both;
@@ -1533,7 +1542,7 @@ li {
   .overview-section {
     text-align: left;
   }
-  .overwatch-trailer {
+  .column .overwatch-trailer {
     margin-right: 30px;
     margin-bottom: 0;
   }
