@@ -46,6 +46,59 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #141516;
     padding-top: 140px;
 }
+/*导航 开始*/
+/* .navbars {
+     position: fixed;
+     top: 44px;
+     width: 100%;
+     display: block;
+     z-index: 97;
+     height: 100px;
+}
+ .box{
+
+     background-color: rgba(40,53,79,.9);
+     z-index: 96;
+      overflow: hidden;
+ }
+.nav-left-a{
+    width: 58px;
+    height: 58px;
+    display: inline-block;
+   background: url('../images/game/nav-logo-sm.png') no-repeat    center center;
+    float:left;
+}
+.navbars-top-con li{
+    float:left;
+}
+.nav-right{
+    float:right;
+    background:#f7931e;
+
+}
+.nav-right a{
+    font-weight: 700;
+}
+.nav-right .nav-btn {
+    display: inline-block;
+    border-bottom: 0 solid transparent;
+    padding: 24px 15px 22px;
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "microsoft yahei",arial,sans-serif;
+    text-transform: none;
+    color: rgba(255,255,255,.85);
+    min-width: auto;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: .05em;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}*/
+/*导航 结束*/
 .clearfix {
     display: block;
 }
@@ -472,7 +525,9 @@ position: relative;
     width: 8.33333333%;
 }
 @media (min-width: 768px) {
-
+    .box{
+        margin: 20px 20px 0;
+    }
     .col-sm-12 {
         width: 100%;
     }
@@ -549,7 +604,16 @@ position: relative;
     }
 }
 @media screen and (min-width: 1200px ){
-
+    .nav-left-a{
+        width: 245px;
+        height: 62px;
+        background: url('../images/game/nav-logo-sm.png') no-repeat    center center;
+    }
+    .nav-right .nav-btn {
+        font-size: 1.6rem;
+        min-width: 99px;
+        padding: 24px 0 22px;
+    }
     .col-lg-12 {
         width: 100%;
     }
