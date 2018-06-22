@@ -44,6 +44,14 @@ body{
   background:url("../images/game/game-nav1.jpg");
   text-align: center;
   background-size: cover;
+  h1{
+    margin: 0;
+  }
+  .grid{
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
@@ -55,6 +63,10 @@ body{
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+  h1+p{
+     margin-bottom: 42.3px;
+    margin-top: 13px;
+  }
 }
 .column-video-s{
   width:100%;
@@ -1014,6 +1026,9 @@ li {
     //opacity: .5;
   }
 }
+.nav-right .sub-nav-icon * {
+  fill: #f0edf2;
+}
 .nav-right .sub-nav-item.active,.nav-right .sub-nav-item:hover{
   background-color: #00c3ff;
 
@@ -1228,11 +1243,11 @@ li {
   display: table;
   clear: both;
 }
-.overview-cont:before,.overview-cont:after{
-  content: "";
-  display: table;
-  clear: both;
-}
+//.overview-cont:before,.overview-cont:after{
+//  content: "";
+//  display: table;
+//  clear: both;
+//}
 .col-xs-12 {
   width: 100%;
 }
@@ -1563,7 +1578,7 @@ body {
     text-align: left;
   }
 
-  .overwatch-trailer {
+  .column .overwatch-trailer {
   margin-right: 30px;
   margin-bottom: 0;
 }
