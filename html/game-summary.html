@@ -1315,9 +1315,9 @@ $('.conter-top a').click(function(e){
         });
     });
 
-    $('.overview-video-s').show(1);
-    videos.load();
-
+    $('.overview-video-s').show(1,function(){
+        videos.load();
+    });
 })
 
 
