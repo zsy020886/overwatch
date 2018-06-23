@@ -1726,3 +1726,361 @@ li {
     display: none!important;
   }
 }
+/*导航 开始*/
+.navbars {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(2, 25, 72, 0.3);
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+  z-index: 10000;
+}
+.box {
+  height: 40px;
+}
+.nav-left-a {
+  height: 40px;
+  width: 61.82px;
+  display: inline-block;
+  background: url('../images/game/nav-Ficon-sprite.png') no-repeat -18px -75px;
+  float: left;
+}
+.navbars-top-con li {
+  float: left;
+  position: relative;
+}
+.Navbar-poster {
+  width: calc(12.5% - 17.5px);
+  position: relative;
+  display: inline-block;
+  height: 180px;
+  min-width: 0;
+  max-width: none;
+  overflow: hidden;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.1);
+  margin: 15px 20px 15px 0;
+  font-size: 0;
+  transition: border-color 0.2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.Navbar-poster .Navbar-posterImage {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 180px;
+  width: 216px;
+  -webkit-filter: brightness(100%) contrast(100%);
+  filter: brightness(100%) contrast(100%);
+  transition: -webkit-filter 0.2s;
+  transition: filter .2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+.Navbar-poster:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+}
+.Navbar-poster-div {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.Navbar-poster:hover .Navbar-poster-div {
+  opacity: 1;
+}
+.nav-left-son-div {
+  width: 100%;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
+.nav-bottom {
+  background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35, 0.95) 100%);
+  border: solid 1px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+  /*opacity: 0;*/
+  display: none;
+  box-sizing: border-box;
+  transition: all .4s;
+}
+.nav-bottom-1 {
+  height: 278px;
+}
+.Navbar-poster:last-child {
+  margin-right: 0;
+}
+.Navbar-esport-sub {
+  width: 2px;
+}
+.Navbar-esport-sub {
+  width: 2px;
+  opacity: 0;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  vertical-align: top;
+  max-width: 100px;
+  background-color: #151a23;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all .4s ease;
+}
+.Navbar-esport-sub .Navbar-esport-link {
+  display: block;
+  width: 100px;
+  margin: -6px 0;
+  text-align: center;
+}
+.Navbar-esport-sub .Navbar-esport-link img {
+  width: 100%;
+}
+.center-block .Navbar-esport:hover,
+.center-block .animation-delay-3 {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.Navbar-esportLabel {
+  padding: 5px 20px 18px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: inherit;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+.Navbar-esport {
+  padding: 20px 0;
+  font-size: 15px;
+}
+.Navbar-esport {
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  width: 16vw;
+  max-width: 192px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.nav-bottom-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px rgba(255, 255, 255, 0.15);
+  border-right: solid 1px rgba(255, 255, 255, 0.15);
+  background-color: #283244;
+  opacity: .95;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: center;
+}
+.nav-bottom-top-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: solid 1px transparent;
+  background-color: #151a23;
+}
+.nav-left-son-box {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+}
+.nav-bottom-1 .nav-left-son-box {
+  padding: 0 30px;
+}
+.Navbar-posterImage {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 180px;
+  width: 216px;
+  -webkit-filter: brightness(100%) contrast(100%);
+  filter: brightness(100%) contrast(100%);
+  transition: -webkit-filter 0.2s;
+  transition: filter .2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
+}
+.nav-left {
+  height: 40px;
+  float: left;
+}
+.nav-left ul {
+  height: 40px;
+  margin: 0;
+}
+.nav-left a,
+.nav-right a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 40px;
+  text-decoration: none;
+}
+.nav-left a:hover,
+.nav-right a:hover {
+  /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
+  color: #fff;
+  text-decoration: none;
+}
+.nav-left .active {
+  text-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+.nav-left span,
+.nav-right span {
+  width: 14px;
+  height: 7px;
+  display: inline-block;
+  background: url('../images/game/nav-Ficon-sprite.png') no-repeat -147px -131px;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+.nav-right {
+  float: right;
+}
+.nav-right a {
+  float: left;
+}
+.nav-right-div {
+  display: inline-block;
+}
+.nav-right .nav-btn {
+  display: inline-block;
+  border-bottom: 0 solid transparent;
+  padding: 24px 15px 22px;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 1.2rem;
+  font-family: "microsoft yahei", arial, sans-serif;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.85);
+  min-width: auto;
+  text-align: center;
+  text-shadow: none;
+  letter-spacing: .05em;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+/*                 */
+.nav_head {
+  width: 100%;
+  max-width: 20em;
+  position: fixed;
+  right: 30px;
+  background: #35404f;
+  border-right: 2px solid #383d49;
+  border-bottom: 2px solid #383d49;
+  display: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.nav_head > a {
+  width: 80%;
+  height: 40px;
+  background: #0e86ca;
+  margin: 30px auto;
+  display: block;
+  border: solid 1px #00aeff;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.nav_head > a:hover {
+  background: #00aeff;
+}
+.bg1 {
+  width: 1.5em;
+  height: 1.5em;
+  background: url('../images/game/nav-Ficon-sprite.png') -141px -9px;
+  display: inline-block;
+}
+.bg2 {
+  width: 1.5em;
+  height: 1.5em;
+  background: url('../images/game/nav-Ficon-sprite.png') -198px -16px;
+}
+.li11 {
+  border-top: 2px solid #929191;
+  padding: 10px 40px;
+}
+.li11:hover {
+  background: #252b36;
+}
+.btn11:hover {
+  background: #00aeff;
+}
+.li11 {
+  color: #cccccc;
+}
+.li11:hover {
+  color: white;
+}
+@media (min-width: 768px) {
+  .box {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 992px) {
+  .navbars {
+    display: none!important;
+  }
+}
+@media (min-width: 992px) {
+  .nav-left-a {
+    margin-right: 30px;
+  }
+  .nav-left li {
+    margin-right: 30px;
+  }
+  .nav-right a {
+    margin-left: 30px;
+  }
+  .nav-left-son-box {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-right .nav-btn {
+    font-size: 1.6rem;
+    min-width: 99px;
+    padding: 24px 0 22px;
+  }
+}
+/*导航 结束*/
