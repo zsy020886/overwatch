@@ -1,0 +1,689 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #f7931e;
+    line-height: inherit;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+*, :after, :before {
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+    vertical-align: inherit;
+    white-space: initial;
+    text-overflow: inherit;
+    text-shadow: inherit;
+}
+body {
+    color: #405275;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #f0edf2;
+    max-width: 100%;
+    overflow-x: hidden;
+    font: normal normal normal 10px "microsoft yahei",Arial,sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    display: block;
+    text-transform: none;
+    white-space: normal;
+}
+.blog>.body {
+    background-image: url(../images/game/gane-patch-news.jpg);
+    background-size: 2560px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #141516;
+    padding-top: 140px;
+}
+/*导航 开始*/
+/* .navbars {
+     position: fixed;
+     top: 44px;
+     width: 100%;
+     display: block;
+     z-index: 97;
+     height: 100px;
+}
+ .box{
+
+     background-color: rgba(40,53,79,.9);
+     z-index: 96;
+      overflow: hidden;
+ }
+.nav-left-a{
+    width: 58px;
+    height: 58px;
+    display: inline-block;
+   background: url('../images/game/nav-logo-sm.png') no-repeat    center center;
+    float:left;
+}
+.navbars-top-con li{
+    float:left;
+}
+.nav-right{
+    float:right;
+    background:#f7931e;
+
+}
+.nav-right a{
+    font-weight: 700;
+}
+.nav-right .nav-btn {
+    display: inline-block;
+    border-bottom: 0 solid transparent;
+    padding: 24px 15px 22px;
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "microsoft yahei",arial,sans-serif;
+    text-transform: none;
+    color: rgba(255,255,255,.85);
+    min-width: auto;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: .05em;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}*/
+/*导航 结束*/
+.clearfix {
+    display: block;
+}
+.blog-wrap {
+    color: #fff;
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 25px 0 50px;
+}
+.grid{
+    padding: 0 20px;
+}
+.grid:before,.grid:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.blog-post-wrap, .blog-sidebar {
+    float: left;
+}
+hr {
+    margin: 0;
+    border: 0;
+    padding: 3px 0;
+    background: url(http://overwatch.nos.netease.com/1/assets/img/layout/divider.gif) no-repeat top center;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    box-sizing: content-box;
+}
+/* 版本  */
+.body .col-gutter-lg {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h1{
+    font: "microsoft yahei",impact,sans-serif;
+    font-size: 5.6rem;
+    line-height: normal;
+    letter-spacing: .05rem;
+    font-style: italic;
+}
+p {
+    font-size: inherit;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+}
+
+.patch-notes-body p, [data=blog-body] p {
+    margin-bottom: 1.75rem;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+    margin-top: .5em;
+}
+p a {
+    text-decoration: underline;
+}
+p a:hover{
+    color:white;
+}
+.patch-notes-body {
+    color: hsla(0,0%,100%,.8);
+    border-bottom: 2px solid hsla(0,0%,100%,.3);
+    padding-bottom: 60px;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+.blog-body .h1, .patch-notes-body h1, [data=blog-body] .h1, [data=blog-body] h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.patch-notes-body .h1, .patch-notes-body .h2, .patch-notes-body .h3, .patch-notes-body .h4, .patch-notes-body .h5, .patch-notes-body .h6, .patch-notes-body h1, .patch-notes-body h2, .patch-notes-body h3, .patch-notes-body h4, .patch-notes-body h5, .patch-notes-body h6, [data=blog-body] .h1, [data=blog-body] .h2, [data=blog-body] .h3, [data=blog-body] .h4, [data=blog-body] .h5, [data=blog-body] .h6, [data=blog-body] h1, [data=blog-body] h2, [data=blog-body] h3, [data=blog-body] h4, [data=blog-body] h5, [data=blog-body] h6 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.blog-body .h2, .patch-notes-body h2, [data=blog-body] .h2, [data=blog-body] h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 1;
+    text-transform: none;
+}
+.patch-notes-body ol, .patch-notes-body ul, [data=blog-body] ol, [data=blog-body] ul {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    padding-left: 1.75rem;
+}
+.patch-notes-body dl, .patch-notes-body ol, .patch-notes-body ul {
+    line-height: 1.75;
+}
+.patch-end{
+    margin-bottom: 27px;
+}
+.patch-end a{
+    height: 26px;
+    line-height: 12px;
+    text-align:center;
+    padding: 6px 8px;
+    background-color: #fff;
+    color: black;
+    font-weight:bold;
+    font-size: 1.28rem;
+}
+.patch-end a:hover{
+    background: #000;
+    color: white;
+    border: 1px solid white;
+}
+.patch-end a:first-child:hover{
+ background:white;
+    color: black;
+}
+.patch-notes-body ul li, [data=blog-body] ul li{
+    list-style: square;
+}
+.patch-notes-body ol ul li, .patch-notes-body ul ul li, [data=blog-body] ol ul li, [data=blog-body] ul ul li{
+    list-style-type: circle;
+}
+
+/* 补丁*/
+.blog-sidebar {
+    font-size: .9em;
+}
+.blog-sidebar-box{
+    padding:20px 25px;
+    background-color: rgba(255,255,255,.04);
+    border-radius: 4px;
+}
+ h2 {
+    font: "microsoft yahei",impact,sans-serif;
+    font-size: 4.8rem;
+    line-height: normal;
+    letter-spacing: .08rem;
+    font-style: italic;
+}
+ .blog-sidebar-box>h2{
+     text-transform: none;
+     line-height: .9em;
+     font-size:2.4rem;
+     font-weight: 400;
+     padding-right: .3em;
+     text-shadow: 2.5px -2px 0.5px rgba(35,31,32,.1), -2.5px 2px 0.5px rgba(35,31,32,.1), -2.5px -2px 0.5px rgba(35,31,32,.1), 2.5px 2px 0.5px rgba(35,31,32,.1);
+ }
+.hr-underline {
+    margin: 15px 0 2px;
+}
+hr.hr-underline {
+    padding: 1.5px 0;
+    background: #f0edf2;
+    background-color: rgba(255,255,255,.9);
+}
+dl, ol, ul {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+.blog-sidebar-box-lis li{
+    padding: 15px 0 15px 10px;
+    border-top: 1px solid#f0edf2;
+    border-top: 1px solid rgba(255,255,255,.3);
+    line-height: 1.45em;
+    font-size: 1.3rem;
+}
+.blog-sidebar-box-lis li:first-child{
+    border-top: none;
+}
+.blog-sidebar-box-lis li a{
+    text-decoration: none;
+}
+
+.blog-sidebar-box-lis li a:hover,.footer-top-f a{
+    color: white;
+    text-decoration: none;
+}
+.blog-sidebar-box-lis .meta {
+    display: block;
+    margin-top: 10px;
+    text-shadow: none;
+}
+.blog-sidebar-box-lis .date {
+    display: block;
+    color: rgba(255,255,255,.5);
+    font-size: .9em;
+}
+/*  end  */
+.ow-footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 26px;
+    width: auto;
+    height: 358px;
+    z-index: 3;
+    font-size: 12px!important;
+    background: #202020;
+}
+.ow-footer a {
+    text-decoration: none;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: 400;
+}
+/*    footer-top  */
+.footer-top{
+    width:1000px;
+    position: relative;
+    left:50%;
+    margin-left: -500px;
+    color: #fff;
+    z-index: 100;
+    font-size: 14px;
+    padding-top: 39px;
+}
+.footer-top-f{
+    float:left;
+    height: 25px;
+}
+.footer-top-f a{
+   padding-top:5px;
+    margin-right: 37px;
+    color: white;
+}
+.footer-top-f a:first-child i{
+    background-position: -96px 0;
+}
+.footer-top-f i{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-right: 10px;
+    position: relative;
+    background: url(../images/game/Fsprite-24-blue.png);
+    vertical-align: middle;
+    top: -2px;
+}
+
+.footer-top-f a:nth-child(2) i{
+    background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i{
+    background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+    clear: both;
+    padding-top: 51px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 0 auto 8px;
+    text-align: left;
+    width: 1000px;
+}
+
+.logo_bz{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    margin: 0;
+    position: relative;
+    top: 4px;
+    box-sizing: border-box;
+    background: url("../images/game/foot-1.png")no-repeat 0 0;;
+}
+
+.logo_bz+a{
+    display: inline-block;
+    background: url("../images/game/foot-2.png") no-repeat 0 0;
+    width: 125px;
+    height: 38px;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    top: 39px;
+    left: -3px;
+    margin: 0;
+}
+
+.info {
+    display: inline-block;
+    color: rgba(255,255,255,.5);
+    width: 706px;
+    float: right;
+    text-align: left;
+    padding: 0 0 0 73px;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+}
+.info a{
+    color: rgba(255,255,255,.5);
+}
+.info ul{
+    margin: 0 0 3px -10px;
+    padding: 0 0 5px;
+    overflow: hidden;
+}
+.info ul li{
+     float:left;
+}
+.info ul li a{
+    color: #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.info p{
+    line-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 400;
+}
+.info p:last-child{
+    padding: 8px 0;
+    position: relative;
+
+}
+.info p:last-child a{
+    margin-right:5px;
+}
+.integrity a:first-child{
+position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(2){
+    position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(3){
+    position: relative;
+    top:-1px;
+}
+#btn {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    padding: 0;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    display: none;
+    cursor: pointer;
+}
+/*   foot - bottom */
+
+.footer-bottom{
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    clear: both;
+    position: relative;
+    font-size: 12px;
+
+}
+.footer-bottom p{
+    line-height: 20px;
+}
+
+
+
+/* 栅格系统*/
+[class*=col-] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.grid:before,.grid:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-11 {
+    width: 91.66666667%;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+@media (min-width: 768px) {
+    .box{
+        margin: 20px 20px 0;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+    .col-sm-11 {
+        width: 91.66666667%;
+    }
+    .col-sm-10 {
+        width: 83.33333333%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+    .col-sm-7 {
+        width: 58.33333333%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-2 {
+        width: 16.66666667%;
+    }
+    .col-sm-1 {
+        width: 8.33333333%;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-11 {
+        width: 91.66666667%;
+    }
+    .col-md-10 {
+        width: 83.33333333%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+}
+@media screen and (min-width: 1200px ){
+    .nav-left-a{
+        width: 245px;
+        height: 62px;
+        background: url('../images/game/nav-logo-sm.png') no-repeat    center center;
+    }
+    .nav-right .nav-btn {
+        font-size: 1.6rem;
+        min-width: 99px;
+        padding: 24px 0 22px;
+    }
+    .col-lg-12 {
+        width: 100%;
+    }
+    .col-lg-11 {
+        width: 91.66666667%;
+    }
+    .col-lg-10 {
+        width: 83.33333333%;
+    }
+    .col-lg-9 {
+        width: 75%;
+    }
+    .col-lg-8 {
+        width: 66.66666667%;
+    }
+    .col-lg-7 {
+        width: 58.33333333%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+    .col-lg-4 {
+        width: 33.33333333%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+    .col-lg-1 {
+        width: 8.33333333%;
+    }
+}
+
+
+@media only screen and (min-width: 400px){
+    body {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    .data-table>thead th, .h5, .intro-text, h5 {
+        font-size: 2.4rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    .m-sm{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 960px){
+   .ow-footer .footer-center #infos{
+        display: block;
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footer-center  .info .clearFix{
+        padding: 0px;
+    }
+    .footer-center {
+        width: 100%;
+    }
+}
+
+
+
+
+
