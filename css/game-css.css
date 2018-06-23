@@ -1,0 +1,992 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #f7931e;
+    line-height: inherit;
+    cursor: pointer;
+}
+li{
+    list-style: none;
+}
+*, :after, :before {
+    box-sizing: inherit;
+    background-repeat: no-repeat;
+    vertical-align: inherit;
+    white-space: initial;
+    text-overflow: inherit;
+    text-shadow: inherit;
+}
+body {
+    color: #405275;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #f0edf2;
+    max-width: 100%;
+    overflow-x: hidden;
+    font: normal normal normal 10px "microsoft yahei",Arial,sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    display: block;
+    text-transform: none;
+    white-space: normal;
+}
+.blog>.body {
+    background-image: url(../images/game/gane-patch-news.jpg);
+    background-size: 2560px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #141516;
+    padding-top: 140px;
+}
+
+/*导航 开始*/
+/*.body-div{*/
+    /*width: 100%;*/
+    /*height: 768px;*/
+    /*display: none;*/
+    /*opacity: .1;*/
+    /*background:rgba(0,0,0,.9);*/
+     /*z-index: -12;*/
+/*}*/
+.navbars {
+     position: absolute;
+     top: 0;
+     width: 100%;
+     background-color: rgba(2,25,72,.3);
+     box-sizing: border-box;
+     font-size: 16px;
+     font-weight: 400;
+     line-height: 1.4;
+     color: #fff;
+     z-index: 10000;
+}
+ .box{
+     height: 40px;
+ }
+.nav-left-a{
+    height: 40px;
+    width: 61.82px;
+    display: inline-block;
+   background: url('../images/game/nav-Ficon-sprite.png') no-repeat    -18px -75px;
+    float:left;
+}
+.navbars-top-con li{
+    float:left;
+    position: relative;
+}
+.Navbar-poster {
+    width: calc(12.5% - 17.5px);
+    position: relative;
+    display: inline-block;
+    height: 180px;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+    box-shadow: 0 8px 17px rgba(0,0,0,.1);
+    margin: 15px 20px 15px 0;
+    font-size: 0;
+    transition: border-color .2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.Navbar-poster .Navbar-posterImage {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 180px;
+    width: 216px;
+    -webkit-filter: brightness(100%) contrast(100%);
+    filter: brightness(100%) contrast(100%);
+    transition: -webkit-filter .2s;
+    transition: filter .2s;
+    transition: filter .2s,-webkit-filter .2s;
+}
+.Navbar-poster:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(255,255,255,.15);
+    pointer-events: none;
+}
+.Navbar-poster-div{
+    width:100%;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+    position: absolute;
+    top:0;
+    opacity: 0;
+}
+.Navbar-poster:hover .Navbar-poster-div{
+    opacity: 1;
+}
+.nav-left-son-div{
+    width: 100%;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    top:-1px;
+}
+.nav-bottom{
+    background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95)100%);
+    border: solid 1px rgba(255,255,255,.15);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    /*opacity: 0;*/
+    display:none;
+    box-sizing: border-box;
+    transition: all .4s;
+}
+.nav-bottom-1{
+    height: 278px;
+}
+.Navbar-poster:last-child{
+    margin-right: 0;
+}
+.Navbar-esport-sub{
+    width: 2px;
+}
+.Navbar-esport-sub {
+    width: 2px;
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    vertical-align: top;
+    max-width: 100px;
+    background-color: rgba(21,26,35,1);
+    border-left: 1px solid rgba(0,0,0,.2);
+    border-right: 1px solid rgba(0,0,0,.2);
+    transition: all .4s ease;
+}
+.Navbar-esport-sub .Navbar-esport-link {
+    display: block;
+    width: 100px;
+    margin: -6px 0;
+    text-align: center;
+}
+.Navbar-esport-sub .Navbar-esport-link img {
+    width: 100%;
+}
+.center-block .Navbar-esport:hover, .center-block .animation-delay-3 {
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+.Navbar-esportLabel {
+    padding: 5px 20px 18px;
+
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: inherit;
+    text-align: center;
+    color: rgba(255,255,255,.7);
+}
+.Navbar-esport {
+    padding: 20px 0;
+    font-size: 15px;
+}
+.Navbar-esport {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    width: 16vw;
+    max-width: 192px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-decoration: none;
+    color: rgba(255,255,255,.7);
+}
+.nav-bottom-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px rgba(255,255,255,.15);
+    border-right: solid 1px rgba(255,255,255,.15);
+    background-color: #283244;
+    opacity: .95;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    transform-origin: center;
+
+}
+.nav-bottom-top-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: solid 1px transparent;
+    background-color: #151a23;
+}
+.nav-left-son-box{
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.nav-bottom-1 .nav-left-son-box{
+    padding: 0 30px;
+}
+.Navbar-posterImage {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 180px;
+    width: 216px;
+    -webkit-filter: brightness(100%) contrast(100%);
+    filter: brightness(100%) contrast(100%);
+    transition: -webkit-filter .2s;
+    transition: filter .2s;
+    transition: filter .2s,-webkit-filter .2s;
+}
+.nav-left{
+    height:40px;
+    float:left;
+}
+.nav-left ul{
+    height:40px;
+    margin: 0;
+}
+.nav-left a,.nav-right a{
+    display: inline-block;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    line-height: 40px;
+    text-decoration: none;
+}
+.nav-left a:hover ,.nav-right a:hover{
+    /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
+    color: #fff;
+    text-decoration: none;
+}
+.nav-left .active{
+    text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
+    color: #fff;
+}
+.nav-left span ,.nav-right span{
+    width: 14px;
+    height: 7px;
+    display: inline-block;
+    background: url('../images/game/nav-Ficon-sprite.png') no-repeat -147px -131px;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
+.nav-right{
+    float:right;
+}
+.nav-right a{
+    float: left;
+}
+
+.nav-right-div{
+  display: inline-block;
+}
+.nav-right .nav-btn {
+    display: inline-block;
+    border-bottom: 0 solid transparent;
+    padding: 24px 15px 22px;
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "microsoft yahei",arial,sans-serif;
+    text-transform: none;
+    color: rgba(255,255,255,.85);
+    min-width: auto;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: .05em;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+/*                 */
+
+.nav_head{
+    width: 100%;
+    max-width: 20em;
+    position: fixed;
+    right: 30px;
+    background:#35404f;
+    border-right:2px solid #383d49;
+    border-bottom: 2px solid #383d49;
+    display: none;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.nav_head>a{
+    width: 80%;
+    height: 40px;
+    background: #0e86ca;
+    margin:30px auto;
+    display: block;
+    border:solid 1px #00aeff;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+.nav_head>a:hover{
+    background: #00aeff;
+}
+.bg1{
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/game/nav-Ficon-sprite.png') -141px -9px;
+    display: inline-block;
+
+}
+.bg2{
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/game/nav-Ficon-sprite.png') -198px -16px;
+}
+
+.li11{
+    border-top: 2px solid #929191;
+    padding:10px 40px;
+}
+
+.li11:hover{
+    background: #252b36;
+}
+.btn11:hover{
+    background: #00aeff;
+}
+.li11{
+    color: #cccccc;
+}
+.li11:hover{
+    color: white;
+}
+
+/*导航 结束*/
+.clearfix {
+    display: block;
+}
+.blog-wrap {
+    color: #fff;
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 25px 0 50px;
+}
+.grid{
+    padding: 0 20px;
+}
+.grid:before,.grid:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.blog-post-wrap, .blog-sidebar {
+    float: left;
+}
+hr {
+    margin: 0;
+    border: 0;
+    padding: 3px 0;
+    background: url(http://overwatch.nos.netease.com/1/assets/img/layout/divider.gif) no-repeat top center;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    box-sizing: content-box;
+}
+/* 版本  */
+.body .col-gutter-lg {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+h1{
+    font: "microsoft yahei",impact,sans-serif;
+    font-size: 5.6rem;
+    line-height: normal;
+    letter-spacing: .05rem;
+    font-style: italic;
+}
+p {
+    font-size: inherit;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+}
+
+.patch-notes-body p, [data=blog-body] p {
+    margin-bottom: 1.75rem;
+}
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+    margin-top: .5em;
+}
+p a {
+    text-decoration: underline;
+}
+p a:hover{
+    color:white;
+}
+.patch-notes-body {
+    color: hsla(0,0%,100%,.8);
+    border-bottom: 2px solid hsla(0,0%,100%,.3);
+    padding-bottom: 60px;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    line-height: 1.75;
+}
+.blog-body .h1, .patch-notes-body h1, [data=blog-body] .h1, [data=blog-body] h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.patch-notes-body .h1, .patch-notes-body .h2, .patch-notes-body .h3, .patch-notes-body .h4, .patch-notes-body .h5, .patch-notes-body .h6, .patch-notes-body h1, .patch-notes-body h2, .patch-notes-body h3, .patch-notes-body h4, .patch-notes-body h5, .patch-notes-body h6, [data=blog-body] .h1, [data=blog-body] .h2, [data=blog-body] .h3, [data=blog-body] .h4, [data=blog-body] .h5, [data=blog-body] .h6, [data=blog-body] h1, [data=blog-body] h2, [data=blog-body] h3, [data=blog-body] h4, [data=blog-body] h5, [data=blog-body] h6 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.blog-body .h2, .patch-notes-body h2, [data=blog-body] .h2, [data=blog-body] h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 200;
+    line-height: 1;
+    text-transform: none;
+}
+.patch-notes-body ol, .patch-notes-body ul, [data=blog-body] ol, [data=blog-body] ul {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    padding-left: 1.75rem;
+}
+.patch-notes-body dl, .patch-notes-body ol, .patch-notes-body ul {
+    line-height: 1.75;
+}
+.patch-end{
+    margin-bottom: 27px;
+}
+.patch-end a{
+    height: 26px;
+    line-height: 12px;
+    text-align:center;
+    padding: 6px 8px;
+    background-color: #fff;
+    color: black;
+    font-weight:bold;
+    font-size: 1.28rem;
+}
+.patch-end a:hover{
+    background: #000;
+    color: white;
+    border: 1px solid white;
+}
+.patch-end a:first-child:hover{
+ background:white;
+    color: black;
+}
+.patch-notes-body ul li, [data=blog-body] ul li{
+    list-style: square;
+}
+.patch-notes-body ol ul li, .patch-notes-body ul ul li, [data=blog-body] ol ul li, [data=blog-body] ul ul li{
+    list-style-type: circle;
+}
+
+/* 补丁*/
+.blog-sidebar {
+    font-size: .9em;
+}
+.blog-sidebar-box{
+    padding:20px 25px;
+    background-color: rgba(255,255,255,.04);
+    border-radius: 4px;
+}
+ h2 {
+    font: "microsoft yahei",impact,sans-serif;
+    font-size: 4.8rem;
+    line-height: normal;
+    letter-spacing: .08rem;
+    font-style: italic;
+}
+ .blog-sidebar-box>h2{
+     text-transform: none;
+     line-height: .9em;
+     font-size:2.4rem;
+     font-weight: 400;
+     padding-right: .3em;
+     text-shadow: 2.5px -2px 0.5px rgba(35,31,32,.1), -2.5px 2px 0.5px rgba(35,31,32,.1), -2.5px -2px 0.5px rgba(35,31,32,.1), 2.5px 2px 0.5px rgba(35,31,32,.1);
+ }
+.hr-underline {
+    margin: 15px 0 2px;
+}
+hr.hr-underline {
+    padding: 1.5px 0;
+    background: #f0edf2;
+    background-color: rgba(255,255,255,.9);
+}
+dl, ol, ul {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    list-style-position: outside;
+}
+.blog-sidebar-box-lis li{
+    padding: 15px 0 15px 10px;
+    border-top: 1px solid#f0edf2;
+    border-top: 1px solid rgba(255,255,255,.3);
+    line-height: 1.45em;
+    font-size: 1.3rem;
+}
+.blog-sidebar-box-lis li:first-child{
+    border-top: none;
+}
+.blog-sidebar-box-lis li a{
+    text-decoration: none;
+}
+
+.blog-sidebar-box-lis li a:hover,.footer-top-f a{
+    color: white;
+    text-decoration: none;
+}
+.blog-sidebar-box-lis .meta {
+    display: block;
+    margin-top: 10px;
+    text-shadow: none;
+}
+.blog-sidebar-box-lis .date {
+    display: block;
+    color: rgba(255,255,255,.5);
+    font-size: .9em;
+}
+/*  end  */
+.ow-footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 26px;
+    width: auto;
+    height: 358px;
+    z-index: 3;
+    font-size: 12px!important;
+    background: #202020;
+}
+.ow-footer a {
+    text-decoration: none;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: 400;
+}
+/*    footer-top  */
+.footer-top{
+    width:1000px;
+    position: relative;
+    left:50%;
+    margin-left: -500px;
+    color: #fff;
+    z-index: 100;
+    font-size: 14px;
+    padding-top: 39px;
+}
+.footer-top-f{
+    float:left;
+    height: 25px;
+}
+.footer-top-f a{
+   padding-top:5px;
+    margin-right: 37px;
+    color: white;
+}
+.footer-top-f a:first-child i{
+    background-position: -96px 0;
+}
+.footer-top-f i{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-right: 10px;
+    position: relative;
+    background: url(../images/game/Fsprite-24-blue.png);
+    vertical-align: middle;
+    top: -2px;
+}
+
+.footer-top-f a:nth-child(2) i{
+    background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i{
+    background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+    clear: both;
+    padding-top: 51px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 0 auto 8px;
+    text-align: left;
+    width: 1000px;
+}
+
+.logo_bz{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    margin: 0;
+    position: relative;
+    top: 4px;
+    box-sizing: border-box;
+    background: url("../images/game/foot-1.png")no-repeat 0 0;;
+}
+
+.logo_bz+a{
+    display: inline-block;
+    background: url("../images/game/foot-2.png") no-repeat 0 0;
+    width: 125px;
+    height: 38px;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    top: 39px;
+    left: -3px;
+    margin: 0;
+}
+
+.info {
+    display: inline-block;
+    color: rgba(255,255,255,.5);
+    width: 706px;
+    float: right;
+    text-align: left;
+    padding: 0 0 0 73px;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+}
+.info a{
+    color: rgba(255,255,255,.5);
+}
+.info ul{
+    margin: 0 0 3px -10px;
+    padding: 0 0 5px;
+    overflow: hidden;
+}
+.info ul li{
+     float:left;
+}
+.info ul li a{
+    color: #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.info p{
+    line-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 400;
+}
+.info p:last-child{
+    padding: 8px 0;
+    position: relative;
+
+}
+.info p:last-child a{
+    margin-right:5px;
+}
+.integrity a:first-child{
+position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(2){
+    position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(3){
+    position: relative;
+    top:-1px;
+}
+#btn {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    padding: 0;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    display: none;
+    cursor: pointer;
+}
+/*   foot - bottom */
+
+.footer-bottom{
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    clear: both;
+    position: relative;
+    font-size: 12px;
+
+}
+.footer-bottom p{
+    line-height: 20px;
+}
+
+
+
+/* 栅格系统*/
+[class*=col-] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.grid:before,.grid:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-11 {
+    width: 91.66666667%;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+@media (min-width: 768px) {
+    .box{
+        padding: 0 40px;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+    .col-sm-11 {
+        width: 91.66666667%;
+    }
+    .col-sm-10 {
+        width: 83.33333333%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+    .col-sm-7 {
+        width: 58.33333333%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-2 {
+        width: 16.66666667%;
+    }
+    .col-sm-1 {
+        width: 8.33333333%;
+    }
+}
+@media (max-width: 992px) {
+    .navbars{
+        display: none!important;
+    }
+}
+@media (min-width: 992px) {
+
+    .nav-left-a{
+        margin-right: 30px;
+    }
+    .nav-left li{
+        margin-right: 30px;
+    }
+    .nav-right a{
+        margin-left: 30px;
+    }
+    .nav-left-son-box{
+        padding-left:40px;
+        padding-right:40px;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-11 {
+        width: 91.66666667%;
+    }
+    .col-md-10 {
+        width: 83.33333333%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+}
+@media screen and (min-width: 1200px ){
+
+    .nav-right .nav-btn {
+        font-size: 1.6rem;
+        min-width: 99px;
+        padding: 24px 0 22px;
+    }
+    .col-lg-12 {
+        width: 100%;
+    }
+    .col-lg-11 {
+        width: 91.66666667%;
+    }
+    .col-lg-10 {
+        width: 83.33333333%;
+    }
+    .col-lg-9 {
+        width: 75%;
+    }
+    .col-lg-8 {
+        width: 66.66666667%;
+    }
+    .col-lg-7 {
+        width: 58.33333333%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+    .col-lg-4 {
+        width: 33.33333333%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+    .col-lg-1 {
+        width: 8.33333333%;
+    }
+}
+
+
+@media only screen and (min-width: 400px){
+    body {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+    .data-table>thead th, .h5, .intro-text, h5 {
+        font-size: 2.4rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    .m-sm{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 960px){
+   .ow-footer .footer-center #infos{
+        display: block;
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footer-center  .info .clearFix{
+        padding: 0px;
+    }
+    .footer-center {
+        width: 100%;
+    }
+}
+
+
+
+
+

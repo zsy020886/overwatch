@@ -9,6 +9,7 @@ body {
   height: 100%;
   font-size: 1.5rem;
   line-height: 1.4;
+  background-size: cover;
 }
 .hero-main {
   width: 100%;
@@ -77,6 +78,7 @@ body {
 }
 .hero-person {
   margin-top: 50px;
+  position: relative;
 }
 .hero-person li {
   float: left;
@@ -202,85 +204,82 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid yellow;
   }
   .hero-title {
-    width: 100%;
-    margin-top: 180px;
-    text-align: left;
+    margin-top: 160px;
   }
   .hero-main h2 {
-    width: auto;
-    font-size: 7.2rem;
-    line-height: normal;
-    letter-spacing: .08rem;
-    font-style: italic;
+    font-size: 5.5rem;
   }
   .hero-main p {
-    font-size: 2.4rem;
-    margin-top: .5em;
+    font-size: 2rem;
   }
   .hero-console {
     margin-top: 40px;
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  .hero-person:after,
-  .hero-console:after {
-    content: "";
-    display: block;
-    clear: both;
+  .hero-console li {
+    width: 20%;
+  }
+  .hero-person {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .hero-main {
+    width: 100%;
+    padding-bottom: 100px;
+  }
+  .hero-main-tao {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-title {
+    margin-top: 80px;
+  }
+  .hero-main h2 {
+    font-size: 5rem;
+  }
+  .hero-main p {
+    font-size: 2rem;
+  }
+  .hero-console {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-console li {
+    width: 20%;
+  }
+  .hero-person {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .hero-console li {
     float: left;
-    width: 215.5px;
     background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
     margin-right: 3px;
     border-radius: 2px;
   }
-  .hero-main .hero-main-tao > ul .li-active {
-    background-color: #ffffff;
+  .hero-console li:first-child a {
+    padding: 20px 0;
   }
-  .hero-console li:hover {
-    background: white;
-  }
-  .hero-console li a {
+  .hero-console li a span {
     display: block;
-    padding: 10px 0;
-    text-decoration: none;
-    color: #1a325e;
-  }
-  .hero-console li a span img {
-    width: 16px;
-    height: 16px;
-    vertical-align: -2px;
-    margin-right: 5px;
-  }
-  .hero-person {
-    margin-top: 50px;
-  }
-  .hero-person li {
-    float: left;
-    width: 148px;
-    height: 240px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    border-radius: 2px;
-    border: 2px solid white;
-    background: url("../images/index/hero-p-bg.jpg") no-repeat;
-    background-size: cover;
-    position: relative;
-    transform: scale(1, 1);
-    transition: all 0.5s;
-    z-index: 5;
-  }
-  .hp-li-mask {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 144px;
-    height: 236px;
-    border-radius: 2px;
-    background: transparent;
   }
 }

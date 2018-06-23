@@ -23,69 +23,374 @@ body {
 
 }
 //-------------顶部导航开始---------------------------------------------------------
-.myNavTop{
-  width: 100%;
-  height: 40px;
-  border-top:1px solid rgba(255,255,255,0.3);
-  border-bottom:1px solid rgba(0,0,0,0.1);
-  background-color: rgba(0,0,0,.5);
-  padding: 0 40px;
+
+/*导航 开始*/
+.navbars {
   position: absolute;
   top: 0;
-  z-index: 200;
+  width: 100%;
+  background-color: rgba(2,25,72,.3);
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+  z-index: 10000;
 }
-
-.myNavTopLogo {
-  float: left;
-  display: block;
+.box{
+  height: 40px;
+}
+.nav-left-a{
   height: 40px;
   width: 61.82px;
-  background-image: url(../images/index/logo3.png);
-  background-repeat: no-repeat;
-  background-position: -18px -75px;
+  display: inline-block;
+  background: url('../images/game/nav-Ficon-sprite.png') no-repeat    -18px -75px;
+  float:left;
 }
-.myNavTopLogo:hover{
-  background-position: -18px -120px;
+.navbars-top-con li{
+  float:left;
+  position: relative;
 }
-.myNavTop .myNavTop-left{
-  float: left;
-  height: 40px;
+.Navbar-poster {
+  width: calc(12.5% - 17.5px);
+  position: relative;
+  display: inline-block;
+  height: 180px;
+  min-width: 0;
+  max-width: none;
+  overflow: hidden;
+  box-shadow: 0 8px 17px rgba(0,0,0,.1);
+  margin: 15px 20px 15px 0;
+  font-size: 0;
+  transition: border-color .2s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
-.myNavTop .myNavTop-right{
-  float: right;
-  height: 40px;
+.Navbar-poster .Navbar-posterImage {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 180px;
+  width: 216px;
+  -webkit-filter: brightness(100%) contrast(100%);
+  filter: brightness(100%) contrast(100%);
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s,-webkit-filter .2s;
 }
-.myNavTop li{
-  float: left;
-  margin-left: 40px;
+.Navbar-poster:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(255,255,255,.15);
+  pointer-events: none;
 }
-.myNavTop li>a{
+.Navbar-poster-div{
+  width:100%;
+  height: 100%;
+  background: rgba(255,255,255,.1);
+  position: absolute;
+  top:0;
+  opacity: 0;
+}
+.Navbar-poster:hover .Navbar-poster-div{
+  opacity: 1;
+}
+.nav-left-son-div{
+  width: 100%;
+  z-index: 1;
+  display: inline-block;
+  position: relative;
+  top:-1px;
+}
+.nav-bottom{
+  background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95)100%);
+  border: solid 1px rgba(255,255,255,.15);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+  /*opacity: 0;*/
+  display:none;
+  box-sizing: border-box;
+  transition: all .4s;
+}
+.nav-bottom-1{
+  height: 278px;
+}
+.Navbar-poster:last-child{
+  margin-right: 0;
+}
+.Navbar-esport-sub{
+  width: 2px;
+}
+.Navbar-esport-sub {
+  width: 2px;
+  opacity: 0;
+  overflow: hidden;
   display: block;
+  position: relative;
+  vertical-align: top;
+  max-width: 100px;
+  background-color: rgba(21,26,35,1);
+  border-left: 1px solid rgba(0,0,0,.2);
+  border-right: 1px solid rgba(0,0,0,.2);
+  transition: all .4s ease;
+}
+.Navbar-esport-sub .Navbar-esport-link {
+  display: block;
+  width: 100px;
+  margin: -6px 0;
+  text-align: center;
+}
+.Navbar-esport-sub .Navbar-esport-link img {
+  width: 100%;
+}
+.center-block .Navbar-esport:hover, .center-block .animation-delay-3 {
+  color: #fff;
+  background-color: rgba(255,255,255,.05);
+}
+.Navbar-esportLabel {
+  padding: 5px 20px 18px;
+
+  font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: inherit;
+  text-align: center;
   color: rgba(255,255,255,.7);
+}
+.Navbar-esport {
+  padding: 20px 0;
+  font-size: 15px;
+}
+.Navbar-esport {
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  width: 16vw;
+  max-width: 192px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: none;
+  color: rgba(255,255,255,.7);
+}
+.nav-bottom-top{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px rgba(255,255,255,.15);
+  border-right: solid 1px rgba(255,255,255,.15);
+  background-color: #283244;
+  opacity: .95;
+  transform: translate(-50%,-50%) rotate(-45deg);
+  transform-origin: center;
+
+}
+.nav-bottom-top-box{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: solid 1px transparent;
+  background-color: #151a23;
+}
+.nav-left-son-box{
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+
+}
+.nav-bottom-1 .nav-left-son-box{
+  padding: 0 30px;
+}
+.Navbar-posterImage {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 180px;
+  width: 216px;
+  -webkit-filter: brightness(100%) contrast(100%);
+  filter: brightness(100%) contrast(100%);
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s,-webkit-filter .2s;
+}
+.nav-left{
+  height:40px;
+  float:left;
+}
+.nav-left ul{
+  height:40px;
+  margin: 0;
+}
+.nav-left a,.nav-right a{
+  display: inline-block;
+  color: rgba(255,255,255,.7);
+  font-size: 15px;
   line-height: 40px;
   text-decoration: none;
-  height: 40px;
-
 }
-.myNavTop li>a:hover,.myNavTop-left li:first-child>a{
-  color: white;
-  text-shadow:0 0 10px white;
+.nav-left a:hover ,.nav-right a:hover{
+  /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
+  color: #fff;
+  text-decoration: none;
 }
-.myNavTop li>a>div{
+.nav-left .active{
+  text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
+  color: #fff;
+}
+.nav-left span ,.nav-right span{
+  width: 14px;
+  height: 7px;
+  display: inline-block;
+  background: url('../images/game/nav-Ficon-sprite.png') no-repeat -147px -131px;
+  margin-left: 2px;
+  vertical-align: baseline;
+}
+.nav-right{
+  float:right;
+}
+.nav-right a{
   float: left;
 }
 
-.myNavTop-dropdownIcon {
-  margin-top: 17px;
-  margin-left: 2px;
-  width: 14px;
-  height: 7px;
-  background-image: url(../images/index/logo3.png);
-  background-position: -147px -131px;
-  background-repeat: no-repeat;
+.nav-right-div{
+  display: inline-block;
+}
+.nav-right .nav-btn {
+  display: inline-block;
+  border-bottom: 0 solid transparent;
+  padding: 24px 15px 22px;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 1.2rem;
+  font-family: "microsoft yahei",arial,sans-serif;
+  text-transform: none;
+  color: rgba(255,255,255,.85);
+  min-width: auto;
+  text-align: center;
+  text-shadow: none;
+  letter-spacing: .05em;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
 }
 
 
+
+/*                 */
+
+.nav_head{
+  width: 100%;
+  max-width: 20em;
+  position: fixed;
+  right: 30px;
+  background:#35404f;
+  border-right:2px solid #383d49;
+  border-bottom: 2px solid #383d49;
+  display: none;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.nav_head>a{
+  width: 80%;
+  height: 40px;
+  background: #0e86ca;
+  margin:30px auto;
+  display: block;
+  border:solid 1px #00aeff;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.nav_head>a:hover{
+  background: #00aeff;
+}
+.bg1{
+  width: 1.5em;
+  height: 1.5em;
+  background: url('../images/game/nav-Ficon-sprite.png') -141px -9px;
+  display: inline-block;
+
+}
+.bg2{
+  width: 1.5em;
+  height: 1.5em;
+  background: url('../images/game/nav-Ficon-sprite.png') -198px -16px;
+}
+
+.li11{
+  border-top: 2px solid #929191;
+  padding:10px 40px;
+}
+
+.li11:hover{
+  background: #252b36;
+}
+.btn11:hover{
+  background: #00aeff;
+}
+.li11{
+  color: #cccccc;
+}
+.li11:hover{
+  color: white;
+}
+
+
+.box {
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .navbars{
+    display: none!important;
+  }
+}
+
+.nav-left-a{
+  margin-right: 30px;
+}
+.nav-left li{
+  margin-right: 30px;
+}
+.nav-right a{
+  margin-left: 30px;
+}
+.nav-left-son-box{
+  padding-left:40px;
+  padding-right:40px;
+}
+
+
+
+.nav-right .nav-btn {
+  font-size: 1.6rem;
+  min-width: 99px;
+  padding: 24px 0 22px;
+}
+
+/*导航 结束*/
 //-------------顶部导航结束-------------------------------------------------
 //-------------主导航开始---------------------------------------------------------
 
@@ -548,7 +853,7 @@ body {
 
   }
 .hero>ul{
-  width: 78%;
+  width: 88%;
   margin: 0 auto;
   margin-top:520px;
   display:flex;
@@ -666,6 +971,11 @@ display: none;
   text-align: center;
   padding-bottom: 30px;
 }
+
+
+
+
+
 //--------------二级菜单开始----------------------------------------------
 
 .second-menu{
@@ -676,7 +986,7 @@ display: none;
   width: 240px;
 
   background: #2a3751;
-  overflow-y:scroll;
+  overflow-y:auto;
   transition:  all .5s;
 }
 .second-menu>ul>li{
@@ -808,7 +1118,9 @@ background: #39455d;
   width: 240px;
   background:#151a23;
   transition:  all .5s;
-  overflow-y: scroll;
+  overflow: auto;
+
+
 }
 .second-menu2>ul>li{
   position: relative;
@@ -1019,13 +1331,191 @@ background: #39455d;
 
 
 //--------------footer开始----------------------------------------------
-footer{
+
+
+/*  end  */
+.ow-footer {
+  margin: 0;
+  padding: 0;
   position: relative;
-  width: 100%;
-  height: 400px;
-  background: black;
-  z-index: 100;
+  line-height: 26px;
+  width: auto;
+  height: 100%;
+  z-index: 3;
+  font-size: 12px!important;
+  background: #202020;
+  padding-bottom: 40px;
 }
+.ow-footer a {
+  text-decoration: none;
+  padding-top: 5px;
+  color: #fff;
+  font-weight: 400;
+}
+/*    footer-top  */
+.footer-top{
+  width:1000px;
+  position: relative;
+  left:50%;
+  margin-left: -500px;
+  color: #fff;
+  z-index: 100;
+  font-size: 14px;
+  padding-top: 39px;
+}
+.footer-top-f{
+  float:left;
+  height: 25px;
+}
+.footer-top-f a{
+  padding-top:5px;
+  margin-right: 37px;
+  color: white;
+}
+.footer-top-f a:first-child i{
+  background-position: -96px 0;
+}
+.footer-top-f i{
+  display:inline-block;
+  width:24px;
+  height:24px;
+  margin-right: 10px;
+  position: relative;
+  background: url(../images/game/Fsprite-24-blue.png);
+  vertical-align: middle;
+  top: -2px;
+}
+
+.footer-top-f a:nth-child(2) i{
+  background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i{
+  background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+  clear: both;
+  padding-top: 51px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: 0 auto 8px;
+  text-align: left;
+  width: 1000px;
+}
+
+.logo_bz{
+  display: inline-block;
+  width: 140px;
+  height: 80px;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 0;
+  position: relative;
+  top: 4px;
+  box-sizing: border-box;
+  background: url("../images/game/foot-1.png")no-repeat 0 0;;
+}
+
+.logo_bz+a{
+  display: inline-block;
+  background: url("../images/game/foot-2.png") no-repeat 0 0;
+  width: 125px;
+  height: 38px;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: relative;
+  top: 39px;
+  left: -3px;
+  margin: 0;
+}
+
+.info {
+  display: inline-block;
+  color: rgba(255,255,255,.5);
+  width: 706px;
+  float: right;
+  text-align: left;
+  padding: 0 0 0 73px;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+}
+.info a{
+  color: rgba(255,255,255,.5);
+}
+.info ul{
+  margin: 0 0 3px -10px;
+  padding: 0 0 5px;
+  overflow: hidden;
+}
+.info ul li{
+  float:left;
+}
+.info ul li a{
+  color: #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.info p{
+  line-height: 20px;
+  vertical-align: top;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+}
+.info p:last-child{
+  padding: 8px 0;
+  position: relative;
+
+}
+.info p:last-child a{
+  margin-right:5px;
+}
+.integrity a:first-child{
+  position: relative;
+  top:-1px;
+}
+.integrity a:nth-child(2){
+  position: relative;
+  top:-1px;
+}
+.integrity a:nth-child(3){
+  position: relative;
+  top:-1px;
+}
+#btn {
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  padding: 0;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255,255,255,.25);
+  color: #000;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 501;
+  display: none;
+  cursor: pointer;
+}
+/*   foot - bottom */
+
+.footer-bottom{
+  color: rgba(255,255,255,.3);
+  text-align: center;
+  clear: both;
+  position: relative;
+  font-size: 12px;
+
+}
+.footer-bottom p{
+  line-height: 20px;
+}
+
 //--------------footer结束-------------------------------------------
 
 
@@ -1166,10 +1656,16 @@ footer{
     right: 0;
     top: 0;
     height:48px ;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
   }
   .mainNav-left{
-    width: 40%;
-   margin-left:20%;
+    width:auto;
+
+    margin:  0 auto;
+
   }
   .mainNav-logo{
     width: 162px;
@@ -1177,7 +1673,6 @@ footer{
     margin: 0 auto;
     background: url(../images/index/logo.png) no-repeat;
     background-size: contain;
-    margin-top:0px;
   }
   .mainNav-menu{
     display: none;
@@ -1187,14 +1682,17 @@ footer{
   }
   .mainNav-right-media-l{
     display: block;
+    width:48px;
+    float: left;
   };
   .mainNav-right-media-r{
     display: block;
-    margin-right: 10px;
+    width:48px;
+    float:right;
+    margin-right:0;
   };
   .mainNav-right-media-l>a{
     display: block;
-    float: left;
     width: 48px;
     height: 48px;
     background: url("../images/index/logo3.png") no-repeat;
@@ -1202,11 +1700,10 @@ footer{
   }
   .mainNav-right-media-r>a{
     display: block;
-    float: right;
     width: 48px;
     height: 48px;
     background: url("../images/index/logo3.png") no-repeat;
-    background-position: -183px  -101px;
+    background-position: -190px  -105px;
   }
   //---------------响应式：动画----------------------------
   .animate-b-bg{
@@ -1473,7 +1970,20 @@ footer{
     background-size: cover;
     background-position: center top;
   }
-
+//---------尾部--------------------
+  .ow-footer .footer-center #infos{
+    display: block;
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .footer-center  .info .clearFix{
+    padding: 0px;
+  }
+  .footer-center {
+    width: 100%;
+  }
 }
 
 
@@ -1521,3 +2031,4 @@ footer{
 
 
 }
+

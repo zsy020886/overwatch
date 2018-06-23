@@ -31,22 +31,10 @@ var video=document.getElementsByTagName("video")[0];
     video.autoplay=true;
     video.loop=true;
 //----------------浏览器尺寸变化--------------------------------
-var temp=0;
+
 $(window).resize(function () {
     var  newsWidth=parseInt($(".news ul li").css("width"))/2.2;
     $(".news ul li").css("height",newsWidth+"px");
-
-   /* if($(window).width()<=748){
-        var animateWidth=$(".animate-b-bg").width();
-        $(".animateBG").css("height",animateWidth);
-
-    }else  if($(window).width()>748 && $(window).width()<1200){
-        $(".animateBG").css("height","500px");
-    }else {
-        $(".animateBG").css("height","1100px");
-    }*/
-
-
 
 });
 

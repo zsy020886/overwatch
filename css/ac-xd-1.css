@@ -1,0 +1,1179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/*清浮动*/
+li:after,ul:after,div:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*张世玉*/
+
+/*导航 开始*/
+.navbars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(2,25,72,.3);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+    z-index: 10000;
+}
+.box{
+    height: 40px;
+}
+.nav-left-a{
+    height: 40px;
+    width: 61.82px;
+    display: inline-block;
+    background: url('../images/game/nav-Ficon-sprite.png') no-repeat    -18px -75px;
+    float:left;
+}
+.navbars-top-con li{
+    float:left;
+    position: relative;
+}
+.Navbar-poster {
+    width: calc(12.5% - 17.5px);
+    position: relative;
+    display: inline-block;
+    height: 180px;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+    box-shadow: 0 8px 17px rgba(0,0,0,.1);
+    margin: 15px 20px 15px 0;
+    font-size: 0;
+    transition: border-color .2s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.Navbar-poster .Navbar-posterImage {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 180px;
+    width: 216px;
+    -webkit-filter: brightness(100%) contrast(100%);
+    filter: brightness(100%) contrast(100%);
+    transition: -webkit-filter .2s;
+    transition: filter .2s;
+    transition: filter .2s,-webkit-filter .2s;
+}
+.Navbar-poster:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid rgba(255,255,255,.15);
+    pointer-events: none;
+}
+.Navbar-poster-div{
+    width:100%;
+    height: 100%;
+    background: rgba(255,255,255,.1);
+    position: absolute;
+    top:0;
+    opacity: 0;
+}
+.Navbar-poster:hover .Navbar-poster-div{
+    opacity: 1;
+}
+.nav-left-son-div{
+    width: 100%;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    top:-1px;
+}
+.nav-bottom{
+    background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95)100%);
+    border: solid 1px rgba(255,255,255,.15);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    /*opacity: 0;*/
+    display:none;
+    box-sizing: border-box;
+    transition: all .4s;
+}
+.nav-bottom-1{
+    height: 278px;
+}
+.Navbar-poster:last-child{
+    margin-right: 0;
+}
+.Navbar-esport-sub{
+    width: 2px;
+}
+.Navbar-esport-sub {
+    width: 2px;
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    vertical-align: top;
+    max-width: 100px;
+    background-color: rgba(21,26,35,1);
+    border-left: 1px solid rgba(0,0,0,.2);
+    border-right: 1px solid rgba(0,0,0,.2);
+    transition: all .4s ease;
+}
+.Navbar-esport-sub .Navbar-esport-link {
+    display: block;
+    width: 100px;
+    margin: -6px 0;
+    text-align: center;
+}
+.Navbar-esport-sub .Navbar-esport-link img {
+    width: 100%;
+}
+.center-block .Navbar-esport:hover, .center-block .animation-delay-3 {
+    color: #fff;
+    background-color: rgba(255,255,255,.05);
+}
+.Navbar-esportLabel {
+    padding: 5px 20px 18px;
+
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: inherit;
+    text-align: center;
+    color: rgba(255,255,255,.7);
+}
+.Navbar-esport {
+    padding: 20px 0;
+    font-size: 15px;
+}
+.Navbar-esport {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    width: 16vw;
+    max-width: 192px;
+    font-size: 13px;
+    line-height: 1.4;
+    text-decoration: none;
+    color: rgba(255,255,255,.7);
+}
+.nav-bottom-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-top: solid 1px rgba(255,255,255,.15);
+    border-right: solid 1px rgba(255,255,255,.15);
+    background-color: #283244;
+    opacity: .95;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    transform-origin: center;
+
+}
+.nav-bottom-top-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: solid 1px transparent;
+    background-color: #151a23;
+}
+.nav-left-son-box{
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.nav-bottom-1 .nav-left-son-box{
+    padding: 0 30px;
+}
+.Navbar-posterImage {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 180px;
+    width: 216px;
+    -webkit-filter: brightness(100%) contrast(100%);
+    filter: brightness(100%) contrast(100%);
+    transition: -webkit-filter .2s;
+    transition: filter .2s;
+    transition: filter .2s,-webkit-filter .2s;
+}
+.nav-left{
+    height:40px;
+    float:left;
+}
+.nav-left ul{
+    height:40px;
+    margin: 0;
+}
+.nav-left a,.nav-right a{
+    display: inline-block;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    line-height: 40px;
+    text-decoration: none;
+}
+.nav-left a:hover ,.nav-right a:hover{
+    /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
+    color: #fff;
+    text-decoration: none;
+}
+.nav-left .active{
+    text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
+    color: #fff;
+}
+.nav-left span ,.nav-right span{
+    width: 14px;
+    height: 7px;
+    display: inline-block;
+    background: url('../images/game/nav-Ficon-sprite.png') no-repeat -147px -131px;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
+.nav-right{
+    float:right;
+}
+.nav-right a{
+    float: left;
+}
+
+.nav-right-div{
+    display: inline-block;
+}
+.nav-right .nav-btn {
+    display: inline-block;
+    border-bottom: 0 solid transparent;
+    padding: 24px 15px 22px;
+    box-sizing: border-box;
+    line-height: 1;
+    font-size: 1.2rem;
+    font-family: "microsoft yahei",arial,sans-serif;
+    text-transform: none;
+    color: rgba(255,255,255,.85);
+    min-width: auto;
+    text-align: center;
+    text-shadow: none;
+    letter-spacing: .05em;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+
+
+/*                 */
+
+.nav_head{
+    width: 100%;
+    max-width: 20em;
+    position: fixed;
+    right: 30px;
+    background:#35404f;
+    border-right:2px solid #383d49;
+    border-bottom: 2px solid #383d49;
+    display: none;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.nav_head>a{
+    width: 80%;
+    height: 40px;
+    background: #0e86ca;
+    margin:30px auto;
+    display: block;
+    border:solid 1px #00aeff;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+.nav_head>a:hover{
+    background: #00aeff;
+}
+.bg1{
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/game/nav-Ficon-sprite.png') -141px -9px;
+    display: inline-block;
+
+}
+.bg2{
+    width: 1.5em;
+    height: 1.5em;
+    background: url('../images/game/nav-Ficon-sprite.png') -198px -16px;
+}
+
+.li11{
+    border-top: 2px solid #929191;
+    padding:10px 40px;
+}
+
+.li11:hover{
+    background: #252b36;
+}
+.btn11:hover{
+    background: #00aeff;
+}
+.li11{
+    color: #cccccc;
+}
+.li11:hover{
+    color: white;
+}
+
+
+
+@media (min-width: 768px){
+
+    .box {
+        padding: 0 40px;
+    }
+}
+@media (max-width: 992px) {
+    .navbars{
+        display: none!important;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+
+    .nav-left-a{
+        margin-right: 30px;
+    }
+    .nav-left li{
+        margin-right: 30px;
+    }
+    .nav-right a{
+        margin-left: 30px;
+    }
+    .nav-left-son-box{
+        padding-left:40px;
+        padding-right:40px;
+    }
+}
+
+
+@media screen and (min-width: 1200px ){
+
+    .nav-right .nav-btn {
+        font-size: 1.6rem;
+        min-width: 99px;
+        padding: 24px 0 22px;
+    }
+}
+/*导航 结束*/
+
+/*张世玉*/
+
+/*固定*/
+#fix-1{
+    width: 100%;
+    height: 872px;
+    background: url("../images/activity/a1/header-bg.jpg") no-repeat  top center;
+    background-size: cover ;
+    position: fixed;
+    overflow: hidden;
+    z-index: -11;
+}
+
+
+#overview{
+    width: 100%;
+    height: 700px;
+
+}
+/*logo*/
+.logo{
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    text-align: center;
+    z-index: 9;
+}
+.logo h2{
+    color: white;
+    font-size: 50px;
+    font-style: italic;
+}
+.logo a{
+    display: inline-block;
+    background: #ff9a00;
+    font-size: 20px;
+    width: 150px;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    color: white;
+}
+.logo a:hover{
+    text-decoration: none;
+    color: white;
+    background: #ff9a09;
+}
+
+/*人物图像*/
+.img-1{
+    position: absolute;
+    left: 27%;
+    top: 10%;
+    width: 65%;
+}
+
+/*play*/
+
+.play{
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 30%;
+}
+.play img{
+    width: 135px;
+}
+
+
+/*视频加入*/
+
+.video-wrap{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.video-wrap h1{
+    color: #3564c5;
+}
+.video-wrap>span{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    right: 200px;
+    color: #3564c5;
+}
+
+.video-wrap>span:hover{
+    color: #00c3ff;
+}
+/*视频加入结束*/
+
+
+/*第二部分*/
+#sec-2{
+    width: 100%;
+    height: 700px;
+    background: url("../images/activity/a1/ac-bg-1.png") no-repeat center top;
+    background-size: cover;
+    margin-top: -20px;
+    margin-bottom: -5px;
+}
+
+/*文字*/
+.event-info-subheading--lunar-new-year {
+    color: #ff9c00;
+}
+.sec-2-1{
+    margin-top: 100px;
+}
+.u-subheading {
+    font-family: FuturaNo2D,century gothic,arial,sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    font-variant: normal;
+    line-height: normal;
+}
+
+.u-limit-width {
+    max-width: 40em;
+}
+.u-center-block {
+    display: table;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+/*btn*/
+.btn, .button, button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 6px 1em;
+    border-radius: 2px;
+    border: 3px solid transparent;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: .025em;
+    text-shadow: none;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    transition: all .2s;
+    background-color: #ff9c00;
+    color: #fefefe;
+}
+
+.font-1{
+    width: 640px;
+    height: 75px;
+    color: white;
+    font-size: 16px;
+}
+
+
+/*第三部分*/
+.media-gallery{
+    padding: 0 30px;
+}
+
+#sec-3{
+    width: 100%;
+    background: url("../images/activity/a1/sec-3-background-desktop-wide.jpg") no-repeat center;
+    background-size: cover  ;
+    position: relative;
+    height: 2111px;
+}
+.u-max-width-container, .u-nav-width-container {
+    width: 100%;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sec-3-h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-weight: 400;
+    font-variant: normal;
+    line-height: normal;
+    letter-spacing: .8px;
+    color: white;
+    width: 100%;
+    height: 62px;
+    font-size: 60px;
+}
+.media-card {
+    color: #f0edf2;
+    border: 3px solid hsla(0,0%,100%,.5);
+    border-radius: 3px;
+    transition: all .2s;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100%;
+}
+
+.sec-3-ul li{
+    width: 25%;
+    float: left;
+}
+
+.lis-div{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.sec-3-ul li a{
+    display: block;
+    float: left;
+    width: 98%;
+    height: 100%;
+    border: 3px solid #a8a6a8;
+    /*margin-left: 5px;*/
+    position: relative;
+    margin-top: 5px;
+}
+
+
+.status{
+    position: absolute;
+    z-index: 3;
+    top: 5px;
+    right: 5px;
+    padding: 1px 5px;
+    border: 2px solid #e79b2a;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,.65);
+    font-size: 12px;
+    width: 40px;
+    height: 22px;
+    color: #ffe30b;
+}
+
+/*头像设置开始*/
+.tou{
+    width: 100%;
+    height: 195px;
+}
+.tou img{
+    display: none;
+}
+
+
+.media-card-caption {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 15px;
+    transition: background .2s;
+    background-color: rgba(3, 20, 26, .75);
+    color: #ff9c00;
+    height: 41px;
+}
+
+.media-card-title {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    font-variant: normal;
+    line-height: normal;
+    letter-spacing: .5px;
+}
+
+/*设置头像的鼠标移入效果*/
+.sec-3-ul li a:hover{
+    border: 3px solid #fbf9fb;
+}
+.sec-3-ul li a:hover .media-card-caption{
+    background-color: rgba(3, 20, 26, .9);
+}
+.sec-3-ul li a:hover .tou>img{
+    display: inline-block;
+}
+
+/*特写部分效果*/
+.tou-2 .img-2{
+    width: 40px;
+}
+
+.tou-2 .img-3{
+    position: absolute;
+    top: 70px;
+    width: 40px;
+}
+
+.link-1{
+    width: 100%;
+    height: 58px;
+    background: url("../images/activity/a1/link-1.jpg") no-repeat top;
+    background-size: cover;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 996px){
+    .sec-3-ul li {
+        width: 33.3333%;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    .sec-3-ul {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .sec-3-ul li{
+        width: 100%;
+    }
+    .sec-3-ul li a{
+        width: 100%;
+        height: 401px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .tou{
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%!important;
+    }
+}
+
+
+
+/*3 弹出浮层*/
+.wrapTou{
+    position: absolute;
+    width: 100%;
+    height: 950px;
+    background: rgba(39, 39, 39, .6);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.wrapTou-1 {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.67);
+    left: 10%;
+    top: 20%;
+
+}
+.wrapTou img{
+    position: absolute;
+    bottom: 5%;
+    left:10%;
+    width: 80%;
+    display: none;
+
+}
+.show{
+    display: block;
+}
+
+#btn-3,#btn-4{
+    position: absolute;
+    top: 0;
+    right: 1%;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 55px;
+    color: #1b6d85;
+}
+#btn-3,#btn-4:hover{
+    color: #00c3ff;
+}
+
+#left-1,#left-2{
+    display: inline-block;
+    width: 65px;
+    height: 69px;
+    background: url("../images/activity/a1/btn-lightbox-nav.png");
+    background-position: 0 0 ;
+    position: absolute;
+    top: 50%;
+    left: 0;
+ }
+#right-1,#right-2{
+    display: inline-block;
+    width: 65px;
+    height: 69px;
+    background: url("../images/activity/a1/btn-lightbox-nav.png");
+    background-position: 0 -69px ;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+/*第二个浮层*/
+
+.wrapTe{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    background: rgba(39, 39, 39, .6);
+    z-index: 99;
+    top: 1000px;
+    left: 0;
+    display: none;
+}
+.wrapTe video{
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 80%;
+    display: none;
+}
+
+
+/*第四部分开始*/
+#sec-4{
+    width: 100%;
+    height: 460px;
+    background: url("../images/activity/a1/reinhardt-skin.jpg") no-repeat center top;
+    background-size: cover;
+    position: relative;
+
+}
+.end-1{
+    position: absolute;
+    width: 595px;
+    height: 266px;
+    top: 50px;
+    right: 100px;
+    color: white;
+    z-index: 9;
+}
+
+.end-h2{
+    width: 595px;
+    height: 67px;
+    font-size: 55px;
+    font-style: italic;
+}
+.end-1 p{
+    font-size: 17px;
+}
+
+#btn-2{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+    border: 3px solid transparent;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff9c00;
+    color: #fefefe;
+    width: 148px;
+    height: 45px;
+}
+
+
+/*未完成*/
+.video-1{
+    width: 100%;
+    height: 460px;
+
+    object-fit: contain;
+}
+
+
+
+/*隐藏*/
+
+.sec-5-con-top{
+    width: 100%;
+    height: 782px;
+    background: url("../images/activity/a1/ac-bg-2.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.sec-5-con-top .tio{
+    width: 495px;
+    height: 381px;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.sec-5-con-top .tio h2{
+    width: 495px;
+    height: 134px;
+    font-size: 50px;
+    color: white;
+    font-style: italic;
+}
+.sec-5-con-top .tio p{
+    width: 495px;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.sec-5-con-center{
+    width: 100%;
+    height: 782px;
+    background: url("../images/activity/a1/ac-bg-3.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.sec-5-con-center .tiu{
+    width: 495px;
+    height: 243px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.sec-5-con-center .tiu h2{
+    width: 495px;
+    height: 134px;
+    font-size: 50px;
+    color: white;
+    font-style: italic;
+}
+.sec-5-con-center .tiu p{
+    width: 495px;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+
+/*底部展示*/
+.sec-5-con-bottom{
+    position: relative;
+}
+.sec-5-con-bottom .sec-5-bot-left{
+    float: left;
+    width: 1522px;
+    height: 560px;
+    transition: all 0.6s ease;
+    background: url("../images/activity/a1/ac-bg-4-1.jpg") no-repeat center;
+    background-size: cover;
+}
+.sec-5-con-bottom .sec-5-bot-right{
+    float: right;
+    width: 380px;
+    height: 560px;
+    transition: all 0.6s ease;
+    background: url("../images/activity/a1/ac-bg-4-2.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+/*分界符*/
+.line-1{
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    z-index: 3;
+}
+
+/*尾部*/
+/*  end  */
+.ow-footer {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 26px;
+    width: auto;
+    height: 358px;
+    z-index: 3;
+    font-size: 12px!important;
+    background: #202020;
+}
+.ow-footer a {
+    text-decoration: none;
+    padding-top: 5px;
+    color: #fff;
+    font-weight: 400;
+}
+/*    footer-top  */
+.footer-top{
+    width:1000px;
+    position: relative;
+    left:50%;
+    margin-left: -500px;
+    color: #fff;
+    z-index: 100;
+    font-size: 14px;
+    padding-top: 39px;
+}
+.footer-top-f{
+    float:left;
+    height: 25px;
+}
+.footer-top-f a{
+    padding-top:5px;
+    margin-right: 37px;
+    color: white;
+}
+.footer-top-f a:first-child i{
+    background-position: -96px 0;
+}
+.footer-top-f i{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-right: 10px;
+    position: relative;
+    background: url(../images/game/Fsprite-24-blue.png);
+    vertical-align: middle;
+    top: -2px;
+}
+
+.footer-top-f a:nth-child(2) i{
+    background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i{
+    background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+    clear: both;
+    padding-top: 51px;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 0 auto 8px;
+    text-align: left;
+    width: 1000px;
+}
+
+.logo_bz{
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    overflow: hidden;
+    vertical-align: top;
+    margin: 0;
+    position: relative;
+    top: 4px;
+    box-sizing: border-box;
+    background: url("../images/game/foot-1.png")no-repeat 0 0;;
+}
+
+.logo_bz+a{
+    display: inline-block;
+    background: url("../images/game/foot-2.png") no-repeat 0 0;
+    width: 125px;
+    height: 38px;
+    overflow: hidden;
+    box-sizing: border-box;
+    vertical-align: top;
+    position: relative;
+    top: 39px;
+    left: -3px;
+    margin: 0;
+}
+
+.info {
+    display: inline-block;
+    color: rgba(255,255,255,.5);
+    width: 706px;
+    float: right;
+    text-align: left;
+    padding: 0 0 0 73px;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box;
+}
+.info a{
+    color: rgba(255,255,255,.5);
+}
+.info ul{
+    margin: 0 0 3px -10px;
+    padding: 0 0 5px;
+    overflow: hidden;
+}
+.info ul li{
+    float:left;
+}
+.info ul li a{
+    color: #ccc;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.info p{
+    line-height: 20px;
+    vertical-align: top;
+    font-size: 12px;
+    margin: 0;
+    font-weight: 400;
+}
+.info p:last-child{
+    padding: 8px 0;
+    position: relative;
+
+}
+.info p:last-child a{
+    margin-right:5px;
+}
+.integrity a:first-child{
+    position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(2){
+    position: relative;
+    top:-1px;
+}
+.integrity a:nth-child(3){
+    position: relative;
+    top:-1px;
+}
+#btn {
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    padding: 0;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    display: none;
+    cursor: pointer;
+}
+/*   foot - bottom */
+
+.footer-bottom{
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    clear: both;
+    position: relative;
+    font-size: 12px;
+
+}
+.footer-bottom p{
+    line-height: 20px;
+}
+
+
+
+@media only screen and (max-width: 960px){
+    .ow-footer .footer-center #infos{
+        display: block;
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footer-center  .info .clearFix{
+        padding: 0px;
+    }
+    .footer-center {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

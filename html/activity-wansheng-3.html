@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="../css/ac-ws-3.css"> <!--666-->
+    <link rel="stylesheet" href="../css/index-nav.css"> <!-- 导航 -->
+    <script src="../js/index-nav.js"></script>
+
+
+    <!--[if lte IE 6]>
+    <script src="../bootstrap/js/html5shiv.min.js"></script>
+    <script src="../bootstrap/css/bootstrap.min.css"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style>
+        .end {
+            position: relative;
+        }
+
+        .end p {
+            position: absolute;
+            right: 5px;
+            width: 50px;
+            height: 25px;
+            line-height: 21px;
+            text-align: center;
+            color: #ffe30b;
+            border: 2px solid #e79b2a;
+            border-radius: 4px;
+            background-color: #111820;
+            opacity: 0.8;
+            top: 5px;
+            z-index: 999;
+        }
+
+        .esports-media-card {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            margin-top: -75px;
+            margin-left: -75px;
+            z-index: 20;
+        }
+        @media screen and (max-width:800px) {
+            #loot-box .events-section-header{
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<!--导航-->
+<!--------------顶部导航开始--------------------->
+<div class="navbars">
+    <nav class="navbars-top box">
+        <div class="nav-left">
+            <a href="https://www.battlenet.com.cn/zh/" class="nav-left-a" target="_blank"></a>
+        </div>
+        <div class="nav-left navbars-top-con">
+            <ul>
+                <li><a href="#" class="active">游戏<span></span></a>
+                </li>
+                <li><a href="https://www.battlenet.com.cn/shop/" target="_blank">商城</a></li>
+                <li><a href="https://cn.news.blizzard.com/" target="_blank">新闻</a></li>
+                <li><a href="#">电子竞技<span></span></a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="https://www.battlenet.com.cn/support/" class="Navbar-support Navbar-item Navbar-link is-noSelect"><div class="Navbar-label">支持</div></a>
+            <a data-target="Navbar-accountDropdown" data-name="account" class="Navbar-account Navbar-item Navbar-modalToggle is-noSelect"><div class="nav-right-div">你的通行证</div><span></span>
+            </a>
+        </div>
+    </nav>
+    <div class="nav-left-son-div nav-bottom">
+        <div class="nav-bottom-top" style="left:169.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <div class="nav-left-son-box center-block" >
+            <a href="http://ow.blizzard.cn/" class="Navbar-poster animation-delay-1" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-overwatch-CN-85c98611cefd3018.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+            </a><a href="http://www.wowchina.com/" class="Navbar-poster animation-delay-2" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-world-of-warcraft-CN-c4bebe45e5af0993.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div>
+        </a><a href="http://hs.blizzard.cn/" class="Navbar-poster animation-delay-3" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-hearthstone-CN-538b49564ab2122a.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+        </a><a href="http://heroes.blizzard.cn/" class="Navbar-poster animation-delay-4" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-heroes-of-the-storm-CN-bacafbbddcf92348.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div></a><a href="http://sc2.blizzard.cn/" class="Navbar-poster animation-delay-5" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-starcraft-2-CN-de310c5ddfb63a49.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div></a><a href="http://d3.blizzard.cn/" class="Navbar-poster animation-delay-6" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-diablo-3-CN-0d57444efa52a79b.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+        </a>
+        </div>
+    </div>
+    <div class="nav-left-son-div nav-bottom nav-bottom-1">
+        <div class="nav-bottom-top" style="left:395.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <div class="nav-left-son-box center-block" >
+            <a href="http://ow.blizzard.cn/esports" target="_blank" class="Navbar-esport ow-site  animation-delay-1"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-ow.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">守望先锋电竞</div>
+                <div class="Navbar-poster-div"></div>
+            </a>
+            <div class="Navbar-esport-sub"><a href="http://ow.blizzard.cn/overwatchleague/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-overwatch.png" class="Navbar-esportImage-sub"></a><a href="http://owwc.overwatchesports.cn/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-overwatch-world-cup.png" class="Navbar-esportImage-sub"></a><a href="http://owc.blz.cn/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-contenders.png" class="Navbar-esportImage-sub">
+            </a>
+            </div>
+            <a href="http://gold.blizzard.cn/minisite/gold-super-tournament" target="_blank" class="Navbar-esport  animation-delay-2"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-gold.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">炉石传说黄金系列赛</div>
+                <div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/heroes-tournament" target="_blank" class="Navbar-esport  animation-delay-3"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-heroes.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">HGC黄金风暴联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/sc2gpl/" target="_blank" class="Navbar-esport  animation-delay-4"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-sc2-wcs.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">星际争霸II黄金职业联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/war3-tournament/" target="_blank" class="Navbar-esport  animation-delay-5"><img src="https://blz.nosdn.127.net/1/fsbnet/wariii.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">魔兽争霸III黄金联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+        </div>
+    </div>
+    <div class="nav_head">
+        <div class="nav-bottom-top" style="left:301.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <a target="_blank" href="javascript:void(0)">
+            登录</a>
+        <div class="ul11">
+            <a target="_blank" href="javascript:void(0)">
+                <div class="li11">
+                    <div class="bg1"></div>
+                    账户
+                </div>
+            </a>
+            <div class="ul11">
+                <a target="_blank" href="javascript:void(0)">
+                    <div class="li11">
+                        <div class="bg1"></div>
+                        注册
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </nav>
+</div>
+<!--------------顶部导航结束--------------------->
+<!--------------主导航开始--------------------->
+<nav class="mainNav">
+    <div class="mainNav-right-media-l"><a href="#"></a></div>
+    <div class="mainNav-left">
+        <a href="index.html" class="mainNav-logo"></a>
+    </div>
+    <ul class="mainNav-left  mainNav-menu">
+        <li class="mainNav-menu-xiala" >
+            <a href="#" class="mainNav-title">游戏
+                <div class="mainNav-arrow"></div>
+            </a>
+            <ul class="mainNav-second" style="padding-left: 280px;">
+                <li><a href="game-summary.html">
+                    <div class="mainNav-second-icon"></div>
+                    概述</a></li>
+                <li><a href="game-patch.html">
+                    <div class="mainNav-second-icon"></div>
+                    补丁</a></li>
+            </ul>
+        </li>
+        <li><a href="hero.html" class="nav-btn ">英雄</a></li>
+        <li class="mainNav-menu-xiala">
+            <a href="#" class="mainNav-title">活动
+                <div class="mainNav-arrow"></div>
+            </a>
+            <ul class="mainNav-second" style="padding-left: 480px;">
+                <li ><a href="activity-xingdong-1.html" >
+                    <div class="mainNav-second-icon"></div>行动档案</a></li>
+                <li><a href="activity-huandu-2.html" >
+                    <div class="mainNav-second-icon"></div>
+                    欢度新春</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>雪国仙境</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>万圣夜惊魂</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>夏季运动会</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>周年庆典</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>国王行动</a></li>
+            </ul>
+        </li><li><a href="video.html" class="nav-btn ">视频图片</a></li>
+        <li><a href="news.html" class="nav-btn ">新闻</a></li>
+        <li><a href="download.html" class="nav-btn">下载</a></li>
+        <li><a href="#" class="nav-btn ">生涯数据</a></li>
+        <li><a href="#" class="nav-btn ">电子竞技</a></li>
+        <li><a href="#" target="_blank" class="nav-btn">论坛</a></li>
+    </ul>
+    <div class="mainNav-right"><a href="#">购买</a></div>
+
+    <div class="mainNav-right-media-r"><a href="#"></a></div>
+
+</nav>
+<!--------------主导航结束--------------------->
+<!--------------第二级菜单开始--------------------->
+<div class="second-menu">
+    <ul>
+        <li>
+            <a href="#" class="second-menu-close"></a>
+            <a href="#" class="second-menu-logo1"></a>
+        </li>
+        <li><span></span><a href="#">首页</a></li>
+        <li><span></span>
+            <a href="#" >游戏</a>
+            <ul>
+                <li><a href="#">概述</a></li>
+                <li><a href="#">补丁</a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><span></span><a href="#">英雄</a></li>
+        <li><span></span>
+            <a href="#">活动</a>
+            <ul>
+                <li><a href="#" >行动档案</a></li>
+                <li><a href="#" >欢度新春</a></li>
+                <li><a href="#" >雪国仙境</a></li>
+                <li><a href="#" >万圣夜惊魂</a></li>
+                <li><a href="#" >夏季运动会</a></li>
+                <li><a href="#" >周年庆典</a></li>
+                <li><a href="#" >国王行动</a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><span></span><a href="#">视频图片</a></li>
+        <li><span></span><a href="#">新闻</a></li>
+        <li><span></span><a href="#">下载</a></li>
+        <li><span></span><a href="#">生涯数据</a></li>
+        <li><span></span><a href="#">电子竞技</a></li>
+        <li><span></span><a href="#">论坛</a></li>
+        <li><a href="#" class="second-menu-shop">立即购买</a></li>
+        <li>
+            <a href="#" class="second-menu-logo2"></a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="second-menu2">
+    <ul>
+        <li>
+            <a href="#" class="second-menu-logo1"></a>
+            <a href="#" class="second-menu-close"></a>
+        </li>
+        <li>
+            <a href="#"><div>登录</div></a></li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron1">&nbsp;</span>
+                <span class="s-menu2-iron-t">支持</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron2">&nbsp;</span>
+                <span class="s-menu2-iron-t">账户</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron3">&nbsp;</span>
+                <span class="s-menu2-iron-t">注册</span>
+            </a>
+        </li>
+        <li><a href="#">首页</a></li>
+        <li><span class="aaa"></span>
+            <a href="#" >游戏</a>
+            <ul>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon1">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">守望先锋</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon2">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">魔兽世界</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon3">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">炉石传说</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon4">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">风暴英雄</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon5">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">星际争霸 </span>
+                        <span class="sm2-g-icon-t2">®</span>
+                        <span class="sm2-g-icon-t1">II</span>
+                    </a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon6">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">黑暗破坏神 </span>
+                        <span class="sm2-g-icon-t2">®</span>
+                        <span class="sm2-g-icon-t1"> III</span>
+                    </a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><a href="#">商城</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><span class="aaa"></span>
+            <a href="#">电子竞技</a>
+            <ul class="second-menu-third">
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >守望先锋电竞</a> </li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋世界杯</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋挑战者系列赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >炉石传说黄金系列赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >HGC黄金风暴联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >星际争霸II黄金职业联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >魔兽争霸III黄金联赛</a></li>
+            </ul>
+            <div class="second-menu-icon" style="left:80px"></div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="mask"></div>
+
+<!--------------第二级菜单结束--------------------->
+
+<!--开头-->
+<!--固定-->
+<div id="fix-1">
+</div>
+
+<section id="overview">
+    <div>
+        <!--左侧logo-->
+        <div class="logo">
+            <img src="http://overwatch.nos.netease.com/1/assets/video/hallonween/BrowserPreview.png" alt="" width="480px">
+            <a href="https://shop.battlenet.com.cn/zh-cn/product/overwatch-credits" target="_blank">购买补给</a>
+        </div>
+        <!--右侧-->
+        <div class="ren">
+            <img src="http://overwatch.nos.netease.com/1/assets/video/hallonween/reaper.png" alt="" class="img-12" >
+            <img src="http://overwatch.nos.netease.com/1/assets/video/hallonween/mccree.png" alt="" class="img-1">
+
+        </div>
+
+        <a href="javascript:void(0)" class="play"><img src="../images/activity/a1/Fplay-button.png" alt=""></a>
+
+    </div>
+
+    <!--视频盛放框-->
+    <div class="video-wrap text-center">
+        <span id="overview-btn"><img src="../images/activity/a1/exit.3OOEf.png" alt=""></span>
+        <div class="video-wrap-1">
+            <h1>守望先锋 威尼斯行动</h1>
+            <video src="../images/vedio/activity/a1/ac-video-1.mp4" controls style="width: 75% ;margin-top: 3%"></video>
+        </div>
+    </div>
+</section>
+
+
+<!--第二部分-->
+<section id="sec-2" class="text-center" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/brickwall.png')">
+    <div class="row">
+        <div class="sec-2-1">
+           <h1 style="margin-top: 150px;">恐惧再临</h1>
+            <p class="u-limit-width u-center-block font-1">  <!--需改动-->
+                为恐惧而战，英雄们！
+            </p>
+            <p class="u-limit-width u-center-block font-1" data-fadein="true">
+                接下来的三周，我们将用极具特色的季节性活动来庆祝每年最惊悚的节日。不要错过这个收集活动主题物品的大好机会，还能在我们的PvE模式：怪鼠复仇中再度体验到那段骇人听闻的传说。
+            </p>
+            <p class="u-limit-width u-center-block font-1" data-fadein="true">
+                今年的怪鼠复仇加入了无尽模式，让那些在对抗邪恶博士的战斗中坚持得最久的勇士们有了在排行榜上一争 高下的机会。不仅如此，今年还有超过50件全新主题物品等着你来解锁，包括了全新的传说品质皮肤：吸血死神、范海辛麦克雷、八零年代查莉娅以及巨龙
+            </p>
+            <p class="u-limit-width u-center-block font-1" data-fadein="true">
+                秩序之光”。当然，去年的万圣节物品也会再度开放。
+            </p>
+            <p>
+                <a class="btn showDetail btn-5">更多信息</a>
+            </p>
+        </div>
+    </div>
+</section>
+<!--隐藏部分-->
+<section id="sec-5" style="overflow: hidden;display: none">
+    <div class=" sec-5-con">
+        <div class="sec-5-con-top">
+            <div class="tio">
+                <h2>怪鼠复仇</h2>
+                <p>
+                    和其他三名玩家组队，挑战数量庞大的可怕敌人，包括了弗兰狂斯鼠、他的可怕造物、神秘的召唤师、“死 神”以及荒野女巫
+                </p>
+            </div>
+            <div class="tiu">
+                <h2>无尽黑夜</h2>
+                <p>
+                    准备好迎接真正的挑战吧！街机模式的最新内容将是狂鼠复仇：无尽黑夜。城堡大门正在遭受无穷无尽的敌 人和首领冲击，这种情况下，你能够坚持多久？这次新增四名英雄可供选择：源氏、托比昂、“黑百合”以 及禅雅塔。坚持得最久的玩家还可以在全新加入的排行榜上拥有一席之地。
+                </p>
+            </div>
+        </div>
+
+        <div class="link-1"></div>
+        <div class="sec-5-con-bottom">
+            <div class="sec-5-bot-left"></div>
+
+            <div class="sec-5-bot-right">
+                <div class="line-1">
+                    <img src="../images/activity/a1/dividier-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--第三部分-->
+
+<section id="sec-3" class="text-center">
+
+    <!--显示浮层-->
+    <div id="popBox">
+        <div class="w-light-box">
+            <div class="head">
+                <div class="title">地动山摇</div>
+                <div class="num" style="">1/4</div>
+            </div>
+            <div class="content" style="height: 763px">
+
+            </div>
+            <div class="control" style="">
+                <a class="prev" href="javascript:void(0);"></a><a class="next" href="javascript:void(0);"></a>
+            </div>
+        </div>
+        <a class="closeBtn" href="javascript:;">关闭</a>
+    </div>
+    <div id="boxModel"></div>
+
+        <div class="wrapTou">
+
+            <span id="left-1"></span>
+            <span id="right-1"></span>
+
+            <span id="btn-3">×</span>
+            <img src="../images/activity/a1/1-skin.jpg" alt="" class="show">
+            <img src="../images/activity/a1/2-skin.jpg" alt="">
+            <img src="../images/activity/a1/3-skin.jpg" alt="">
+            <img src="../images/activity/a1/4-skin.jpg" alt="">
+            <img src="../images/activity/a1/5-skin.jpg" alt="">
+            <img src="../images/activity/a1/6-skin.jpg" alt="">
+            <img src="../images/activity/a1/7-skin.jpg" alt="">
+            <img src="../images/activity/a1/8-skin.jpg" alt="">
+            <img src="../images/activity/a1/9-skin.jpg" alt="">
+            <img src="../images/activity/a1/10-skin.jpg" alt="">
+            <img src="../images/activity/a1/11-skin.jpg" alt="">
+            <img src="../images/activity/a1/12-skin.jpg" alt="">
+            <img src="../images/activity/a1/13-skin.jpg" alt="">
+            <img src="../images/activity/a1/14-skin.jpg" alt="">
+            <img src="../images/activity/a1/15-skin.jpg" alt="">
+            <img src="../images/activity/a1/16-skin.jpg" alt="">
+            <img src="../images/activity/a1/17skin.jpg" alt="">
+            <img src="../images/activity/a1/18-skin.jpg" alt="">
+        </div>
+
+
+        <div class="u-max-width-container content-box">
+            <div class="column  gutter-12 u-relative">
+
+                <!-- 皮肤 -->
+                <section>
+                    <h2 class="sec-3-h2">皮肤</h2>
+                    <ul class="media-gallery  sec-3-ul sec-3-f1">
+                        <li class="column md-4 lg-3">
+                            <div class="lis-div">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/ana-pirate.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                            </div>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/zen-squid.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/reaper-vampire.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/sym-dragon.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <!--2-->
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/mei.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/zarya.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/mccree.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/torb.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <!--3-->
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c8a.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000C68.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c1d.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c4f.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <!--4-->
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c71.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000a7c.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c6c.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000a86.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <!--5-->
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c6d.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c69.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c6a.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000b4f.jpg');background-size: 280px">
+                                    <img src="../images/activity/a2/magnifying.png" alt="" style="margin-top: 70px;">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--特写-->
+                <section data-unlock-type="data-unlock-type" style="margin-top: 50px">
+                    <h2 class="event-unlock-media-header sec-3-h2">特写</h2>
+
+                    <ul data-js-media-gallery="skins" class="media-gallery sec-3-ul sec-3-f2">
+                        <li class="column md-4 lg-3"  data-mp4="http://overwatch.nos.netease.com/1/assets/video/hallonween/OVR_Halloween2017_RoadhogMonsterPOTG_XA.mp4" data-title="地动山摇" data-num="1/4">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/roadhog.jpg');background-size:  300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+
+                        <li class="column md-4 lg-3"   data-mp4="http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000C33.mp4" data-title="恶灵复生 " data-num="2/4">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000C33.jpg');background-size:  300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3"  data-mp4="http://overwatch.nos.netease.com/1/assets/video/hallonween/OVR_Halloween2016_MeiPOTG_XA.mp4" data-title="美丽吓人"  data-num="3/4">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c38.jpg');background-size:  300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column md-4 lg-3"  data-mp4="http://overwatch.nos.netease.com/1/assets/video/hallonween/OVR_Halloween2016_GenjiPOTG_XA.mp4" data-title="南瓜雕刻" data-num="4/4">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c43.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--表情-->
+                <section data-unlock-type="data-unlock-type" style="margin-top: 50px">
+                    <h2 class="event-unlock-media-header sec-3-h2">表情</h2>
+                    <ul data-js-media-gallery="skins" class="media-gallery gutter-6 spacer-6 sec-3-ul">
+                        <li class="column col-xs-12 col-lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x02500000000012A6.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column col-xs-12 col-lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/mei.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column col-xs-12 col-lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c24.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column col-xs-12 col-lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c2f.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                        <li class="column col-xs-12 col-lg-3">
+                            <a href="javascript:void(0)">
+                                <span class="status">全新</span>
+                                <div class="tou tou-2" style="background: url('http://overwatch.nos.netease.com/1/assets/video/hallonween/0x0250000000000c25.jpg');background-size: 300px">
+                                    <img src="../images/activity/a2/youtube-btn-wh.png" alt="" style="" class="img-3">
+                                    <img src="../images/activity/a2/youtube-btn-ylw.png" alt="" style="margin-top: 70px;display: inline-block" class="img-2">
+                                </div>
+                                <div class="media-card-caption"><p class="media-card-title text-center">调音师</p></div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+</section>
+<!--link-1 上下连接-->
+<div class="link-1"></div>
+
+
+
+<!--第四部分-->
+<section id="sec-4">
+    <!--文字部分-->
+    <div class="column xs-12 lg-6 lg-push-6 u-align-center u-align-left@lg-min end-1">
+        <h2 data-fadein="true" class="events-section-header u-align-center u-align-left@lg-min end-h2">回顾“守望先锋”的过去</h2>
+        <div class="event-loot-box-description">
+            <p data-fadein="true">
+                打开时间胶囊，浏览尘封的档案，寻找“守望先锋”早期的记忆。打开行动补给解锁过去的片段，例如居家小美、黑爪特工“黑影”、28号实验品温斯顿、岛田先生半藏、黑暗守望者莫伊拉皮肤等等。超过60种新外观物品以及共计160余种个性化物品等你发现，不过别犹豫太久——很快，这些补给将会再次成为历史。
+            </p>
+        </div>
+        <a href="#" id="btn-2"  class="btn m-lg margin-18 margin-no-sides">购买补给</a>
+    </div>
+</section>
+
+<!--尾部-->
+<footer class="ow-footer">
+    <div class="footer-top hidden-sm hidden-xs">
+        <div class="footer-top-f"><a href="#"><i></i>在线客服</a><a href="#"><i></i>反馈</a><a href="#"><i></i>加入我们</a>
+        </div>
+    </div>
+    <div class="footer-center ">
+        <a target="_blank" href="https://www.battlenet.com.cn/" class="logo_bz hidden-sm hidden-xs"></a>
+        <a target="_blank" href="http://www.163.com/" class="logo_ne hidden-sm hidden-xs"></a>
+        <div class="info footer-info" id="infos">
+            <ul class="clearFix">
+                <li><a href="https://www.battlenet.com.cn/zh/legal-cn/privacy" target="_blank">隐私</a>|</li>
+                <li><a href="https://www.battlenet.com.cn/zh/legal-cn/" target="_blank">法律条款</a>|</li>
+                <li><a href="https://dev.battle.net/" target="_blank">API</a></li>
+            </ul>
+            <p>?2018 暴雪娱乐有限公司版权所有
+                <span>由上海网之易网络科技发展有限公司运营</span><a href="https://www.battlenet.com.cn/legal-cn/infringementnotice" target="_blank"> 著作权侵权</a>&nbsp;|&nbsp;<span id="js_shenzi">新广出审[2016]378号</span></p>
+            <p>
+                <span id="js_wenjinwang">文网游进字[2016]0025号</span>&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/license.pdf" target="_blank">沪网文号〔2017〕9633-727号</a>&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/appreciation-licence.pdf" target="_blank">增值电信业务经营许可证编号：沪B2－20080012</a></p>
+            <p>互联网违法和不良信息举报电话：0571-28090163&nbsp;沪公网安备 31011502022167号&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/self-discipline.pdf" target="_blank">上海市网络游戏行业自律公约</a>
+            </p>
+            <p class="integrity">
+                <a target="_blank" href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg"><img src="https://blz.nosdn.127.net/1/frame/cprt/police.png"></a><a target="_blank" href="http://www.zx110.org/"><img src="https://blz.nosdn.127.net/1/frame/cprt/zx110.png"></a><a target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20111011175417664"><img src="https://blz.nosdn.127.net/1/frame/cprt/sgs-icon.png"></a><a target="_blank" href="http://www.shjbzx.cn/"><img src="https://blz.nosdn.127.net/1/frame/cprt/icon20120516.png"></a><span>| &nbsp;适龄提示：适合13岁及以上使用&nbsp;&nbsp;</span><a href="https://www.battlenet.com.cn/support/zh/article/280" target="_blank">家长监护工程&gt;</a>
+            </p>
+        </div>
+        <a id="btn"  href="#top">TOP</a>
+    </div>
+    <div class="footer-bottom hidden-sm hidden-xs">
+        <p class="tips">积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+    </div>
+
+</footer>
+
+
+<script src="../js/jquery.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+
+
+<!--特写部分视频-->
+<script>
+    /*特写部分视频*/
+    $(".sec-3-f2 li ").click(function () {
+      $("#popBox").css("display","flex");
+        $("#boxModel").attr("style","width: 1903px; height: 4393px; opacity: 0.8; display: block;");
+        $(".title").text($(this).attr('data-title'));
+        $(".num").text($(this).attr('data-num'));
+        var m = $(this).attr('data-mp4');
+        var video = $('<video width="100%" height="70%" controls="controls" autoplay="autoplay" preload="auto" >');
+        $(".content").append(video);
+        var source = $('<source src="'+m+'" type="video/mp4">');
+        $("video").append(source);
+        $("video").append("您的浏览器暂时无法播放此视频.");
+    });
+
+    //关闭按钮
+    $(".closeBtn").click(function () {
+        $(this).parent().attr("style"," display: none");
+        $(this).parent().next().attr("style","width: 1903px; height: 3717px; opacity: 0.8; display: none;");
+        $("#popBox video").remove();
+        $("#popBox img").remove();
+    });
+
+    //右按钮
+
+    // 点击右按钮
+    $(".next").click(function () {
+        $(".sec-3-f2 li").each(function (index, ele) {
+            if ($(this).attr('data-title') == $(".title").text()) {
+                $("this").parent().attr("style", "display: none");
+                $("this").parent().next().attr("style", "width: 1903px; height: 3717px; opacity: 0.8; display: none;");
+                $("#popBox video").remove();
+                $(".title").text($(this).next().attr('data-title'));
+                $(".num").text($(this).next().attr('data-num'));
+                var m = $(this).next().attr('data-mp4');
+                var video = $('<video width="100%" height="100%" controls="controls" autoplay="autoplay" preload="auto">');
+                $(".content").append(video);
+                var source = $('<source src="' + m + '" type="video/mp4">');
+                $("video").append(source);
+                $("video").append("您的浏览器暂时无法播放此视频.");
+                return false;
+            }
+        });
+    });
+
+    //左按钮
+
+    $(".prev").click(function () {
+        $(".sec-3-f2 li").each(function(index,ele) {
+            if ($(this).attr('data-title') == $(".title").text()) {
+                $("this").parent().attr("style"," display: none");
+                $("this").parent().next().attr("style","width: 1903px; height: 3717px; opacity: 0.8; display: none;");
+                $("#popBox video").remove();
+                $(".title").text($(this).prev().attr('data-title'));
+                $(".num").text($(this).prev().attr('data-num'));
+                var m = $(this).prev().attr('data-mp4');
+                var video = $('<video width="100%" height="100%" controls="controls" autoplay="autoplay" preload="auto">');
+                $(".content").append(video);
+                var source = $('<source src="'+m+'" type="video/mp4">');
+                $("video").append(source);
+                $("video").append("您的浏览器暂时无法播放此视频.");
+                return false;
+            }
+        }); });
+
+</script>
+
+
+<!--照片 和 首部视频-->
+<script>
+    $(".play").click(function () {
+        $(".video-wrap").css("display","block");
+    });
+
+    $("#overview-btn").click(function () {
+        $(".video-wrap").css("display","none");
+    });
+
+    /*大框点击变照片*/
+
+    /*皮肤浮层*/
+    /*出现浮层*/
+    $(".sec-3-f1 li").each(function () {
+        $(this).click(function () {
+            $(".wrapTou").css("display","block");
+            var Index = $(this).index();
+            $(".wrapTou img").eq(Index).addClass("show").siblings().removeClass("show");
+
+        });
+    });
+
+    /*差号*/
+    $("#btn-3").click(function () {
+        $(".wrapTou").css("display","none");
+    });
+
+    /*切换照片*/
+    /*右侧*/
+    $("#right-1").click(function () {
+        Index ++;
+        if(Index == 19){
+            Index = 1;
+        }
+        $("img").eq(Index).addClass("show").siblings().removeClass("show");
+    });
+
+
+    var Index = 1;
+    /*左侧*/
+    $("#left-1").click(function () {
+        Index --;
+        if(Index == 0){
+            Index = 18;
+        }
+        $("img").eq(Index).addClass("show").siblings().removeClass("show");
+
+    });
+
+</script>
+
+
+<!--隐藏部分 推拉-->
+<script>
+    /*隐藏部分开关*/
+    $(".btn-5").click(function () {
+        if($(".btn-5").text() == "更多信息"){
+            $(".btn-5").text("隐藏信息");
+        } else {
+            $(".btn-5").text("更多信息");
+        }
+
+        $("#sec-5").slideToggle("slow");
+    });
+
+
+    /*filter: brightness(45%);*/
+    /*底部推拉展示*/
+    $(".sec-5-bot-left").mouseenter(function () {
+        $(this).css({
+            "width" : "80%",
+            "filter" : "brightness(100%)"
+        }); //1431
+        $(this).siblings().css({
+            "width" : "20%",
+            "filter" : "brightness(45%)"
+        }); //360
+    });
+
+    $(".sec-5-bot-right").mouseenter(function () {
+        $(this).css({
+            "width" : "80%",
+            "filter" : "brightness(100%)"
+        });
+        $(this).siblings().css({
+            "width" : "20%",
+            "filter" : "brightness(45%)"
+        });
+    });
+</script>
+
+<!--尾部-->
+<script>
+    window.onscroll=function(){
+        var wScrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        console.log(wScrollTop);
+        if(wScrollTop>=230){
+            $('[id="btn"]').show();
+        }else{
+            $('[id="btn"]').hide();
+        }
+
+    }
+    $('.blog-sidebar-box-lis li').click(function(e){
+
+        e.preventDefault();
+        var index=$(this).index();
+        var top=$('[data="blog-body"]').eq(index).offset().top;
+        $('body,html').animate({scrollTop:top},'fast');
+    })
+
+    $('[id="btn"]').click(function(e){
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},'fast');
+    })
+</script>
+
+<!--js-->
+
+<script src="../js/index-nav.js"></script>
+
+<!--张-->
+
+</body>
+</html>
