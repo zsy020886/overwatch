@@ -16,6 +16,7 @@ body {
   color: #405275;
   font-size: 1.5rem;
   line-height: 1.4;
+  font: normal normal normal 10px "microsoft yahei", Arial, sans-serif;
 }
 .overview-section,
 heroes-section,
