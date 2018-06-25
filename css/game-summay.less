@@ -1226,6 +1226,7 @@ li {
   line-height: 20px;
 }
 
+
 /* 栅格系统*/
 [class*=col-] {
   float: left;
@@ -1760,6 +1761,15 @@ body {
 }
 
 
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /*导航 开始*/
 .navbars {
   position: absolute;
@@ -1771,10 +1781,11 @@ body {
   font-weight: 400;
   line-height: 1.4;
   color: #fff;
-  z-index: 10000;
+  z-index: 1000;
 }
 .box{
   height: 40px;
+  border-bottom: solid 1px rgba(255,255,255,.15);
 }
 .nav-left-a{
   height: 40px;
@@ -1786,6 +1797,12 @@ body {
 .navbars-top-con li{
   float:left;
   position: relative;
+}
+.nav-left li {
+  margin-right: 20px;
+}
+.nav-right-top a {
+  margin-left: 20px;
 }
 .Navbar-poster {
   width: calc(12.5% - 17.5px);
@@ -1856,6 +1873,28 @@ body {
 .nav-bottom-1{
   height: 278px;
 }
+.Navbar-overlay {
+  animation-name: Navbar-dropdown-fade-in;
+  animation-duration: 200ms;
+}
+.Navbar-overlay {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -100;
+  background-color: rgba(0,0,0,.5);
+}
+.Navbar-overlay-1{
+  top: 292px;
+}
+.Navbar-overlay-2{
+  top: 317px;
+}
+.Navbar-overlay-3{
+  top: 40px;
+}
 .Navbar-poster:last-child{
   margin-right: 0;
 }
@@ -1913,6 +1952,9 @@ body {
   line-height: 1.4;
   text-decoration: none;
   color: rgba(255,255,255,.7);
+}
+.Navbar-esport:hover{
+  text-decoration: none;
 }
 .nav-bottom-top{
   position: absolute;
@@ -1974,14 +2016,14 @@ body {
   height:40px;
   margin: 0;
 }
-.nav-left a,.nav-right a{
+.nav-left a,.nav-right-top a{
   display: inline-block;
   color: rgba(255,255,255,.7);
   font-size: 15px;
   line-height: 40px;
   text-decoration: none;
 }
-.nav-left a:hover ,.nav-right a:hover{
+.nav-left a:hover ,.nav-right-top a:hover{
   /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
   color: #fff;
   text-decoration: none;
@@ -1990,7 +2032,7 @@ body {
   text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
   color: #fff;
 }
-.nav-left span ,.nav-right span{
+.nav-left span ,.nav-right-top span{
   width: 14px;
   height: 7px;
   display: inline-block;
@@ -1998,17 +2040,17 @@ body {
   margin-left: 2px;
   vertical-align: baseline;
 }
-.nav-right{
+.nav-right-top{
   float:right;
 }
-.nav-right a{
+.nav-right-top a{
   float: left;
 }
 
 .nav-right-div{
   display: inline-block;
 }
-.nav-right .nav-btn {
+.nav-right-top .nav-btn {
   display: inline-block;
   border-bottom: 0 solid transparent;
   padding: 24px 15px 22px;
@@ -2061,6 +2103,10 @@ a{
 }
 .nav_head>a:hover{
   background: #00aeff;
+  text-decoration: none;
+}
+.ul11>a:hover{
+  text-decoration: none;
 }
 .bg1{
   width: 1.5em;
@@ -2076,21 +2122,24 @@ a{
 }
 
 .li11{
-  border-top: 2px solid #929191;
+  border-top: 1px solid #929191;
   padding:10px 40px;
 }
 
 .li11:hover{
   background: #252b36;
+  text-decoration: none;
 }
 .btn11:hover{
   background: #00aeff;
+
 }
 .li11{
   color: #cccccc;
 }
 .li11:hover{
   color: white;
+  text-decoration: none;
 }
 
 
@@ -2100,8 +2149,9 @@ a{
   .box {
     padding: 0 40px;
   }
+
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .navbars{
     display: none!important;
   }
@@ -2117,7 +2167,7 @@ a{
   .nav-left li{
     margin-right: 30px;
   }
-  .nav-right a{
+  .nav-right-top a{
     margin-left: 30px;
   }
   .nav-left-son-box{
@@ -2126,10 +2176,9 @@ a{
   }
 }
 
-
 @media screen and (min-width: 1200px ){
 
-  .nav-right .nav-btn {
+  .nav-right-top .nav-btn {
     font-size: 1.6rem;
     min-width: 99px;
     padding: 24px 0 22px;
