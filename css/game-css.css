@@ -82,6 +82,38 @@ h1, h2, h3, h4, h5, h6 {
     float:left;
     position: relative;
 }
+.nav-left li {
+    margin-right: 20px;
+}
+
+.Navbar-overlay {
+    animation-name: Navbar-dropdown-fade-in;
+    animation-duration: 200ms;
+}
+.Navbar-overlay {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100;
+    background-color: rgba(0,0,0,.5);
+}
+.Navbar-overlay-1{
+    top: 292px;
+}
+.Navbar-overlay-2{
+    top: 317px;
+}
+.Navbar-overlay-3{
+    top: 40px;
+}
+.nav-right-top a {
+    margin-left: 20px;
+}
+.nav-right a {
+    margin-left: 20px;
+}
 .Navbar-poster {
     width: calc(12.5% - 17.5px);
     position: relative;
@@ -853,7 +885,7 @@ position: relative;
         width: 8.33333333%;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .navbars{
         display: none!important;
     }
