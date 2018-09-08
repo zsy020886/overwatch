@@ -113,7 +113,11 @@ body {
 }
 .mainNav-menu > li > a {
   display: block;
+<<<<<<< HEAD
   padding: 19px 20px 18px;
+=======
+  padding: 20px 20px 20px;
+>>>>>>> origin/master
   font-size: 1.6rem;
   color: rgba(255, 255, 255, 0.85);
   text-align: center;
