@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sport</title>
+    <!--meta:vp-- 移动端需要视口-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--设置当前文件以最优的内核渲染-->
+    <!--meta:compat -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <!--低版本IE能识别-->
+    <!--cc:ie6改成IE8-->
+    <!--if lte IE6]-->
+    <script src="../bootstrap/js/html5shiv.min.js"></script>
+    <script src="../bootstrap/js/respond.min.js"></script>
+    <!--endif-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="../bootstrap/js/jquery-1.11.3.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/index-nav.css">
+    <script src="../bootstrap/js/index-nav.js"></script>
+    <style>
+
+
+        /*导航 开始*/
+        .navbars {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(2,25,72,.3);
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #fff;
+            z-index: 10000;
+        }
+        .box{
+            height: 40px;
+        }
+        .nav-left-a{
+            height: 40px;
+            width: 61.82px;
+            display: inline-block;
+            background: url('../images/game/nav-Ficon-sprite.png') no-repeat    -18px -75px;
+            float:left;
+        }
+        .navbars-top-con li{
+            float:left;
+            position: relative;
+        }
+        .Navbar-poster {
+            width: calc(12.5% - 17.5px);
+            position: relative;
+            display: inline-block;
+            height: 180px;
+            min-width: 0;
+            max-width: none;
+            overflow: hidden;
+            box-shadow: 0 8px 17px rgba(0,0,0,.1);
+            margin: 15px 20px 15px 0;
+            font-size: 0;
+            transition: border-color .2s;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        .Navbar-poster .Navbar-posterImage {
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            height: 180px;
+            width: 216px;
+            -webkit-filter: brightness(100%) contrast(100%);
+            filter: brightness(100%) contrast(100%);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+            transition: filter .2s,-webkit-filter .2s;
+        }
+        .Navbar-poster:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid rgba(255,255,255,.15);
+            pointer-events: none;
+        }
+        .Navbar-poster-div{
+            width:100%;
+            height: 100%;
+            background: rgba(255,255,255,.1);
+            position: absolute;
+            top:0;
+            opacity: 0;
+        }
+        .Navbar-poster:hover .Navbar-poster-div{
+            opacity: 1;
+        }
+        .nav-left-son-div{
+            width: 100%;
+            z-index: 1;
+            display: inline-block;
+            position: relative;
+            top:-1px;
+        }
+        .nav-bottom{
+            background: radial-gradient(ellipse farthest-side at center top,#283244 0,rgba(21,26,35,.95)100%);
+            border: solid 1px rgba(255,255,255,.15);
+            box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+            /*opacity: 0;*/
+            display:none;
+            box-sizing: border-box;
+            transition: all .4s;
+        }
+        .nav-bottom-1{
+            height: 278px;
+        }
+        .Navbar-poster:last-child{
+            margin-right: 0;
+        }
+        .Navbar-esport-sub{
+            width: 2px;
+        }
+        .Navbar-esport-sub {
+            width: 2px;
+            opacity: 0;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            vertical-align: top;
+            max-width: 100px;
+            background-color: rgba(21,26,35,1);
+            border-left: 1px solid rgba(0,0,0,.2);
+            border-right: 1px solid rgba(0,0,0,.2);
+            transition: all .4s ease;
+        }
+        .Navbar-esport-sub .Navbar-esport-link {
+            display: block;
+            width: 100px;
+            margin: -6px 0;
+            text-align: center;
+        }
+        .Navbar-esport-sub .Navbar-esport-link img {
+            width: 100%;
+        }
+        .center-block .Navbar-esport:hover, .center-block .animation-delay-3 {
+            color: #fff;
+            background-color: rgba(255,255,255,.05);
+        }
+        .Navbar-esportLabel {
+            padding: 5px 20px 18px;
+
+            font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.4;
+
+            text-align: center;
+            color: rgba(255,255,255,.7);
+        }
+        .Navbar-esport {
+            padding: 20px 0;
+            font-size: 15px;
+        }
+        .Navbar-esport {
+            display: table-cell;
+            position: relative;
+            vertical-align: top;
+            width: 16vw;
+            max-width: 192px;
+            font-size: 13px;
+            line-height: 1.4;
+            text-decoration: none;
+            color: rgba(255,255,255,.7);
+        }
+        .nav-bottom-top{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-top: solid 1px rgba(255,255,255,.15);
+            border-right: solid 1px rgba(255,255,255,.15);
+            background-color: #283244;
+            opacity: .95;
+            transform: translate(-50%,-50%) rotate(-45deg);
+            transform-origin: center;
+
+        }
+        .nav-bottom-top-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: solid 1px transparent;
+            background-color: #151a23;
+        }
+        .nav-left-son-box{
+
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: center;
+
+        }
+        .nav-bottom-1 .nav-left-son-box{
+            padding: 0 30px;
+        }
+        .Navbar-posterImage {
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            height: 180px;
+            width: 216px;
+            -webkit-filter: brightness(100%) contrast(100%);
+            filter: brightness(100%) contrast(100%);
+            transition: -webkit-filter .2s;
+            transition: filter .2s;
+
+        }
+        .nav-left{
+            height:40px;
+            float:left;
+        }
+        .nav-left ul{
+            height:40px;
+            margin: 0;
+        }
+        .nav-left a,.nav-right a{
+            display: inline-block;
+            color: rgba(255,255,255,.7);
+            font-size: 15px;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        .nav-left a:hover ,.nav-right a:hover{
+            /*text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);*/
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav-left .active{
+            text-shadow: 0 0 15px #fff, 0 0 30px rgba(255,255,255,.3);
+            color: #fff;
+        }
+        .nav-left span ,.nav-right span{
+            width: 14px;
+            height: 7px;
+            display: inline-block;
+            background: url('../images/game/nav-Ficon-sprite.png') no-repeat -147px -131px;
+            margin-left: 2px;
+            vertical-align: baseline;
+        }
+        .nav-right{
+            float:right;
+        }
+        .nav-right a{
+            float: left;
+        }
+
+        .nav-right-div{
+            display: inline-block;
+        }
+        .nav-right .nav-btn {
+            display: inline-block;
+            border-bottom: 0 solid transparent;
+            padding: 24px 15px 22px;
+            box-sizing: border-box;
+            line-height: 1;
+            font-size: 1.2rem;
+            font-family: "microsoft yahei",arial,sans-serif;
+            text-transform: none;
+            color: rgba(255,255,255,.85);
+            min-width: auto;
+            text-align: center;
+            text-shadow: none;
+            letter-spacing: .05em;
+            position: relative;
+            cursor: pointer;
+            -webkit-transition: background-color .2s;
+            transition: background-color .2s;
+        }
+
+
+
+        /*                 */
+
+        .nav_head{
+            width: 100%;
+            max-width: 20em;
+            position: fixed;
+            right: 30px;
+            background:#35404f;
+            border-right:2px solid #383d49;
+            border-bottom: 2px solid #383d49;
+            display: none;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav_head>a{
+            width: 80%;
+            height: 40px;
+            background: #0e86ca;
+            margin:30px auto;
+            display: block;
+            border:solid 1px #00aeff;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+        }
+        .nav_head>a:hover{
+            background: #00aeff;
+        }
+        .bg1{
+            width: 1.5em;
+            height: 1.5em;
+            background: url('../images/game/nav-Ficon-sprite.png') -141px -9px;
+            display: inline-block;
+
+        }
+        .bg2{
+            width: 1.5em;
+            height: 1.5em;
+            background: url('../images/game/nav-Ficon-sprite.png') -198px -16px;
+        }
+
+        .li11{
+            border-top: 2px solid #929191;
+            padding:10px 40px;
+        }
+
+        .li11:hover{
+            background: #252b36;
+        }
+        .btn11:hover{
+            background: #00aeff;
+        }
+        .li11{
+            color: #cccccc;
+        }
+        .li11:hover{
+            color: white;
+        }
+
+
+
+        @media (min-width: 768px){
+
+            .box {
+                padding: 0 40px;
+            }
+        }
+        @media (max-width: 992px) {
+            .navbars{
+                display: none!important;
+            }
+        }
+
+
+
+        @media (min-width: 992px) {
+
+            .nav-left-a{
+                margin-right: 30px;
+            }
+            .nav-left li{
+                margin-right: 30px;
+            }
+            .nav-right a{
+                margin-left: 30px;
+            }
+            .nav-left-son-box{
+                padding-left:40px;
+                padding-right:40px;
+            }
+        }
+
+
+        @media screen and (min-width: 1200px ){
+
+            .nav-right .nav-btn {
+                font-size: 1.6rem;
+                min-width: 99px;
+                padding: 24px 0 22px;
+            }
+        }
+        /*导航 结束*/
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body {
+            line-height: 1.5;
+        }
+        .esports{
+            text-align:center;
+        }
+        .esports-intro-section {
+            background: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/overview-background.jpg) no-repeat;
+        }
+        .u-nav-offset {
+            padding-top: 110px;
+        }
+        .content-box{
+            padding-top:72px ;
+            padding-bottom:72px;
+            max-width: 1600px;
+            padding-left: 30px;
+            padding-right: 30px
+        }
+
+        h1{
+            color:white;
+            font-size: 6.10352rem;
+            font-family: "microsoft yahei","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-variant: normal;
+            line-height: normal;
+            letter-spacing: .5px;
+        }
+        .u-align-center {
+            margin-bottom: 50px;
+        }
+
+        .media-card-fill {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: inherit;
+            background-clip: inherit;
+            border: 0 none;
+        }
+        .media-card{
+            position:relative;
+            overflow: hidden;
+            border: 3px solid hsla(0,0%,100%,.5);
+            border-radius: 3px;
+            transition: all .2s;
+        }
+        .media-card:after{
+            content:"";
+            position:absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: 13% auto;
+            background:url("http://overwatch.nos.netease.com/1/assets/img/icons/youtube-btn-ylw.png") 50% 50% no-repeat;
+            transition: all .2s cubic-bezier(.25,.46,.45,.94);
+            z-index:5;
+        }
+        .media-card:hover{
+            border:3px solid white;
+        }
+        .u-video:hover:after {
+            background-image: url(http://overwatch.nos.netease.com/1/assets/img/icons/youtube-btn-wh.png);
+
+        }
+        .media-card-title {
+            font-family: FuturaNo2D,century gothic,arial,sans-serif;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 700;
+            font-variant: normal;
+            line-height: normal;
+            letter-spacing: .5px;
+        }
+        .u-align-center {
+             margin-bottom: 0;
+        }
+        a, p, span {
+            white-space: normal;
+            color:white;
+        }
+        ::after, ::before {
+            box-sizing: inherit;
+            background-repeat: no-repeat;
+            vertical-align: inherit;
+            white-space: initial;
+            text-overflow: inherit;
+            text-shadow: inherit;
+        }
+
+
+
+
+
+        .esports-flex-container {
+            justify-content: flex-start;
+            flex-direction: column;
+
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            flex-wrap: nowrap;
+            align-content: stretch;
+        }
+        .esports-flex-item {
+
+            padding-top: 36px;
+        }
+        .esports-overviewVideoContainer {
+
+            padding: 0 10%;
+        }
+        h2 {
+            font-size: 6.10352rem;
+            color:whitesmoke;
+            font-family: Big Noodle Too,impact,sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-variant: normal;
+            line-height: normal;
+            letter-spacing: .8px;
+        }
+        .u-limit-width {
+            max-width: 40em;
+        }
+        .row::after,.row:before {
+            clear: both;
+            content: " ";
+            flex-basis: 0;
+            display: table;
+            order: 1;
+            -webkit-box-ordinal-group: 2;
+        }
+        .column.row.row{
+            float: none;
+
+        }
+
+
+
+        .esports-pathtopro-container {
+            margin-top: 32px;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .esports-pathtopro-accordion {
+            background-color: #e9e9e7;
+            height: 1px;
+            min-height: 360px;
+            max-height: 560px;
+            display:flex;
+            align-items: stretch;
+            position: relative;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .HorizontalAccordion-column:hover {
+            box-shadow: inset 0 0 50px 10px #fff;
+        }
+        .HorizontalAccordion-column.is-open {
+            flex-basis: 54%;}
+        @media screen and (min-width) {
+            .HorizontalAccordion-column.is-open {
+                flex-basis: 60%;
+            }
+        }
+
+
+        .HorizontalAccordion-column {
+            height:360px;
+            transform-origin: center;
+            transition-property: flex-basis;
+            transition-timing-function: ease-out;
+            transition-duration: .4s;
+            position: relative;
+            flex: 1 0 10%;
+            display: flex;
+            justify-content: center;
+            border: 1px solid #a1a1a1;
+
+        }
+            .HorizontalAccordion-column.is-viewable:first-child .HorizontalAccordion-media {
+                animation-name: bounce-move-from-top;
+                animation-fill-mode: both;
+                animation-duration: .2s;
+                animation-delay: .15s;
+            }
+            .HorizontalAccordion-media {
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .HorizontalAccordion-column.is-open .HorizontalAccordion-image, .HorizontalAccordion-image.is-hover {
+
+                transform: scale(.85);
+            }
+            .HorizontalAccordion-image {
+
+                transform-origin: center;
+                transition-property: transform;
+                transition-timing-function: ease-out,linear;
+
+                transition-duration: .2s;}
+            img {
+                border: 0 none;
+                max-width: 100%;
+                height: auto;
+            }
+            @media screen and (min-width:1600px){
+                .HorizontalAccordion-content.is-visible {
+                    max-width: 43em;
+                }
+            }
+        .HorizontalAccordion-content.is-visible {
+            transform-origin: left center;
+            transition-property: max-width,opacity;
+            transition-delay: 1ms,.4s;
+            transition-duration: .3s,.4s;
+            transition-timing-function: ease-out;}
+            .HorizontalAccordion-media {
+            display: flex;
+            justify-content: center;
+
+        }
+        .HorizontalAccordion-content {
+            max-height: 320px;
+            overflow: hidden;
+        }
+        .LadderInfoBlock {
+            display: block;
+            height: 100%;
+            padding: 0 18px;
+            max-width: 1112px;
+            color: #333;
+        }
+
+
+        .h4, h4 {
+            font-family: FuturaNo2D,century gothic,arial,sans-serif;
+            margin: 0;
+            font-size: 2.8rem;
+            display: block;
+            text-transform: uppercase;
+            white-space: normal;
+            font-style: normal;
+            font-weight: 700;
+            font-variant: normal;
+            line-height: normal;
+        }
+
+        @media screen and (min-width:400px){
+            h4{
+                font-size:3.6rem;
+            }
+        }
+        @media screen and (min-width:768px){
+            h4 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .LadderInfoBlock-copy {
+            margin-bottom: 1em;
+        }
+        h1 + * > p:first-child, h1 + .paragraph-spacing, h1 + p, h2 + * > p:first-child, h2 + .paragraph-spacing, h2 + p, h3 + * > p:first-child, h3 + .paragraph-spacing, h3 + p, h4 + * > p:first-child, h4 + .paragraph-spacing, h4 + p, h5 + * > p:first-child, h5 + .paragraph-spacing, h5 + p, h6 + * > p:first-child, h6 + .paragraph-spacing, h6 + p {
+            margin-top: .6em;
+        }
+
+        p {
+            font-size: inherit;
+            line-height: 1.6;
+            text-rendering: optimizeLegibility;
+        }
+        .ExternalLink::after {
+            content: " ";
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/link-icon-white.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .btn:link, .btn:visited, .button:link, .button:visited, button:link, button:visited {
+            color: #fefefe;
+        }
+        .btn, .button, button {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 6px 1em;
+
+            border-radius: 2px;
+            border: 3px solid transparent;
+            font-family: FuturaNo2D,century gothic,arial,sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: .025em;
+            text-shadow: none;
+            text-decoration: none;
+            cursor: pointer;
+
+            -moz-appearance: none;
+
+            outline: 0;
+            transition: all .2s;
+            background-color: #ff9c00;
+
+        }
+        .btn:hover, .button:hover, button:hover {
+            border-color: #ffb033;
+            background-color: #ffb033;
+            color: #fefefe;
+        }
+        .btn:link, .btn:visited, .button:link, .button:visited, button:link, button:visited {
+            color: #fefefe;
+        }
+        .btn.is-active, .btn:hover, .button.is-active, .button:hover, button.is-active, button:hover {
+            border-color: #ffb033;
+            background-color: #ffb033;
+            -webkit-transition: none;
+            transition: none;
+        }
+        .btn:link, .btn:visited, .button:link, .button:visited, button:link, button:visited {
+            color: #333;
+        }
+        a:focus, a:hover {
+            color: #ffb033;
+        }
+
+        a:active, a:hover {
+            outline: 0;
+        }
+        .btn.is-active, .btn:active, .btn:focus, .button.is-active, .button:active, .button:focus, button.is-active, button:active, button:focus {
+            color: #333;
+        }
+
+        a:active, a:visited {
+            color: #ffc466;
+        }
+        .HorizontalAccordion-column.is-open .HorizontalAccordion-icon {
+            opacity: 0;
+        }
+        .HorizontalAccordion-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 18px;
+            width: 30px;
+            height: 30px;
+            fill: #ff9c00;
+        }
+        .LadderInfoBlock--arrow::before {
+            content: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/arrow.png);
+            display: inline-block;
+            position: absolute;
+            left: -11px;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+
+       @media screen and (min-width:1600px){
+           .HorizontalAccordion-column.is-open {
+               flex-basis: 60%;
+           }
+       }
+        .HorizontalAccordion-column + .HorizontalAccordion-column {
+            border-left: 0;
+        }
+        .HorizontalAccordion-column.is-viewable:nth-child(2) .HorizontalAccordion-media {
+            animation-name: bounce-move-from-top;
+            animation-fill-mode: both;
+            animation-duration: .2s;
+            animation-delay: .25s;
+        }
+
+
+
+        .HorizontalAccordion-content.is-visible {
+
+            opacity: 1;
+        }
+        html.safari .HorizontalAccordion-content,html.safari .HorizontalAccordion-content.is-visible {
+            transition:none
+        }
+        .HorizontalAccordion-media {
+            opacity:0
+        }
+        .HorizontalAccordion-column.is-viewable:first-child .HorizontalAccordion-media {
+            animation-name:bounce-move-from-top;
+            animation-fill-mode:both;
+            animation-duration:.2s;
+            animation-delay:.15s
+        }
+        .HorizontalAccordion-column.is-viewable:nth-child(2) .HorizontalAccordion-media {
+            animation-name:bounce-move-from-top;
+            animation-fill-mode:both;
+            animation-duration:.2s;
+            animation-delay:.25s
+        }
+        .HorizontalAccordion-column.is-viewable:nth-child(3) .HorizontalAccordion-media {
+            animation-name:bounce-move-from-top;
+            animation-fill-mode:both;
+            animation-duration:.2s;
+            animation-delay:.35s
+        }
+        .HorizontalAccordion-column.is-viewable:nth-child(4) .HorizontalAccordion-media {
+            animation-name:bounce-move-from-top;
+            animation-fill-mode:both;
+            animation-duration:.2s;
+            animation-delay:.45s
+        }
+
+        @keyframes bounce-move-from-top {
+            0% {
+                transform:translateY(-40px);
+                animation-timing-function:linear;
+                border-width:0;
+                opacity:0
+            }
+            25% {
+                opacity:1
+            }
+            65% {
+                transform:translateY(0);
+                animation-timing-function:linear
+            }
+            85% {
+                transform:translateY(5px);
+                animation-timing-function:ease-in
+            }
+            to {
+                transform:translateY(0);
+                animation-timing-function:ease-out;
+                border-width:1px;
+                opacity:1
+            }
+        }
+        .HorizontalAccordion-column.is-viewable:first-child .HorizontalAccordion-media {
+            animation-name: bounce-move-from-top;
+            animation-fill-mode: both;
+            animation-duration: .2s;
+            animation-delay: .15s;
+        }
+        .HorizontalAccordion-media {
+            opacity: 0;
+        }
+        .HorizontalAccordion-content{
+            display:none;
+        }
+        .HorizontalAccordion-content.content{
+            display:block;
+        }
+        @media screen and (max-width:1200px){
+            .show-for-xl{
+                display:none;
+            }
+        }
+        @media screen and (min-width:1200px){
+            .column .hide-for-xl{
+                display:none;
+            }
+        }
+        .column.end:last-child:last-child, .end.columns:last-child:last-child {
+            float: left;
+        }
+        .column, .columns {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+        .LadderSection-handle.is-active {
+            background-color: #fff;
+        }
+        .LadderSection-handle {
+            background: #f0edf2;
+            color: #000;
+            display: block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            border-top: 2px solid #ccc;
+            white-space: initial;
+        }
+        .LadderSection-handleContent {
+            padding: 0 18px;
+            color: #000;
+            cursor: pointer;
+        }
+        .LadderSection-handleLogo {
+            height: 76px;
+            margin-right: 10px;
+        }
+        img {
+            border: 0 none;
+            max-width: 100%;
+        }
+        .LadderSection-title {
+            display: inline-block;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .LadderSection-handleArrowIndicator {
+            width: 28px;
+            height: 28px;
+            background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/arrow-selector.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: 0 -28px;
+            position: absolute;
+            transform: translateY(-50%);
+            top: 50%;
+            right: 20px;
+        }
+        .LadderSection-container {
+            background: #e9e9e7;
+            position: relative;
+        }
+        .Slideout-container {
+
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        .card > .caption > .heading, .u-invert {
+            color: #f0edf2;
+        }
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+            display: block;
+        }
+        .LadderSection-content {
+            padding: 24px;
+            background-color: #333;
+        }
+        .u-limit-width {
+            max-width: 40em;
+        }
+        .LadderSection-desc {
+            margin-bottom: 24px;
+        }
+        .btn.m-external::after, .button.m-external::after, button.m-external::after {
+            content: " ";
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/link-icon-white.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            margin-left: 8px;
+        }
+        .btn.m-external::after, .button.m-external::after, button.m-external::after {
+            content: " ";
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/link-icon-white.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            margin-left: 8px;
+        }
+        .LadderSection-container {
+            background: #e9e9e7;
+            position: relative;
+        }
+        .Slideout-container {
+
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        .btn, .button, button {
+            width:80%;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            vertical-align: middle;
+            background-color: #ff9c00;
+            color: #333;
+            line-height: 1;
+            letter-spacing: .025em;
+            font-weight: 700;
+            font-size: 1.6rem;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            text-decoration: none;
+        }
+        p,a{
+            white-space:normal;
+        }
+        .LadderInfoBlock a,.LadderInfoBlock p{
+    color:black;
+}
+        .esports-worldcup-container {
+            background: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/worldcup-background-mobile.jpg) no-repeat;
+            background-color: #3d67bb;
+            background-position: bottom;
+            background-size: 100%;
+            padding-bottom: 100px;
+
+
+        }
+        .esports-worldcup-container p{
+            margin:0 auto;
+        }
+        .esports-worldcup-container a{
+            max-width:300px;
+            text-decoration:none;
+            margin-top:30px;
+
+        }
+        #gotop {
+
+            width: 40px;
+            height: 30px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,.25);
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 12px;
+            z-index: 501;
+            text-decoration:none;
+            cursor: pointer;
+
+        }
+        .esports{
+            background:black;
+        }
+        .sportvideo{
+            position:absolute;
+            top:0;
+            left:7.5%;
+            width:85%;
+            height:100%;
+            z-index:900;
+            display:none;
+            background:rgba(200,44,199,.3)
+        }
+        @media screen and (max-width:778px){
+            h1{
+                font-size:2.8rem;
+            }
+            p{
+                font-size:10px;
+            }
+        }
+        .sportview a{
+            font-size:100px;
+            position:absolute;
+            right:0;
+            top:-20px;
+            text-decoration:none;
+            color:#3d67bb;
+        }
+        .sportview a:hover{
+            color:blue;
+        }
+        .sportview h1{
+            text-align:center;
+            font-size:40px;
+            line-height:60px;
+            font-weight:200;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color:#3d67bb;
+
+        }
+        hr{
+            width:100%;
+            size:3px;
+            color:brown;
+        }
+.LadderSection-handleArrowIndicator.active{
+    background-image: url(http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/arrow-selector.png);
+    background-position: 0px 0px;
+}
+        .longlong{
+            background:url("../images/eSports_bbs/longjuanfeng.png") no-repeat 0 0 ;
+            background-size:10% auto;
+            background-position:50% 90%;
+        }
+
+        .sanjiao{
+            background:url("../images/eSports_bbs/sanjiao.png") no-repeat 0px 0 white;
+            background-size:5% auto;
+            background-position:50% -10px;
+        }
+        .sanjiao1{
+            background:url("../images/eSports_bbs/sanjiao-1.png") no-repeat 0px 0 white;
+            background-size:5% auto;
+            background-position:50% -10px;
+        }
+        .ow-footer {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            line-height: 26px;
+            width: auto;
+            height: 358px;
+            z-index: 3;
+            font-size: 12px!important;
+            background: #202020;
+        }
+        .ow-footer a {
+            text-decoration: none;
+            padding-top: 5px;
+            color: #fff;
+            font-weight: 400;
+        }
+        /*    footer-top  */
+        .footer-top{
+            width:1000px;
+            position: relative;
+            left:50%;
+            margin-left: -500px;
+            color: #fff;
+            z-index: 100;
+            font-size: 14px;
+            padding-top: 39px;
+        }
+        .footer-top-f{
+            float:left;
+            height: 25px;
+        }
+        .footer-top-f a{
+            padding-top:5px;
+            margin-right: 37px;
+            color: white;
+        }
+        .footer-top-f a:first-child i{
+            background-position: -96px 0;
+        }
+        .footer-top-f i{
+            display:inline-block;
+            width:24px;
+            height:24px;
+            margin-right: 10px;
+            position: relative;
+            background: url(../images/game/Fsprite-24-blue.png);
+            vertical-align: middle;
+            top: -2px;
+        }
+
+        .footer-top-f a:nth-child(2) i{
+            background-position: -144px -24px;
+        }
+        .footer-top-f a:nth-child(3) i{
+            background-position: -24px -119px;
+        }
+        /*  footer-conter */
+        .footer-center {
+            clear: both;
+            padding-top: 51px;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+            overflow: hidden;
+            padding-bottom: 20px;
+            margin: 0 auto 8px;
+            text-align: left;
+            width: 1000px;
+        }
+
+        .logo_bz{
+            display: inline-block;
+            width: 140px;
+            height: 80px;
+            overflow: hidden;
+            vertical-align: top;
+            margin: 0;
+            position: relative;
+            top: 4px;
+            box-sizing: border-box;
+            background: url("../images/game/foot-1.png")no-repeat 0 0;;
+        }
+
+        .logo_bz+a{
+            display: inline-block;
+            background: url("../images/game/foot-2.png") no-repeat 0 0;
+            width: 125px;
+            height: 38px;
+            overflow: hidden;
+            box-sizing: border-box;
+            vertical-align: top;
+            position: relative;
+            top: 39px;
+            left: -3px;
+            margin: 0;
+        }
+
+        .info {
+            display: inline-block;
+            color: rgba(255,255,255,.5);
+            width: 706px;
+            float: right;
+            text-align: left;
+            padding: 0 0 0 73px;
+            vertical-align: middle;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .info a{
+            color: rgba(255,255,255,.5);
+        }
+        .info ul{
+            margin: 0 0 3px -10px;
+            padding: 0 0 5px;
+            overflow: hidden;
+        }
+        .info ul li{
+            float:left;
+        }
+        .info ul li a{
+            color: #ccc;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+        .info p{
+            line-height: 20px;
+            vertical-align: top;
+            font-size: 12px;
+            margin: 0;
+            font-weight: 400;
+        }
+        .info p:last-child{
+            padding: 8px 0;
+            position: relative;
+
+        }
+        .info p:last-child a{
+            margin-right:5px;
+        }
+        .integrity a:first-child{
+            position: relative;
+            top:-1px;
+        }
+        .integrity a:nth-child(2){
+            position: relative;
+            top:-1px;
+        }
+        .integrity a:nth-child(3){
+            position: relative;
+            top:-1px;
+        }
+        #btn {
+            width: 40px;
+            height: 30px;
+            position: fixed;
+            padding: 0;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,.25);
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 3px;
+            font-size: 12px;
+            z-index: 501;
+            display: none;
+            cursor: pointer;
+        }
+        /*   foot - bottom */
+
+        .footer-bottom{
+            color: rgba(255,255,255,.3);
+            text-align: center;
+            clear: both;
+            position: relative;
+            font-size: 12px;
+
+        }
+        .footer-bottom p{
+            line-height: 20px;
+        }
+
+
+
+
+
+
+
+        @media only screen and (max-width: 960px){
+            .ow-footer .footer-center #infos{
+                display: block;
+                float: none;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            .footer-center  .info .clearFix{
+                padding: 0;
+            }
+            .footer-center {
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<!--------------顶部导航结束--------------------->
+<!--------------主导航开始--------------------->
+<nav class="mainNav">
+    <div class="mainNav-right-media-l"><a href="#"></a></div>
+    <div class="mainNav-left">
+        <a href="index.html" class="mainNav-logo"></a>
+    </div>
+    <ul class="mainNav-left  mainNav-menu">
+        <li class="mainNav-menu-xiala" >
+            <a href="#" class="mainNav-title">游戏
+                <div class="mainNav-arrow"></div>
+            </a>
+            <ul class="mainNav-second" style="padding-left: 280px;">
+                <li><a href="game-summary.html">
+                    <div class="mainNav-second-icon"></div>
+                    概述</a></li>
+                <li><a href="game-patch.html">
+                    <div class="mainNav-second-icon"></div>
+                    补丁</a></li>
+            </ul>
+        </li>
+        <li><a href="hero.html" class="nav-btn ">英雄</a></li>
+        <li class="mainNav-menu-xiala">
+            <a href="#" class="mainNav-title">活动
+                <div class="mainNav-arrow"></div>
+            </a>
+            <ul class="mainNav-second" style="padding-left: 480px;">
+                <li ><a href="activity-xingdong-1.html" >
+                    <div class="mainNav-second-icon"></div>行动档案</a></li>
+                <li><a href="activity-huandu-2.html" >
+                    <div class="mainNav-second-icon"></div>
+                    欢度新春</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>雪国仙境</a></li>
+                <li><a href="activity-wansheng-3.html" >
+                    <div class="mainNav-second-icon"></div>万圣夜惊魂</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>夏季运动会</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>周年庆典</a></li>
+                <li><a href="#" >
+                    <div class="mainNav-second-icon"></div>国王行动</a></li>
+            </ul>
+        </li><li><a href="video.html" class="nav-btn ">视频图片</a></li>
+        <li><a href="news.html" class="nav-btn ">新闻</a></li>
+        <li><a href="download.html" class="nav-btn">下载</a></li>
+        <li><a href="#" class="nav-btn ">生涯数据</a></li>
+        <li><a href="#" class="nav-btn  mainNav-menu-xiala-active">电子竞技</a></li>
+        <li><a href="overWatchbbs.html" target="_blank" class="nav-btn">论坛</a></li>
+    </ul>
+    <div class="mainNav-right"><a href="#">购买</a></div>
+
+    <div class="mainNav-right-media-r"><a href="#"></a></div>
+
+</nav>
+<!--------------主导航结束--------------------->
+<!--------------第二级菜单开始--------------------->
+<div class="second-menu">
+    <ul>
+        <li>
+            <a href="#" class="second-menu-close"></a>
+            <a href="#" class="second-menu-logo1"></a>
+        </li>
+        <li><span></span><a href="#">首页</a></li>
+        <li><span></span>
+            <a href="#" >游戏</a>
+            <ul>
+                <li><a href="#">概述</a></li>
+                <li><a href="#">补丁</a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><span></span><a href="#">英雄</a></li>
+        <li><span></span>
+            <a href="#">活动</a>
+            <ul>
+                <li><a href="#" >行动档案</a></li>
+                <li><a href="#" >欢度新春</a></li>
+                <li><a href="#" >雪国仙境</a></li>
+                <li><a href="#" >万圣夜惊魂</a></li>
+                <li><a href="#" >夏季运动会</a></li>
+                <li><a href="#" >周年庆典</a></li>
+                <li><a href="#" >国王行动</a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><span></span><a href="#">视频图片</a></li>
+        <li><span></span><a href="#">新闻</a></li>
+        <li><span></span><a href="#">下载</a></li>
+        <li><span></span><a href="#">生涯数据</a></li>
+        <li><span></span><a href="#">电子竞技</a></li>
+        <li><span></span><a href="#">论坛</a></li>
+        <li><a href="#" class="second-menu-shop">立即购买</a></li>
+        <li>
+            <a href="#" class="second-menu-logo2"></a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="second-menu2">
+    <ul>
+        <li>
+            <a href="#" class="second-menu-logo1"></a>
+            <a href="#" class="second-menu-close"></a>
+        </li>
+        <li>
+            <a href="#"><div>登录</div></a></li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron1">&nbsp;</span>
+                <span class="s-menu2-iron-t">支持</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron2">&nbsp;</span>
+                <span class="s-menu2-iron-t">账户</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="s-menu2-iron3">&nbsp;</span>
+                <span class="s-menu2-iron-t">注册</span>
+            </a>
+        </li>
+        <li><a href="#">首页</a></li>
+        <li><span class="aaa"></span>
+            <a href="#" >游戏</a>
+            <ul>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon1">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">守望先锋</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon2">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">魔兽世界</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon3">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">炉石传说</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon4">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">风暴英雄</span>
+                        <span class="sm2-g-icon-t2">®</span>
+                    </a>
+                </li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon5">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">星际争霸 </span>
+                        <span class="sm2-g-icon-t2">®</span>
+                        <span class="sm2-g-icon-t1">II</span>
+                    </a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">
+                        <span class="sm2-g-icon6">&nbsp;</span>
+                        <span class="sm2-g-icon-t1">黑暗破坏神 </span>
+                        <span class="sm2-g-icon-t2">®</span>
+                        <span class="sm2-g-icon-t1"> III</span>
+                    </a></li>
+            </ul>
+            <div class="second-menu-icon"></div>
+        </li>
+        <li><a href="#">商城</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><span class="aaa"></span>
+            <a href="#">电子竞技</a>
+            <ul class="second-menu-third">
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >守望先锋电竞</a> </li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋世界杯</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#">&emsp;-守望先锋挑战者系列赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >炉石传说黄金系列赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >HGC黄金风暴联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >星际争霸II黄金职业联赛</a></li>
+                <li><span class="sm2-g-list"></span>
+                    <a href="#" >魔兽争霸III黄金联赛</a></li>
+            </ul>
+            <div class="second-menu-icon" style="left:80px"></div>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="mask"></div>
+
+
+
+
+<div class="navbars">
+    <nav class="navbars-top box">
+        <div class="nav-left">
+            <a href="https://www.battlenet.com.cn/zh/" class="nav-left-a" target="_blank"></a>
+        </div>
+        <div class="nav-left navbars-top-con">
+            <ul>
+                <li><a href="#" class="active">游戏<span></span></a>
+                </li>
+                <li><a href="https://www.battlenet.com.cn/shop/" target="_blank">商城</a></li>
+                <li><a href="https://cn.news.blizzard.com/" target="_blank">新闻</a></li>
+                <li><a href="#">电子竞技<span></span></a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="https://www.battlenet.com.cn/support/" class="Navbar-support Navbar-item Navbar-link is-noSelect"><div class="Navbar-label">支持</div></a>
+            <a data-target="Navbar-accountDropdown" data-name="account" class="Navbar-account Navbar-item Navbar-modalToggle is-noSelect"><div class="nav-right-div">你的通行证</div><span></span>
+            </a>
+        </div>
+    </nav>
+    <div class="nav-left-son-div nav-bottom">
+        <div class="nav-bottom-top" style="left:169.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <div class="nav-left-son-box center-block" >
+            <a href="http://ow.blizzard.cn/" class="Navbar-poster animation-delay-1" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-overwatch-CN-85c98611cefd3018.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+            </a><a href="http://www.wowchina.com/" class="Navbar-poster animation-delay-2" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-world-of-warcraft-CN-c4bebe45e5af0993.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div>
+        </a><a href="http://hs.blizzard.cn/" class="Navbar-poster animation-delay-3" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-hearthstone-CN-538b49564ab2122a.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+        </a><a href="http://heroes.blizzard.cn/" class="Navbar-poster animation-delay-4" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-heroes-of-the-storm-CN-bacafbbddcf92348.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div></a><a href="http://sc2.blizzard.cn/" class="Navbar-poster animation-delay-5" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-starcraft-2-CN-de310c5ddfb63a49.jpg" class="Navbar-posterImage">
+            <div class="Navbar-poster-div"></div></a><a href="http://d3.blizzard.cn/" class="Navbar-poster animation-delay-6" target="_blank"><img src="https://blz.nosdn.127.net/1/fsbnet/card-diablo-3-CN-0d57444efa52a79b.jpg" class="Navbar-posterImage"><div class="Navbar-poster-div"></div>
+        </a>
+        </div>
+    </div>
+    <div class="nav-left-son-div nav-bottom nav-bottom-1">
+        <div class="nav-bottom-top" style="left:395.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <div class="nav-left-son-box center-block" >
+            <a href="http://ow.blizzard.cn/esports" target="_blank" class="Navbar-esport ow-site  animation-delay-1"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-ow.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">守望先锋电竞</div>
+                <div class="Navbar-poster-div"></div>
+            </a>
+            <div class="Navbar-esport-sub"><a href="http://ow.blizzard.cn/overwatchleague/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-overwatch.png" class="Navbar-esportImage-sub"></a><a href="http://owwc.overwatchesports.cn/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-overwatch-world-cup.png" class="Navbar-esportImage-sub"></a><a href="http://owc.blz.cn/" target="_blank" class="Navbar-esport-link"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-contenders.png" class="Navbar-esportImage-sub">
+            </a>
+            </div>
+            <a href="http://gold.blizzard.cn/minisite/gold-super-tournament" target="_blank" class="Navbar-esport  animation-delay-2"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-gold.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">炉石传说黄金系列赛</div>
+                <div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/heroes-tournament" target="_blank" class="Navbar-esport  animation-delay-3"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-heroes.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">HGC黄金风暴联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/sc2gpl/" target="_blank" class="Navbar-esport  animation-delay-4"><img src="https://blz.nosdn.127.net/1/fsbnet/esports-sc2-wcs.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">星际争霸II黄金职业联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+            <a href="http://gold.blizzard.cn/minisite/war3-tournament/" target="_blank" class="Navbar-esport  animation-delay-5"><img src="https://blz.nosdn.127.net/1/fsbnet/wariii.png" class="Navbar-esportImage"><div class="Navbar-esportLabel">魔兽争霸III黄金联赛</div><div class="Navbar-poster-div"></div>
+            </a>
+        </div>
+    </div>
+    <div class="nav_head">
+        <div class="nav-bottom-top" style="left:301.812px;">
+            <div class="nav-bottom-top-box" style="opacity: 0.700918;"></div>
+        </div>
+        <a target="_blank" href="javascript:void(0)">
+            登录</a>
+        <div class="ul11">
+            <a target="_blank" href="javascript:void(0)">
+                <div class="li11">
+                    <div class="bg1"></div>
+                    账户
+                </div>
+            </a>
+            <div class="ul11">
+                <a target="_blank" href="javascript:void(0)">
+                    <div class="li11">
+                        <div class="bg1"></div>
+                        注册
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </nav>
+</div>
+
+<script>
+    var falt=true;
+
+    $('.box a').on('click',function(){
+        var text=$(this).text();
+        console.log(text);
+        if(falt==false){
+            $(this).find('span').css('background-position','-147px -131px');
+            $('.nav-bottom').css('display','none');
+        }
+        if(falt==true){
+
+            if(text=='游戏'){
+                $('.nav-bottom').css('display','none');
+                $('.nav-bottom').eq(0).css('display','block').next().css('display','none');
+                $('.body-div').css('display','block');
+            }
+            if(text=='电子竞技'){
+                $('.nav-bottom').css('display','none');
+                $('.nav-bottom').eq(1).css('display','block').prev().css('display','none');
+                $('.body-div').css('display','block');
+            }
+
+
+
+            $(this).find('span').css('background-position','-147px -145px');}
+        falt=!falt;
+    });
+
+    $('.animation-delay-1').on({
+        'mousemove':function(e){
+            e.preventDefault();
+            $('.Navbar-esport-sub').css({
+                'width':'100%','opacity':'1'
+            });
+        },
+        'mouseout':function(e){
+            e.preventDefault();
+            $('.Navbar-esport-sub').css({
+                'width':'2px','opacity':'0'
+            });
+        }
+    })
+    $('.nav-right-div').click(function(){
+        if($('.nav_head').css('display')=='none'){
+            $('.nav-bottom').css('display','none');
+            $('.nav_head').css('display','block');
+            $('body').css(' background','rgba(255,255,255,.9)');
+        }else{
+            $('.nav_head').css('display','none');
+        }
+
+    })
+</script>
+<script>
+    var falt=true;
+
+    $('.box a').on('click',function(){
+        var text=$(this).text();
+        console.log(text);
+        if(falt==false){
+            $(this).find('span').css('background-position','-147px -131px');
+            $('.nav-bottom').css('display','none');
+        }
+        if(falt==true){
+
+            if(text=='游戏'){
+                $('.nav-bottom').css('display','none');
+                $('.nav-bottom').eq(0).css('display','block').next().css('display','none');
+                $('.body-div').css('display','block');
+            }
+            if(text=='电子竞技'){
+                $('.nav-bottom').css('display','none');
+                $('.nav-bottom').eq(1).css('display','block').prev().css('display','none');
+                $('.body-div').css('display','block');
+            }
+
+
+
+            $(this).find('span').css('background-position','-147px -145px');}
+        falt=!falt;
+    });
+
+    $('.animation-delay-1').on({
+        'mousemove':function(e){
+            e.preventDefault();
+            $('.Navbar-esport-sub').css({
+                'width':'100%','opacity':'1'
+            });
+        },
+        'mouseout':function(e){
+            e.preventDefault();
+            $('.Navbar-esport-sub').css({
+                'width':'2px','opacity':'0'
+            });
+        }
+    })
+    $('.nav-right-div').click(function(){
+        if($('.nav_head').css('display')=='none'){
+            $('.nav-bottom').css('display','none');
+            $('.nav_head').css('display','block');
+            $('body').css(' background','rgba(255,255,255,.9)');
+        }else{
+            $('.nav_head').css('display','none');
+        }
+
+    })
+</script>
+
+
+<div class="esports">
+    <section id="overview" class="u-full-width-container u-nav-offset esports-intro-section">
+        <div class="u-nav-width-container content-box">
+            <div class="u-align-center">
+                <h1>《守望先锋》电子竞技</h1>
+            </div>
+            <div class="flex-container esports-flex-container">
+                <div class="flex-item esports-flex-item">
+                    <div class="esports-overviewVideoContainer">
+                        <div data-js-youtube-player="" data-yt-id="qEa2a2b7Bys" class="youtubePlayer">
+                            <div class="youtubePlayer-frame m-16-9">
+                                <div class="youtubePlayer-placeholder"></div>
+                            </div>
+                            <div class="youtubePlayer-preview">
+                                <div class="media-card m-16-9 u-video">
+                                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/overview-thumbnail.jpg" class="media-card-fill">
+                                    <div class="media-card-caption u-uppercase u-align-center">
+                                        <span class="media-card-title">职业之路 2018 | 《守望先锋》电子竞技</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item esports-flex-item u-align-center">
+                    <h1>职业之路</h1>
+                    <p class="u-limit-width u-center-block">《守望先锋》电子竞技的道路以竞技模式为起点，最终通往《守望先锋联赛》的殿堂。无论你是有国际舞台的经验，或是初次加入专业队伍，都欢迎你关注甚至是参与《守望先锋》电竞比赛！
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+            <section id="pathtopro" class="esports-pathtopro-container row column">
+                <div class="show-for-xl">
+                    <div data-js="sidways-accordion" data-id="esports-pathtopro-accordion" class="HorizontalAccordion container esports-pathtopro-accordion">
+                        <div class="row">
+                        <div data-js="horizontal-accordion-column" data-id="openDivision" class="HorizontalAccordion-column is-viewable is-hover hidden-xs hidden-sm hidden-md col-lg-6">
+                            <div class="HorizontalAccordion-media">
+                                <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
+                                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owod-1.png">
+                                </div>
+                                <div data-js="horizontal-accordion-content" class="HorizontalAccordion-content content">
+                                    <div class="LadderInfoBlock">
+                                        <h4 class="LadderInfoBlock-title">守望先锋公开争霸赛</h4>
+                                        <p class="LadderInfoBlock-copy">《守望先锋公开争霸赛》欢迎任何竞技等级的玩家，目前你可以选择韩国、中国、澳大利亚、南美、北美、欧洲，以及亚太地区开始你的征程。如果你热爱电子竞技，这是你在系统化的比赛中一展身手的好机会！</p>
+                                        <a href="http://owod.blz.cn/" target="_blank" data-analytics="action-link" data-analytics-placement="OW Open || Esports – Visit OW Open" class="LadderInfoBlock-callToAction btn ExternalLink">查看《守望先锋公开争霸赛》</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <title>ui_info</title>
+
+                                </svg></div>
+                        </div>
+                        <div data-js="horizontal-accordion-column" data-id="contendersTrials" class="HorizontalAccordion-column LadderInfoBlock--arrow SidewaysAccordion-column--arrow is-viewable is-hover col-lg-2 hidden-xs hidden-sm hidden-md">
+                            <div class="HorizontalAccordion-media">
+                                <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
+                                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owct-1.png">
+                                </div>
+                                <div data-js="horizontal-accordion-content" class="HorizontalAccordion-content">
+                                    <div class="LadderInfoBlock">
+                                        <h4 class="LadderInfoBlock-title">守望先锋挑战者选拔赛</h4>
+                                        <p class="LadderInfoBlock-copy">《守望先锋挑战者选拔赛》的每一个赛季结束时，将有四支队伍与《守望先锋公开争霸赛》前四名队伍一起，共八支战队参加该地区的《守望先锋挑战者选拔赛》，在升/降级比赛中争夺系列赛的席位。</p>
+                                        <a href="http://owc.blz.cn/" target="_blank" data-analytics="action-link" data-analytics-placement="Contenders Trials || Esports – Visit Contenders Trials" class="LadderInfoBlock-callToAction btn ExternalLink">查看《守望先锋挑战者选拔赛》</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
+                                <svg data-js="horizontal-accordion-icon" viewBox="0 0 64 64">
+                                    <title>ui_info</title>
+
+                                </svg></div>
+                        </div>
+                        <div data-js="horizontal-accordion-column" data-id="contenders" class="HorizontalAccordion-column LadderInfoBlock--arrow SidewaysAccordion-column--arrow is-viewable is-hover is-open hidden-xs hidden-sm hidden-md col-lg-2">
+                            <div class="HorizontalAccordion-media">
+                                <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
+                                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owc-1.png">
+                                </div>
+                                <div data-js="horizontal-accordion-content" class="HorizontalAccordion-content is-visible">
+                                    <div class="LadderInfoBlock">
+                                        <h4 class="LadderInfoBlock-title">守望先锋挑战者系列赛</h4>
+                                        <p class="LadderInfoBlock-copy">对于追求卓越的《守望先锋》职业选手而言，参加《守望先锋挑战者系列赛》是一个重要的里程碑。12支战队汇集众多明日之星，通过一年三个赛季的比拼，力求在七个赛区中突出重围。系列赛每个赛季结束时，将有数支战队参加该地区的《守望先锋挑战者选拔赛》。在系列赛中表现突出的选手未来有望被《守望先锋联赛》战队收入麾下。</p>
+                                        <a href="http://owc.blz.cn/" target="_blank" data-analytics="action-link" data-analytics-placement="Contenders || Esports – Visit Contenders" class="LadderInfoBlock-callToAction btn ExternalLink">查看《守望先锋挑战者系列赛》</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <title>ui_info</title>
+
+                                </svg></div>
+                        </div>
+                        <div data-js="horizontal-accordion-column" data-id="overwatchLeague" class="HorizontalAccordion-column is-viewable CarouselSplit-item--overwatchLeague col-lg-2 hidden-xs hidden-sm hidden-md">
+                            <div class="HorizontalAccordion-media">
+                                <div data-js="horizontal-accordion-image" class="HorizontalAccordion-image">
+                                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owl-1.png">
+                                </div>
+                                <div data-js="horizontal-accordion-content" class="HorizontalAccordion-content">
+                                    <div class="LadderInfoBlock">
+                                        <h4 class="LadderInfoBlock-title">守望先锋联赛</h4>
+                                        <p class="LadderInfoBlock-copy">《守望先锋联赛》是全球首个以城市战队为单位的大型电竞联赛，是《守望先锋》电子竞技的最高殿堂。虽然在现阶段，各战队由经过精挑细选的选手所组成，未来《守望先锋联赛》可能会从《守望先锋挑战者系列赛》中吸纳优秀的选手，以持续保障联赛的选手实力。来自世界各地的顶尖职业选手们享有稳定的薪金与福利，并且可以在贯穿全年的比赛中追逐《守望先锋联赛》冠军的荣誉，以及数百万美元的丰厚奖金！</p>
+                                        <a href="https://www.overwatchleague.cn/zh-cn/" target="_blank" data-analytics="action-link" data-analytics-placement="Overwatch League || Esports – Visit Overwatch League" class="LadderInfoBlock-callToAction btn ExternalLink">查看《守望先锋联赛》</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-js="horizontal-accordion-icon" class="HorizontalAccordion-icon">
+                                <svg viewBox="0 0 64 64">
+                                    <title>ui_info</title>
+
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+
+                <div class="column md-10 md-offset-1 end hide-for-xl">
+                    <div data-js="slideout-handle" data-slideout-id="openDivision" class="LadderSection-handle LadderSection-handle--openDivision is-active">
+                        <div class="LadderSection-handleContent">
+                            <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/owod-page-logo.png" class="LadderSection-handleLogo LadderSection-handleLogo--openDivision">
+                            <h3 class="LadderSection-title LadderSection-title--openDivision">守望先锋公开争霸赛</h3>
+                        </div>
+                        <div class="LadderSection-handleArrowIndicator"></div>
+                    </div>
+                    <section data-js="slideout-container" data-slideout-id="openDivision" class="LadderSection-container u-invert Slideout-container is-open">
+                        <div class="LadderSection-content LadderSection-content--openDivision">
+                            <p class="u-limit-width LadderSection-desc">《守望先锋公开争霸赛》欢迎任何竞技等级的玩家，目前你可以选择韩国、中国、澳大利亚、南美、北美、欧洲，以及亚太地区开始你的征程。如果你热爱电子竞技，这是你在系统化的比赛中一展身手的好机会！</p>
+                            <a href="http://owod.blz.cn" target="_blank" data-analytics="action-link" data-analytics-placement="OW Open || Esports – Visit OW Open" class="btn m-external">查看《守望先锋公开争霸赛》</a>
+                        </div>
+                    </section>
+                    <div data-js="slideout-handle" data-slideout-id="contendersTrials" class="LadderSection-handle LadderSection-handle--contendersTrials">
+                        <div class="LadderSection-handleContent">
+                            <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owct.png" class="LadderSection-handleLogo LadderSection-handleLogo--contendersTrials">
+                            <h3 class="LadderSection-title LadderSection-title--contendersTrials">守望先锋挑战者选拔赛</h3>
+                        </div>
+                        <div class="LadderSection-handleArrowIndicator"></div>
+                    </div>
+                    <section data-js="slideout-container" data-slideout-id="contendersTrials" class="LadderSection-container u-invert Slideout-container">
+                        <div class="LadderSection-content LadderSection-content--contendersTrials">
+                            <p class="u-limit-width LadderSection-desc">《守望先锋挑战者系列赛》的每一个赛季结束时，将有四支队伍与《守望先锋公开争霸赛》前四名队伍一起，共八支战队参加该地区的《守望先锋挑战者选拔赛》，在升/降级比赛中争夺系列赛的席位。</p>
+                            <a href="http://owc.blz.cn/" target="_blank" data-analytics="action-link" data-analytics-placement="Contenders Trials || Esports – Visit Contenders Trials" class="btn m-external">查看《守望先锋挑战者选拔赛》</a>
+                        </div>
+                    </section>
+                    <div data-js="slideout-handle" data-slideout-id="contenders" class="LadderSection-handle LadderSection-handle--contenders">
+                        <div class="LadderSection-handleContent">
+                            <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owc.png" class="LadderSection-handleLogo LadderSection-handleLogo--contenders">
+                            <h3 class="LadderSection-title LadderSection-title--contenders">守望先锋挑战者系列赛</h3>
+                        </div>
+                        <div class="LadderSection-handleArrowIndicator"></div>
+                    </div>
+                    <section data-js="slideout-container" data-slideout-id="contenders" class="LadderSection-container u-invert Slideout-container">
+                        <div class="LadderSection-content LadderSection-content--contenders">
+                            <p class="u-limit-width LadderSection-desc">对于追求卓越的《守望先锋》职业选手而言，参加《守望先锋挑战者系列赛》是一个重要的里程碑。12支战队汇集众多明日之星，通过一年三个赛季的比拼，力求在七个赛区中突出重围。系列赛每个赛季结束时，将有数支战队参加该地区的《守望先锋挑战者选拔赛》。在系列赛中表现突出的选手未来有望被《守望先锋联赛》战队收入麾下。</p>
+                            <a href="http://owc.blz.cn/" target="_blank" class="btn m-external">查看《守望先锋挑战者系列赛》</a>
+                        </div>
+                    </section>
+                    <div data-js="slideout-handle" data-slideout-id="overwatchLeague" class="LadderSection-handle LadderSection-handle--overwatchLeague">
+                        <div class="LadderSection-handleContent">
+                            <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/ow-esports-logos-owl.png" class="LadderSection-handleLogo LadderSection-handleLogo--overwatchLeague">
+                            <h3 class="LadderSection-title LadderSection-title--overwatchLeague">守望先锋联赛</h3>
+                        </div>
+                        <div class="LadderSection-handleArrowIndicator"></div>
+                    </div>
+                    <section data-js="slideout-container" data-slideout-id="overwatchLeague" class="LadderSection-container u-invert Slideout-container">
+                        <div class="LadderSection-content LadderSection-content--overwatchLeague">
+                            <p class="u-limit-width LadderSection-desc">《守望先锋联赛》是全球首个以城市战队为单位的大型电竞联赛，是《守望先锋》电子竞技的最高殿堂。虽然在现阶段，各战队由经过精挑细选的选手所组成，未来《守望先锋联赛》可能会从《守望先锋挑战者系列赛》中吸纳优秀的选手，以持续保障联赛的选手实力。来自世界各地的顶尖职业选手们享有稳定的薪金与福利，并且可以在贯穿全年的比赛中追逐《守望先锋联赛》冠军的荣誉，以及数百万美元的丰厚奖金！</p>
+                            <a href="https://www.overwatchleague.cn/zh-cn/" target="_blank" data-analytics="action-link" data-analytics-placement="Overwatch League || Esports – Visit Overwatch League" class="btn m-external">查看《守望先锋联赛》</a>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+        <section id="worldcup" class="container-fuild esports-worldcup-container">
+            <div class="row u-max-width-container spacer-18 spacer-0-lg gutter-24-lg" style="padding-top:50px;">
+                <div class=" col-xs-12 col-lg-2 col-lg-offset-4">
+                    <img src="http://overwatch.nos.netease.com/1/assets/img/pages/esports/v1/worldcup_logo.png" alt="Overwatch World Cup" class="esports-worldcup-logo">
+                </div>
+                <div class="col-xs-12 col-lg-3 ">
+                    <h2 class="h3 u-invert">守望先锋世界杯</h2>
+                    <p class="u-center-mobile u-limit-width u-invert">《守望先锋世界杯》汇集了全球各个国家和地区代表队，而社区是推动这场电竞盛宴的关键。玩家投票选出代表委员会之后，再由委员会选拔组成国家和地区最强战队的选手阵容。代表队伍一路过关斩将，最终在暴雪嘉年华上演巅峰对决！</p>
+                    <a href="http://owwc.overwatchesports.cn/" target="_blank" class="margin-24 margin-only-top button m-external">查看《守望先锋世界杯》</a>
+                </div>
+            </div>
+        </section>
+</div>
+
+<a id="gotop" class="active" href="#top" hidefocus="true" style="display: inline;">TOP</a>
+<div class="blackout">
+</div>
+</div>
+<div class="videoshow" style="width:100%;height:2380px; opacity:0.8;position:absolute;top:0;background-color: rgba(0,0,0,.7); z-index:700;display:none;"></div>
+<div class="sportvideo">
+<div class="container" style="width:80%;">
+    <div class="row">
+
+        <div class="col-xs-12 sportview">
+            <h1>职业之路 2018 | 《守望先锋》电子竞技</h1>
+            <hr>
+    <video src="../images/eSports_bbs/mm.mp4" controls="controls"
+    autoplay="autoplay" preload="auto" width="100%" height="100%" id="v1"></video>
+    <a href="">×</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+<footer class="ow-footer">
+    <div class="footer-top hidden-sm hidden-xs">
+        <div class="footer-top-f"><a href="#"><i></i>在线客服</a><a href="#"><i></i>反馈</a><a href="#"><i></i>加入我们</a>
+        </div>
+    </div>
+    <div class="footer-center ">
+        <a target="_blank" href="https://www.battlenet.com.cn/" class="logo_bz hidden-sm hidden-xs"></a>
+        <a target="_blank" href="http://www.163.com/" class="logo_ne hidden-sm hidden-xs"></a>
+        <div class="info footer-info" id="infos">
+            <ul class="clearFix">
+                <li><a href="https://www.battlenet.com.cn/zh/legal-cn/privacy" target="_blank">隐私</a>|</li>
+                <li><a href="https://www.battlenet.com.cn/zh/legal-cn/" target="_blank">法律条款</a>|</li>
+                <li><a href="https://dev.battle.net/" target="_blank">API</a></li>
+            </ul>
+            <p>?2018 暴雪娱乐有限公司版权所有
+                <span>由上海网之易网络科技发展有限公司运营</span><a href="https://www.battlenet.com.cn/legal-cn/infringementnotice" target="_blank"> 著作权侵权</a>&nbsp;|&nbsp;<span id="js_shenzi">新广出审[2016]378号</span></p>
+            <p>
+                <span id="js_wenjinwang">文网游进字[2016]0025号</span>&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/license.pdf" target="_blank">沪网文号〔2017〕9633-727号</a>&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/appreciation-licence.pdf" target="_blank">增值电信业务经营许可证编号：沪B2－20080012</a></p>
+            <p>互联网违法和不良信息举报电话：0571-28090163&nbsp;沪公网安备 31011502022167号&nbsp;|&nbsp;<a href="https://blz.nosdn.127.net/1/frame/cprt/self-discipline.pdf" target="_blank">上海市网络游戏行业自律公约</a>
+            </p>
+            <p class="integrity">
+                <a target="_blank" href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg"><img src="https://blz.nosdn.127.net/1/frame/cprt/police.png"></a><a target="_blank" href="http://www.zx110.org/"><img src="https://blz.nosdn.127.net/1/frame/cprt/zx110.png"></a><a target="_blank" href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20111011175417664"><img src="https://blz.nosdn.127.net/1/frame/cprt/sgs-icon.png"></a><a target="_blank" href="http://www.shjbzx.cn/"><img src="https://blz.nosdn.127.net/1/frame/cprt/icon20120516.png"></a><span>| &nbsp;适龄提示：适合13岁及以上使用&nbsp;&nbsp;</span><a href="https://www.battlenet.com.cn/support/zh/article/280" target="_blank">家长监护工程&gt;</a>
+            </p>
+        </div>
+        <a id="btn"  href="#top">TOP</a>
+    </div>
+    <div class="footer-bottom hidden-sm hidden-xs">
+        <p class="tips">积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。<br>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</p>
+    </div>
+
+</footer>
+<script>
+    window.onscroll=function(){
+        var wScrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+        console.log(wScrollTop);
+        if(wScrollTop>=230){
+            $('[id="btn"]').show();
+        }else{
+            $('[id="btn"]').hide();
+        }
+
+    }
+    $('.blog-sidebar-box-lis li').click(function(e){
+
+        e.preventDefault();
+        var index=$(this).index();
+        var top=$('[data="blog-body"]').eq(index).offset().top;
+        $('body,html').animate({scrollTop:top},'fast');
+    })
+
+    $('[id="btn"]').click(function(e){
+        e.preventDefault();
+        $('body,html').animate({scrollTop:0},'fast');
+    })
+</script>
+
+
+
+
+</body>
+</html>
+<script src="../js/index-nav.js"></script>
+<script>
+    $(".HorizontalAccordion-column").addClass("longlong");
+    $(".HorizontalAccordion-column").hover(function(){
+        $(this).toggleClass("longlong")
+$(".HorizontalAccordion-content").hide();
+$(this).find(".HorizontalAccordion-content").show();
+    $(".HorizontalAccordion-column").removeClass("col-lg-6").addClass("col-lg-2");
+    $(this).removeClass("col-lg-2").addClass("col-lg-6");
+});
+    $(".LadderSection-handle").eq(1).addClass("sanjiao");
+    $(".LadderSection-handle").eq(2).addClass("sanjiao");
+    $(".LadderSection-handle").eq(1).click(function(){
+        $(".LadderSection-handle").eq(2).toggleClass("sanjiao1")
+    })
+$(".LadderSection-handle").click(function(){
+  $(this).next().slideToggle("slow");
+  $(this).find(".LadderSection-handleArrowIndicator").toggleClass("active")
+
+})
+$(".videoshow").on("click",function(){
+    $(".sportvideo").css("display","none");
+    $(this).css("display","none")
+    v1.pause();
+})
+    $(".sportvideo a").click(function(){
+        $(".sportvideo").css("display","none");
+        $(".videoshow").css("display","none");
+        v1.pause();
+
+    })
+    v1.pause();
+    $(".youtubePlayer").click(function(){
+        $(".sportvideo").css("display","block");
+        $(".videoshow").css("display","block")
+        v1.play();
+        v1.currentTime=0;
+    })
+
+
+</script>

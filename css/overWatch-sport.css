@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.boss {
+  background: url("../images/eSports_bbs/huoy.jpeg") no-repeat;
+  background-size: cover;
+}
+.menu {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.menu > ul {
+  float: right;
+  color: rgba(255, 255, 255, 0.7);
+}
+ul {
+  text-align: center;
+  list-style: none;
+}
+.menu > ul > li {
+  list-style: none;
+  float: left;
+  margin-right: 40px;
+  cursor: pointer;
+  line-height: 40px;
+}
+li:hover > a {
+  color: white;
+}
+a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.menu .menuk {
+  margin-right: 0;
+}
+.menu .nava4 {
+  width: 10px;
+  vertical-align: middle;
+}
+.menu .menuli {
+  position: relative;
+}
+.menu .menuli span {
+  font-size: 14px;
+}
+.menu .menuli:hover > span:hover {
+  color: white;
+}
+.menu .menuli .menud {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  display: none;
+}
+.menud.ul1 {
+  padding: 20px 10px;
+  width: 250px;
+  text-align: left;
+  line-height: 1.66;
+  background: #343C46;
+  display: none;
+}
+.menud.ul1 li {
+  border-bottom: 2px solid #bce8f1;
+}
+.menud.ul1 li:hover {
+  border-bottom: 2px solid white;
+}
+.menud.ul1 h4 {
+  color: white;
+}
+.menud.menud1 {
+  background-color: rgba(205, 197, 191, 0.7);
+  width: 632px;
+}
+.menud.menud1 .menudf {
+  padding: 30px 20px;
+}
+.menud.menud1 .menudf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.menud.menud1 .menul {
+  float: left;
+  margin-right: 20px;
+}
+.menud.menud1 .menud:after,
+.menud.menud1 :before {
+  content: "";
+  display: block;
+  clear: both;
+}
+.menud.menud1 .menuf div {
+  float: left;
+}
+.menud .menulu {
+  width: 230px;
+  text-align: left;
+}
+.menud .menulu li {
+  border-bottom: 2px solid rgba(153, 50, 203, 0.8);
+}
+.menud .menulu li:hover {
+  border-bottom: 2px solid #ffffff;
+}
+.menud .tab {
+  width: 180px;
+  text-align: left;
+}
+.menud .tab tr {
+  height: 20px;
+  line-height: 20px;
+}
+.menud .tab tr a {
+  font-size: 10px;
+}
+.menud .tab tr:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.menud .tab caption {
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+.menud .menulu li a {
+  font-size: 20px;
+  line-height: normal;
+}
+.menud .menuim {
+  background: wheat;
+}
+.menud .menuim:hover {
+  box-shadow: 0 0 100px 10px #ff6bfb inset;
+}
+.menud .menuf a {
+  font-size: 10px;
+}
+.menud .menuf div {
+  background-color: lightgrey;
+}
+.menud .menuf div:hover a {
+  color: white;
+}
+.menud .menuf .menuv3 {
+  border: 1px solid red;
+  height: 160px;
+  cursor: pointer;
+  width: 105px;
+  display: block;
+}
+.menuf .menuv31 {
+  background: url("../images/eSports_bbs/menv3.jpg") 0 0 no-repeat;
+}
+.menuf .menuv32 {
+  background: url("../images/eSports_bbs/menv3.jpg") -110px 0 no-repeat;
+}
+.menuf .menuv33 {
+  background: url("../images/eSports_bbs/menv3.jpg") -220px 0 no-repeat;
+}
+.menuf .menuv34 {
+  background: url("../images/eSports_bbs/menv3.jpg") -330px 0 no-repeat;
+}
+.menuf .menuv35 {
+  background: url("../images/eSports_bbs/menv3.jpg") -440px 0 no-repeat;
+}
+.menuf .menuv36 {
+  background: url("../images/eSports_bbs/menv3.jpg") -550px 0 no-repeat;
+}
+a:hover {
+  color: white;
+}
+.bbscont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.bbscont span {
+  color: #ffb033;
+  font-size: 15px;
+}
+.bbscont p {
+  margin-top: 5px;
+  color: gainsboro;
+  white-space: normal;
+  max-width: 500px;
+}
+.bbscont > div {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  width: 600px;
+  height: 140px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+.bbscont > div div {
+  display: inline-block;
+}
+.bbscont > div img {
+  width: 35px;
+  vertical-align: top;
+}
+.bbscont > div:hover {
+  box-shadow: 0 0 3px 2px rgba(255, 255, 255, 0.5) inset;
+}
+.bbscont > div:hover span,
+.bbscont :hover p {
+  color: white;
+}
+.bbsfoot {
+  text-align: center;
+  background: blueviolet;
+  border-top: 2px solid blue;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+.bbsfoot .bbsfs {
+  height: 24px;
+  display: inline-block;
+  width: 24px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.bbsfoot .bbsfs1 {
+  background: url(../images/eSports_bbs/icon-img.png) no-repeat -96px 0;
+}
+.bbsfoot .bbsfs2 {
+  background: url(../images/eSports_bbs/icon-img.png) no-repeat -144px -24px;
+}
+.bbsfoot .bbsfd {
+  width: 200px;
+  margin-bottom: 30px;
+}
+.bbsfoota1 {
+  background: url(../images/eSports_bbs/fool.png) no-repeat 0 0;
+  background-size: contain;
+  height: 70px;
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.bbsfoota2 {
+  background: url('http://overwatch.nos.netease.com/1/images/layout/logo_ne.png') no-repeat 0 0;
+  background-size: contain;
+  height: 34px;
+  width: 105px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.bbsfoot .bbsfootul li {
+  list-style: none;
+  float: left;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+.bbsfootr {
+  margin-left: 50px;
+  width: 70%;
+}
+.bbsfootr a {
+  font-size: 10px;
+}
+#bbsfootbtm {
+  padding-bottom: 60px;
+}
+#bbsfootbtm hr {
+  margin-bottom: 10px;
+}
+#bbsfootbtm p {
+  color: rgba(255, 255, 255, 0.3);
+}
+.menuf .menufdd {
+  position: relative;
+}
+.menuf .menufdd .menufdda {
+  position: absolute;
+  top: 65%;
+  right: 9%;
+  line-height: normal;
+}
+.bbsfoota {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.ow-footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: 26px;
+  width: auto;
+  height: 358px;
+  z-index: 3;
+  font-size: 12px!important;
+  background: #202020;
+}
+.ow-footer a {
+  text-decoration: none;
+  padding-top: 5px;
+  color: #fff;
+  font-weight: 400;
+}
+/*    footer-top  */
+.footer-top {
+  width: 1000px;
+  position: relative;
+  left: 50%;
+  margin-left: -500px;
+  color: #fff;
+  z-index: 100;
+  font-size: 14px;
+  padding-top: 39px;
+}
+.footer-top-f {
+  float: left;
+  height: 25px;
+}
+.footer-top-f a {
+  padding-top: 5px;
+  margin-right: 37px;
+  color: white;
+}
+.footer-top-f a:first-child i {
+  background-position: -96px 0;
+}
+.footer-top-f i {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  position: relative;
+  background: url(../images/eSports_bbs/down1.png);
+  vertical-align: middle;
+  top: -2px;
+}
+.footer-top-f a:nth-child(2) i {
+  background-position: -144px -24px;
+}
+.footer-top-f a:nth-child(3) i {
+  background-position: -24px -119px;
+}
+/*  footer-conter */
+.footer-center {
+  clear: both;
+  padding-top: 51px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin: 0 auto 8px;
+  text-align: left;
+  width: 1000px;
+}
+.logo_bz {
+  display: inline-block;
+  width: 140px;
+  height: 80px;
+  overflow: hidden;
+  vertical-align: top;
+  margin: 0;
+  position: relative;
+  top: 4px;
+  box-sizing: border-box;
+  background: url("../images/eSports_bbs/fool.png") no-repeat 0 0;
+}
+.logo_bz + a {
+  display: inline-block;
+  background: url("../images/eSports_bbs/fool.png") no-repeat 0 0;
+  width: 125px;
+  height: 38px;
+  overflow: hidden;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: relative;
+  top: 39px;
+  left: -3px;
+  margin: 0;
+}
+.info {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+  width: 706px;
+  float: right;
+  text-align: left;
+  padding: 0 0 0 73px;
+  vertical-align: middle;
+  position: relative;
+  box-sizing: border-box;
+}
+.info a {
+  color: rgba(255, 255, 255, 0.5);
+}
+.info ul {
+  margin: 0 0 3px -10px;
+  padding: 0 0 5px;
+  overflow: hidden;
+}
+.info ul li {
+  float: left;
+}
+.info ul li a {
+  color: #ccc;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.info p {
+  line-height: 20px;
+  vertical-align: top;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 400;
+}
+.info p:last-child {
+  padding: 8px 0;
+  position: relative;
+}
+.info p:last-child a {
+  margin-right: 5px;
+}
+.integrity a:first-child {
+  position: relative;
+  top: -1px;
+}
+.integrity a:nth-child(2) {
+  position: relative;
+  top: -1px;
+}
+.integrity a:nth-child(3) {
+  position: relative;
+  top: -1px;
+}
+#btn {
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  padding: 0;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #000;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 501;
+  display: none;
+  cursor: pointer;
+}
+/*   foot - bottom */
+.footer-bottom {
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  clear: both;
+  position: relative;
+  font-size: 12px;
+}
+.footer-bottom p {
+  line-height: 20px;
+}
+@media only screen and (max-width: 960px) {
+  .ow-footer .footer-center #infos {
+    display: block;
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .footer-center .info .clearFix {
+    padding: 0;
+  }
+  .footer-center {
+    width: 100%;
+  }
+}

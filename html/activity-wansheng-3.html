@@ -178,7 +178,7 @@
                     欢度新春</a></li>
                 <li><a href="#" >
                     <div class="mainNav-second-icon"></div>雪国仙境</a></li>
-                <li><a href="#" >
+                <li><a href="activity-wansheng-3.html" >
                     <div class="mainNav-second-icon"></div>万圣夜惊魂</a></li>
                 <li><a href="#" >
                     <div class="mainNav-second-icon"></div>夏季运动会</a></li>
@@ -191,7 +191,7 @@
         <li><a href="news.html" class="nav-btn ">新闻</a></li>
         <li><a href="download.html" class="nav-btn">下载</a></li>
         <li><a href="#" class="nav-btn ">生涯数据</a></li>
-        <li><a href="#" class="nav-btn ">电子竞技</a></li>
+        <li><a href="overWatchsport.html" class="nav-btn ">电子竞技</a></li>
         <li><a href="#" target="_blank" class="nav-btn">论坛</a></li>
     </ul>
     <div class="mainNav-right"><a href="#">购买</a></div>
@@ -447,7 +447,31 @@
 <!--第三部分-->
 
 <section id="sec-3" class="text-center">
+    <div class="wrapTou">
 
+        <span id="left-1"></span>
+        <span id="right-1"></span>
+
+        <span id="btn-3">×</span>
+        <img src="../images/activity/a1/1-skin.jpg" alt="" class="show">
+        <img src="../images/activity/a1/2-skin.jpg" alt="">
+        <img src="../images/activity/a1/3-skin.jpg" alt="">
+        <img src="../images/activity/a1/4-skin.jpg" alt="">
+        <img src="../images/activity/a1/5-skin.jpg" alt="">
+        <img src="../images/activity/a1/6-skin.jpg" alt="">
+        <img src="../images/activity/a1/7-skin.jpg" alt="">
+        <img src="../images/activity/a1/8-skin.jpg" alt="">
+        <img src="../images/activity/a1/9-skin.jpg" alt="">
+        <img src="../images/activity/a1/10-skin.jpg" alt="">
+        <img src="../images/activity/a1/11-skin.jpg" alt="">
+        <img src="../images/activity/a1/12-skin.jpg" alt="">
+        <img src="../images/activity/a1/13-skin.jpg" alt="">
+        <img src="../images/activity/a1/14-skin.jpg" alt="">
+        <img src="../images/activity/a1/15-skin.jpg" alt="">
+        <img src="../images/activity/a1/16-skin.jpg" alt="">
+        <img src="../images/activity/a1/17skin.jpg" alt="">
+        <img src="../images/activity/a1/18-skin.jpg" alt="">
+    </div>
     <!--显示浮层-->
     <div id="popBox">
         <div class="w-light-box">
@@ -466,31 +490,7 @@
     </div>
     <div id="boxModel"></div>
 
-        <div class="wrapTou">
 
-            <span id="left-1"></span>
-            <span id="right-1"></span>
-
-            <span id="btn-3">×</span>
-            <img src="../images/activity/a1/1-skin.jpg" alt="" class="show">
-            <img src="../images/activity/a1/2-skin.jpg" alt="">
-            <img src="../images/activity/a1/3-skin.jpg" alt="">
-            <img src="../images/activity/a1/4-skin.jpg" alt="">
-            <img src="../images/activity/a1/5-skin.jpg" alt="">
-            <img src="../images/activity/a1/6-skin.jpg" alt="">
-            <img src="../images/activity/a1/7-skin.jpg" alt="">
-            <img src="../images/activity/a1/8-skin.jpg" alt="">
-            <img src="../images/activity/a1/9-skin.jpg" alt="">
-            <img src="../images/activity/a1/10-skin.jpg" alt="">
-            <img src="../images/activity/a1/11-skin.jpg" alt="">
-            <img src="../images/activity/a1/12-skin.jpg" alt="">
-            <img src="../images/activity/a1/13-skin.jpg" alt="">
-            <img src="../images/activity/a1/14-skin.jpg" alt="">
-            <img src="../images/activity/a1/15-skin.jpg" alt="">
-            <img src="../images/activity/a1/16-skin.jpg" alt="">
-            <img src="../images/activity/a1/17skin.jpg" alt="">
-            <img src="../images/activity/a1/18-skin.jpg" alt="">
-        </div>
 
 
         <div class="u-max-width-container content-box">
@@ -951,7 +951,9 @@
         $(".wrapTou").css("display","none");
     });
 
+
     /*切换照片*/
+    var Index = 1;
     /*右侧*/
     $("#right-1").click(function () {
         Index ++;
@@ -962,7 +964,7 @@
     });
 
 
-    var Index = 1;
+
     /*左侧*/
     $("#left-1").click(function () {
         Index --;

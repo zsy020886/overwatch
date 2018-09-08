@@ -286,7 +286,7 @@ li:after,ul:after,div:after{
 
 
 
-/*                 */
+/*    */
 
 .nav_head{
     width: 100%;
@@ -444,9 +444,12 @@ a{
 
 /*人物图像*/
 .img-1{
-    width: 1084px;
-    margin: 0 0 0 800px;
+    position: absolute;
+    left: 27%;
+    top: 10%;
+    width: 65%;
 }
+
 
 
 /*play*/
@@ -454,12 +457,11 @@ a{
     display: inline-block;
     position: absolute;
     z-index: 10;
-    left: 1000px;
-    top: 380px;
+    left: 50%;
+    top: 60%;
 }
 .play img{
     width: 135px;
-    height: 133px;
 }
 
 /*视频加入*/
